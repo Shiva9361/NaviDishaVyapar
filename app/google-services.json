@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "242215443157",
+    "project_id": "navidishavyapar",
+    "storage_bucket": "navidishavyapar.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:242215443157:android:076364510f3a407ae7e05c",
+        "android_client_info": {
+          "package_name": "com.shiva936.nayidishavyapar"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAaJuxcCBn0dwCSFrfMilWZILMthsrUkZw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
