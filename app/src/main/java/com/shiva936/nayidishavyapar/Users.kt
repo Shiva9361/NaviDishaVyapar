@@ -1,5 +1,9 @@
 package com.shiva936.nayidishavyapar
 
-data class Users(val id: String="",val name : String ="",
-                 val age : Int=0, var email :String="" ) {
+/**
+ * Model class for storing user data
+ */
+data class Users(val id: String = "",
+                 val name : String = "",
+                 var email :String= "") {
 }

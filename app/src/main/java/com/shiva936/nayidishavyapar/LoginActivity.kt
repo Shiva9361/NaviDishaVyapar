@@ -1,20 +1,40 @@
 package com.shiva936.nayidishavyapar
 
 import android.os.Bundle
+import android.widget.Toast
 import androidx.activity.ComponentActivity
 import androidx.activity.enableEdgeToEdge
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
+import com.google.firebase.auth.FirebaseAuth
+import com.shiva936.nayidishavyapar.databinding.ActivityLoginBinding
 
+/**
+ * Login Activity, Takes care of login
+ * Uses firebase Auth in backend
+ */
 class LoginActivity : ComponentActivity() {
+    private lateinit var loginBinding: ActivityLoginBinding
+    private val auth : FirebaseAuth = FirebaseAuth.getInstance()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        loginBinding = ActivityLoginBinding.inflate(layoutInflater)
+        val view = loginBinding.root
         enableEdgeToEdge()
-        setContentView(R.layout.activity_login)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
+        setContentView(view)
+        loginBinding.login.setOnClickListener {
+            auth.signInWithEmailAndPassword("cs22b057@iittp.ac.in", "Not my password")
+                .addOnCompleteListener { task ->
+                    if (task.isSuccessful) {
+                        Toast.makeText(
+                            applicationContext,
+                            auth.currentUser?.uid,
+                            Toast.LENGTH_SHORT
+                        )
+                            .show()
+                        println("User ID: ${auth.currentUser?.uid}")
+                    }
+
+                }
         }
     }
 }
