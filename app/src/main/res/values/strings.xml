@@ -12,4 +12,8 @@
     <string name="logo">"Logo"</string>
     <string name="login">"Login/Sign up to Showcase your \n property to "<font color="#00F0FF">"1Cr+ Buyers"</font></string>
     <string name="TandC">"By clicking above, you agree to "<font color="#FA140D">"Navidisha Vyapar T&amp;C "</font></string>
+    <string name="sell_and_rent_contentA">Get contact Details of upto <b>5 Responses</b></string>
+    <string name="sell_and_rent_contentB">Access to <font color="#FF0000">15 Lac Buyer</font> &amp; tenants</string>
+    <string name="sell_and_rent_contentC">Applicable only for Property Owner &amp; not Agents.An Owner can have just 1 Free Active Property on the site at a time."</string>
+    <string name="sell_and_rent_containD">you are posting this property for \n <s>Rs 500</s> </string>
 </resources>
