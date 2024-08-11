@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Style for background with gradient -->
+    <style name="groupStyle">
+        <item name="android:background">@drawable/rectangle_gradient_s_deep_orange_a700_e_pink_700</item>
+    </style>
+
+    <!-- Style for text with custom font and size -->
+    <style name="txtMontserratAlternatesmontserratalternatesblackitalic23">
+        <item name="android:textSize">@dimen/_23pxh</item>
+        <item name="android:textColor">@color/white_A700</item>
+        <!--        <item name="android:fontFamily">@font/montserrat_alternates</item>-->
+        <!-- Using fontWeight for API 28+ or consider textStyle for lower APIs -->
+        <item name="android:textFontWeight" tools:targetApi="p">900</item>
+    </style>
+</resources>

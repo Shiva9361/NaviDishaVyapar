@@ -1,0 +1,17 @@
+<resources>
+    <dimen name="_23pxh">23.0dp</dimen>
+    <!-- Horizontal padding for the LinearLayout -->
+    <dimen name="_35pxh">35.0dp</dimen>
+
+    <!-- FrameLayout height -->
+    <dimen name="_176pxv">176.0dp</dimen>
+
+    <!-- FrameLayout width -->
+    <dimen name="_303pxh">303.0dp</dimen>
+
+    <!-- ImageView width -->
+    <dimen name="_180pxh">180.0dp</dimen>
+
+    <!-- Margin for the TextView -->
+    <dimen name="_64pxv">64.0dp</dimen>
+</resources>
