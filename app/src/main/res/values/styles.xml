@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Style for background with gradient -->
-    <style name="groupStyle">
+    <style name="splashScreenStyle">
         <item name="android:background">@drawable/rectangle_gradient_s_deep_orange_a700_e_pink_700</item>
+    </style>
+    <style name="LoginScreenStyle">
+        <item name="android:background">@drawable/rectangle_gradient_s_deep_blue_black_700</item>
     </style>
 
     <!-- Style for text with custom font and size -->
