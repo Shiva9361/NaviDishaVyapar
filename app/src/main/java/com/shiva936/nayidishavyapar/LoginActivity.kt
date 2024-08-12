@@ -1,6 +1,8 @@
 package com.shiva936.nayidishavyapar
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import android.widget.Toast
 import androidx.activity.ComponentActivity
 import androidx.activity.enableEdgeToEdge
@@ -44,5 +46,14 @@ class LoginActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login_screen) // Set the layout to activity_login_screen.xml
+        // Find the button by its ID
+        val registerButton: Button = this.findViewById(R.id.register_with_us)
+
+        // Set up the click listener
+        registerButton.setOnClickListener {
+            // Create an Intent to start the SignupActivity
+            val intent = Intent(this, SignUpActivity::class.java)
+            startActivity(intent)
+        }
     }
 }

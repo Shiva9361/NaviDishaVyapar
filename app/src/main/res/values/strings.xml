@@ -11,4 +11,5 @@
     <string name="login_failed">"Login failed"</string>
     <string name="logo">"Logo"</string>
     <string name="login">"Login/Sign up to Showcase your \n property to "<font color="#00F0FF">"1Cr+ Buyers"</font></string>
+    <string name="TandC">"By clicking above, you agree to "<font color="#FA140D">"Navidisha Vyapar T&amp;C "</font></string>
 </resources>
