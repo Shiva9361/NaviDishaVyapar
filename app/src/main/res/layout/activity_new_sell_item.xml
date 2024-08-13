@@ -104,7 +104,7 @@
         android:id="@+id/imageView9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/back_arrow_white"
+        app:srcCompat="@drawable/back_arrow_black"
         tools:layout_editor_absoluteX="30dp"
         tools:layout_editor_absoluteY="25dp" />
 
