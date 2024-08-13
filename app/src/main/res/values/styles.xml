@@ -7,7 +7,9 @@
     <style name="LoginScreenStyle">
         <item name="android:background">@drawable/rectangle_gradient_s_deep_blue_black_700</item>
     </style>
-
+    <style name="materialActionScreen">
+        <item name="android:background">@drawable/material_action_screen_background</item>
+    </style>
     <!-- Style for text with custom font and size -->
     <style name="txtMontserratAlternatesmontserratalternatesblackitalic23">
         <item name="android:textSize">@dimen/_23pxh</item>

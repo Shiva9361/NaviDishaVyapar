@@ -8,7 +8,7 @@
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="match_parent"
-        android:layout_height="80dp"
+        android:layout_height="100dp"
         app:srcCompat="@drawable/main_menu_top_bar"
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="0dp" />
@@ -26,7 +26,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/baseline_notifications_none_24"
-        tools:layout_editor_absoluteX="306dp"
+        tools:layout_editor_absoluteX="287dp"
         tools:layout_editor_absoluteY="10dp" />
 
     <TextView
@@ -36,11 +36,56 @@
         android:background="@drawable/white_background_rounded"
         android:fontFamily="@font/montserrat_alternates_extrabold"
         android:gravity="center"
-        android:padding="5dp"
+        android:paddingHorizontal="10dp"
+        android:paddingBottom="5dp"
         android:text="ndy"
         android:textColor="@color/red_orange"
         android:textSize="22sp"
-        tools:layout_editor_absoluteX="348dp"
+        tools:layout_editor_absoluteX="329dp"
         tools:layout_editor_absoluteY="10dp" />
+
+    <EditText
+        android:id="@+id/search_material"
+        android:layout_width="282dp"
+        android:layout_height="40dp"
+        android:background="@drawable/search_by_material"
+        android:ems="15"
+        android:fontFamily="@font/opensans_light"
+        android:hint="Search by Material "
+        android:paddingLeft="20dp"
+        android:textColor="@android:color/black"
+        android:textColorHint="@color/text_grey"
+        tools:layout_editor_absoluteX="114dp"
+        tools:layout_editor_absoluteY="53dp" />
+
+    <EditText
+        android:id="@+id/Email"
+        android:layout_width="97dp"
+        android:layout_height="40dp"
+        android:background="@drawable/filter"
+        android:ems="15"
+        android:fontFamily="@font/opensans_light"
+        android:hint="Filter"
+        android:paddingLeft="20dp"
+        android:textColor="@android:color/black"
+        android:textColorHint="@color/text_grey"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="53dp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/baseline_search_24"
+        tools:layout_editor_absoluteX="360dp"
+        tools:layout_editor_absoluteY="58dp" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/baseline_keyboard_arrow_down_24"
+        tools:layout_editor_absoluteX="80dp"
+        tools:layout_editor_absoluteY="58dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

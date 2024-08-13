@@ -1,0 +1,6 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="#F83C2E" />
+    <size android:height="15dp" android:width="125dp"/>
+
+     <!-- Corner radius to make it curved -->
+</shape>

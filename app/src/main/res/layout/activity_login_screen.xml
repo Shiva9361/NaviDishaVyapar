@@ -11,22 +11,19 @@
         android:id="@+id/Back"
         android:layout_width="36dp"
         android:layout_height="36dp"
-        android:layout_marginStart="46dp"
-        android:layout_marginEnd="359dp"
         android:contentDescription="backarrow"
         android:src="@drawable/backarrow"
-        app:layout_constraintBottom_toTopOf="@+id/Description"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.08"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.06" />
 
     <TextView
         android:id="@+id/Description"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="66dp"
-        android:layout_marginEnd="66dp"
-        android:layout_marginBottom="26dp"
         android:fontFamily="@font/montserrat_alternates_bold"
         android:text="@string/login"
         android:textAlignment="center"
@@ -34,18 +31,14 @@
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.191" />
+        app:layout_constraintVertical_bias="0.161" />
 
     <EditText
         android:id="@+id/Password"
         android:layout_width="325dp"
         android:layout_height="48dp"
-        android:layout_marginStart="47dp"
-        android:layout_marginTop="81dp"
-        android:layout_marginEnd="37dp"
         android:background="@drawable/email_background"
         android:ems="15"
         android:fontFamily="@font/montserrat_bold"
@@ -55,19 +48,16 @@
         android:textColor="@android:color/black"
         android:textColorHint="@color/text_grey"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/Email"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/Email"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.322" />
+        app:layout_constraintVertical_bias="0.37" />
 
     <EditText
         android:id="@+id/Email"
         android:layout_width="325dp"
         android:layout_height="48dp"
-        android:layout_marginStart="47dp"
-        android:layout_marginEnd="37dp"
-        android:layout_marginBottom="28dp"
         android:background="@drawable/email_background"
         android:ems="15"
         android:fontFamily="@font/montserrat_bold"
@@ -78,79 +68,68 @@
         android:textColorHint="@color/text_grey"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.546"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.3" />
+        app:layout_constraintVertical_bias="0.284" />
 
     <Button
         android:id="@+id/Next"
         android:layout_width="325dp"
         android:layout_height="48dp"
-        android:layout_marginStart="47dp"
-        android:layout_marginEnd="37dp"
         android:background="@drawable/submit_background"
         android:ems="15"
         android:fontFamily="@font/montserrat_bold"
         android:text="NEXT"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/Password"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/Password"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.515" />
+        app:layout_constraintVertical_bias="0.459" />
 
     <TextView
         android:id="@+id/Help"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="276dp"
-        android:layout_marginTop="72dp"
-        android:layout_marginEnd="37dp"
         android:fontFamily="@font/montserrat_bold"
         android:text="NEED HELP ?"
         android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.897"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Next" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.535" />
 
     <TextView
         android:id="@+id/terms_and_conditions"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="111dp"
-        android:layout_marginTop="282dp"
-        android:layout_marginEnd="111dp"
-        android:layout_marginBottom="45dp"
+        android:layout_width="189dp"
+        android:layout_height="19dp"
         android:fontFamily="@font/montserrat_bold"
         android:text="Terms &amp; Conditions apply"
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.959" />
 
     <Button
         android:id="@+id/register_with_us"
         android:layout_width="325dp"
         android:layout_height="48dp"
-        android:layout_marginStart="47dp"
-        android:layout_marginTop="25dp"
-        android:layout_marginEnd="37dp"
-        android:layout_marginBottom="10dp"
         android:background="@drawable/register_background"
         android:ems="15"
         android:fontFamily="@font/montserrat_bold"
         android:text="REGISTER WITH US"
         android:textColor="@color/white"
-        app:layout_constraintBottom_toTopOf="@+id/terms_and_conditions"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.546"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Help"
-        app:layout_constraintVertical_bias="0.096" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.645" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
