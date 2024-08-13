@@ -8,7 +8,7 @@
     android:layout_height="match_parent">
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/back"
         android:layout_width="36dp"
         android:layout_height="36dp"
         android:layout_marginStart="31dp"
@@ -21,7 +21,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/Description"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="66dp"
@@ -51,32 +51,32 @@
         android:textAlignment="center"
         android:textColor="#FFFFFF"
         android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@+id/button1"
+        app:layout_constraintBottom_toTopOf="@+id/Buyer"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/Description" />
 
 
     <Button
-        android:id="@+id/button1"
+        android:id="@+id/Buyer"
         android:layout_width="100dp"
         android:layout_height="48dp"
-        android:layout_marginStart="60dp"
-        android:layout_marginTop="10dp"
         android:background="@drawable/i_am"
         android:ems="15"
         android:fontFamily="@font/montserrat_bold"
         android:text="Buyer"
         android:textColor="@color/text_grey"
-        app:layout_constraintEnd_toStartOf="@+id/button5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.16"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.409" />
 
     <Button
-        android:id="@+id/button5"
+        android:id="@+id/Agent"
         android:layout_width="100dp"
         android:layout_height="0dp"
-        android:layout_marginStart="15dp"
         android:layout_marginEnd="15dp"
         android:layout_marginBottom="28dp"
         android:background="@drawable/i_am"
@@ -85,11 +85,12 @@
         android:text="Agent"
         android:textColor="@color/text_grey"
         app:layout_constraintBottom_toTopOf="@+id/Name"
-        app:layout_constraintEnd_toStartOf="@+id/button2"
-        app:layout_constraintStart_toEndOf="@+id/button1" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.54"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/Seller"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="40dp"
@@ -99,11 +100,11 @@
         android:fontFamily="@font/montserrat_bold"
         android:text="Seller"
         android:textColor="@color/text_grey"
-        app:layout_constraintBottom_toTopOf="@+id/Name"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/button5"
-        app:layout_constraintTop_toBottomOf="@+id/textView5"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintStart_toEndOf="@+id/Agent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.427" />
 
     <EditText
         android:id="@+id/Name"
@@ -123,7 +124,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button1" />
+        app:layout_constraintTop_toBottomOf="@+id/Buyer" />
 
     <EditText
         android:id="@+id/Email"
@@ -160,14 +161,15 @@
         android:minHeight="48dp"
         android:textColor="@android:color/black"
         android:textColorHint="@color/text_grey"
-        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintBottom_toTopOf="@+id/next"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Email" />
 
+
     <Button
-        android:id="@+id/button"
+        android:id="@+id/next"
         android:layout_width="325dp"
         android:layout_height="48dp"
         android:layout_marginStart="53dp"
@@ -178,13 +180,14 @@
         android:fontFamily="@font/montserrat_bold"
         android:text="REGISTER"
         android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Password" />
 
-
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/terms_and_conditions"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:layout_marginStart="78dp"
@@ -198,6 +201,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
+        app:layout_constraintTop_toBottomOf="@+id/next" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
