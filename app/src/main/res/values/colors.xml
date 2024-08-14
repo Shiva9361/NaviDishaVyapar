@@ -22,4 +22,5 @@
     <color name="amber">#FF9800</color>
     <color name="gold">#FFDA92</color>
     <color name="light_gold">#5EFFFA76</color>
+    <color name="light_grey">#f0f0f0</color>
 </resources>
