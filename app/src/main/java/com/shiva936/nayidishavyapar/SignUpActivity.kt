@@ -17,15 +17,15 @@ class SignUpActivity : ComponentActivity() {
     private lateinit var selectedRole: String
     private val auth : FirebaseAuth = FirebaseAuth.getInstance()
     private val database :FirebaseDatabase = FirebaseDatabase.getInstance()
-    private val userref = database.reference.child("user_data")
+    private val userReference = database.reference.child("user_data")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         signupScreenBinding = ActivitySignupScreenBinding.inflate(layoutInflater)
         val view = signupScreenBinding.root
-        val roles = listOf(signupScreenBinding.Buyer,signupScreenBinding.Agent,signupScreenBinding.Seller)
-        selectedRole = signupScreenBinding.Buyer.text.toString()
-        signupScreenBinding.Buyer.setBackgroundColor(Color.RED)
+        val roles = listOf(signupScreenBinding.BuyerButton,signupScreenBinding.AgentButton,signupScreenBinding.SellerButton)
+        selectedRole = signupScreenBinding.BuyerButton.text.toString()
+        signupScreenBinding.BuyerButton.setBackgroundColor(Color.RED)
 
         for (type in roles){
             type.setOnClickListener{
@@ -36,18 +36,22 @@ class SignUpActivity : ComponentActivity() {
         setContentView(view)
         enableEdgeToEdge()
 
-        signupScreenBinding.next.setOnClickListener{
-            val name = signupScreenBinding.Name.text.toString()
-            val email = signupScreenBinding.Email.text.toString()
-            val password = signupScreenBinding.Password.text.toString()
+        signupScreenBinding.Back.setOnClickListener{
+            onBackPressedDispatcher.onBackPressed()
+        }
+
+        signupScreenBinding.NextButton.setOnClickListener{
+            val name = signupScreenBinding.NameField.text.toString()
+            val email = signupScreenBinding.EmailField.text.toString()
+            val password = signupScreenBinding.PasswordField.text.toString()
             if (name.isEmpty() || email.isEmpty() || password.isEmpty()){
                 Toast.makeText(applicationContext, "Please fill all details", Toast.LENGTH_SHORT).show()
             }
             else{
                 auth.createUserWithEmailAndPassword(email,password).addOnCompleteListener{ task ->
                     if (task.isSuccessful) {
-                        userref.child("${auth.currentUser?.uid}").child("role").setValue(selectedRole)
-                        userref.child("${auth.currentUser?.uid}").child("name").setValue(name)
+                        userReference.child("${auth.currentUser?.uid}").child("role").setValue(selectedRole)
+                        userReference.child("${auth.currentUser?.uid}").child("name").setValue(name)
                     }
                     else{
                         if (task.exception is FirebaseAuthUserCollisionException){

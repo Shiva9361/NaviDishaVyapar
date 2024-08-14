@@ -16,12 +16,12 @@ class SplashScreenActivity : ComponentActivity() {
         setContentView(R.layout.activity_splash_screen)
         Handler(Looper.getMainLooper()).postDelayed(
             {
-                var intent = Intent(this@SplashScreenActivity,MaterialActionActivity::class.java)
+                var intent = Intent(this@SplashScreenActivity, MaterialActionActivity::class.java)
                 if (auth.currentUser != null) {
                     intent = Intent(this@SplashScreenActivity, MainMenuActivity::class.java)
                 }
                 startActivity(intent)
-                finish()
+                finish()// To prevent user from coming back by accident
             },2000
         )
     }
