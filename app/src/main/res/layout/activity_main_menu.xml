@@ -22,7 +22,7 @@
             android:layout_height="30dp"
             app:layout_constraintStart_toStartOf="@+id/Filter"
             app:layout_constraintTop_toTopOf="@+id/ndy"
-            app:srcCompat="@drawable/baseline_dehaze_24" />
+            android:src="@drawable/baseline_dehaze_24" />
 
         <ImageView
             android:id="@+id/notification"
@@ -32,7 +32,7 @@
             app:layout_constraintHorizontal_bias="0.907"
             app:layout_constraintStart_toEndOf="@+id/hamburger_menu"
             app:layout_constraintTop_toTopOf="@+id/ndy"
-            app:srcCompat="@drawable/baseline_notifications_none_24" />
+            android:src="@drawable/baseline_notifications_none_24" />
 
         <TextView
             android:id="@+id/ndy"
@@ -94,7 +94,7 @@
             app:layout_constraintBottom_toBottomOf="@+id/Filter"
             app:layout_constraintEnd_toEndOf="@+id/Filter"
             app:layout_constraintTop_toTopOf="@+id/Filter"
-            app:srcCompat="@drawable/baseline_keyboard_arrow_down_24" />
+            android:src="@drawable/baseline_keyboard_arrow_down_24" />
 
         <ImageView
             android:id="@+id/search_symbol"
@@ -104,7 +104,7 @@
             app:layout_constraintBottom_toBottomOf="@+id/search_material"
             app:layout_constraintEnd_toEndOf="@+id/search_material"
             app:layout_constraintTop_toTopOf="@+id/search_material"
-            app:srcCompat="@drawable/baseline_search_24" />
+            android:src="@drawable/baseline_search_24" />
 
 
 
@@ -146,7 +146,7 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="top|center"
                             android:paddingTop="5dp"
-                            app:srcCompat="@drawable/help_symbool" />
+                            android:src="@drawable/help_symbool" />
 
                         <TextView
                             android:id="@+id/txt_help"
@@ -172,7 +172,7 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="top|center"
                             android:paddingTop="5dp"
-                            app:srcCompat="@drawable/graph" />
+                            android:src="@drawable/graph" />
 
                         <TextView
                             android:id="@+id/txt_grow"
@@ -198,7 +198,7 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="top|center"
                             android:paddingTop="5dp"
-                            app:srcCompat="@drawable/contacts" />
+                            android:src="@drawable/contacts" />
 
                         <TextView
                             android:id="@+id/txt_contact"
@@ -224,7 +224,7 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="top|center"
                             android:paddingTop="5dp"
-                            app:srcCompat="@drawable/front_hand" />
+                            android:src="@drawable/front_hand" />
 
                         <TextView
                             android:id="@+id/txt_pldedge"
@@ -717,7 +717,7 @@
                 android:layout_gravity="top|center"
                 android:layout_marginBottom="16dp"
                 android:background="@drawable/button_background_transparent"
-                app:srcCompat="@drawable/home"
+                android:src="@drawable/home"
                 />
             <TextView
                 android:layout_width="wrap_content"
@@ -744,7 +744,7 @@
                 android:layout_gravity="top|center"
                 android:layout_marginBottom="16dp"
                 android:background="@drawable/button_background_transparent"
-                app:srcCompat="@drawable/home"
+                android:src="@drawable/home"
                 />
             <TextView
                 android:layout_width="wrap_content"
@@ -771,7 +771,7 @@
                 android:layout_gravity="top|center"
                 android:layout_marginBottom="16dp"
                 android:background="@drawable/button_background_transparent"
-                app:srcCompat="@drawable/share"
+                android:src="@drawable/share"
                 />
             <TextView
                 android:layout_width="wrap_content"
@@ -798,7 +798,7 @@
                 android:layout_gravity="top|center"
                 android:layout_marginBottom="16dp"
                 android:background="@drawable/button_background_transparent"
-                app:srcCompat="@drawable/account"
+                android:src="@drawable/account"
                 />
             <TextView
                 android:layout_width="wrap_content"
@@ -824,7 +824,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/sell_background"
-            app:srcCompat="@drawable/baseline_add_24"
+            android:src="@drawable/baseline_add_24"
             android:layout_gravity="top|center"/>
         <TextView
             android:layout_width="wrap_content"
