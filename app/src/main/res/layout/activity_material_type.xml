@@ -17,42 +17,34 @@
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="304dp"
+        android:layout_height="67dp"
         android:fontFamily="@font/montserrat_alternates_bold"
-        android:text="Let's Know you Better"
+        android:text="What type of waste material is it"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="25sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="76dp" />
+        tools:layout_editor_absoluteY="75dp" />
 
-    <FrameLayout
-        android:layout_width="221dp"
-        android:layout_height="129dp"
-        android:background="@drawable/items"
-        android:padding="16dp"
-        tools:layout_editor_absoluteX="60dp"
-        tools:layout_editor_absoluteY="174dp">
-
-        <TextView
-            android:id="@+id/textView6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/montserrat_alternates_bold"
-            android:text="Manufacturing and Industrial Waste"
-            android:textAlignment="center"
-            android:textColor="@color/black" />
-    </FrameLayout>
 
     <ImageView
-        android:id="@+id/imageView6"
+        android:id="@+id/imageView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:scaleType="centerCrop"
+        tools:layout_editor_absoluteX="36dp"
+        tools:layout_editor_absoluteY="181dp"
+        android:src="@drawable/industrial_waster"/>
+
+    <TextView
+        android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/back_arrow_black"
-        tools:layout_editor_absoluteY="379dp" />
+        android:text="Industrial Waster"
+        tools:layout_editor_absoluteX="30dp"
+        tools:layout_editor_absoluteY="262dp" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
