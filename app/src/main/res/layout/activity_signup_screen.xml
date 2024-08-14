@@ -9,7 +9,7 @@
 
 
     <ImageView
-        android:id="@+id/back"
+        android:id="@+id/Back"
         android:layout_width="36dp"
         android:layout_height="36dp"
         android:contentDescription="backarrow"
@@ -22,7 +22,7 @@
         app:layout_constraintVertical_bias="0.038" />
 
     <TextView
-        android:id="@+id/Description"
+        android:id="@+id/Support3Text"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:fontFamily="@font/montserrat_alternates_bold"
@@ -39,7 +39,7 @@
 
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/Support1Text"
         android:layout_width="115dp"
         android:layout_height="22dp"
         android:fontFamily="@font/montserrat_alternates_bold"
@@ -54,7 +54,7 @@
         app:layout_constraintVertical_bias="0.279" />
 
     <Button
-        android:id="@+id/Buyer"
+        android:id="@+id/BuyerButton"
         android:layout_width="100dp"
         android:layout_height="48dp"
         android:background="@drawable/i_am"
@@ -63,12 +63,12 @@
         android:text="Buyer"
         android:textColor="@color/text_grey"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/Name"
+        app:layout_constraintStart_toStartOf="@+id/NameField"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.372" />
 
     <Button
-        android:id="@+id/Agent"
+        android:id="@+id/AgentButton"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:background="@drawable/i_am"
@@ -83,7 +83,7 @@
         app:layout_constraintVertical_bias="0.372" />
 
     <Button
-        android:id="@+id/Seller"
+        android:id="@+id/SellerButton"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="4dp"
@@ -93,12 +93,12 @@
         android:text="Seller"
         android:textColor="@color/text_grey"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/Name"
+        app:layout_constraintEnd_toEndOf="@+id/NameField"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.372" />
 
     <EditText
-        android:id="@+id/Name"
+        android:id="@+id/NameField"
         android:layout_width="326dp"
         android:layout_height="50dp"
         android:background="@drawable/top_background"
@@ -109,13 +109,13 @@
         android:minHeight="48dp"
         android:textColor="@android:color/black"
         android:textColorHint="@color/text_grey"
-        app:layout_constraintBottom_toTopOf="@+id/Email"
-        app:layout_constraintEnd_toEndOf="@+id/Email"
+        app:layout_constraintBottom_toTopOf="@+id/EmailField"
+        app:layout_constraintEnd_toEndOf="@+id/EmailField"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.980" />
 
     <EditText
-        android:id="@+id/Email"
+        android:id="@+id/EmailField"
         android:layout_width="325dp"
         android:layout_height="48dp"
         android:background="@drawable/middle_background"
@@ -133,7 +133,7 @@
         app:layout_constraintVertical_bias="0.563" />
 
     <EditText
-        android:id="@+id/Password"
+        android:id="@+id/PasswordField"
         android:layout_width="325dp"
         android:layout_height="48dp"
         android:background="@drawable/bottom_background"
@@ -145,12 +145,12 @@
         android:textColor="@android:color/black"
         android:textColorHint="@color/text_grey"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/Email"
-        app:layout_constraintTop_toBottomOf="@+id/Email"
+        app:layout_constraintStart_toStartOf="@+id/EmailField"
+        app:layout_constraintTop_toBottomOf="@+id/EmailField"
         app:layout_constraintVertical_bias="0.025" />
 
     <Button
-        android:id="@+id/next"
+        android:id="@+id/NextButton"
         android:layout_width="325dp"
         android:layout_height="48dp"
         android:background="@drawable/submit_background"
@@ -165,7 +165,7 @@
         app:layout_constraintVertical_bias="0.756" />
 
     <TextView
-        android:id="@+id/terms_and_conditions"
+        android:id="@+id/Support2Text"
         android:layout_width="352dp"
         android:layout_height="15dp"
         android:layout_marginTop="12dp"
@@ -176,21 +176,21 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/next"
-        app:layout_constraintTop_toBottomOf="@+id/next"
+        app:layout_constraintStart_toStartOf="@+id/NextButton"
+        app:layout_constraintTop_toBottomOf="@+id/NextButton"
         app:layout_constraintVertical_bias="0.0" />
 
     <androidx.constraintlayout.widget.Group
         android:id="@+id/group"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:constraint_referenced_ids="Name,Email,Password" />
+        app:constraint_referenced_ids="NameField,EmailField,PasswordField" />
 
     <androidx.constraintlayout.widget.Barrier
         android:id="@+id/barrier"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:barrierDirection="top"
-        app:constraint_referenced_ids="Password" />
+        app:constraint_referenced_ids="PasswordField" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
