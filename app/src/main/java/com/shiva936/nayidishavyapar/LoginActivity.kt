@@ -26,19 +26,21 @@ class LoginActivity : ComponentActivity() {
         setContentView(view)
 
         // Set up the click listener
-        loginBinding.registerWithUs.setOnClickListener {
+        loginBinding.RegisterWithUs.setOnClickListener {
             // Create an Intent to start the SignupActivity
             val intent = Intent(this, SignUpActivity::class.java)
             startActivity(intent)
         }
 
         loginBinding.Next.setOnClickListener{
-            val email = loginBinding.Email.text.toString()
-            val password = loginBinding.Password.text.toString()
-            if (email !="" && password !="" ){
+            val email = loginBinding.EmailField.text.toString()
+            val password = loginBinding.PasswordField.text.toString()
+            if (email.isNotEmpty() && password.isNotEmpty() ){
                 auth.signInWithEmailAndPassword(email,password).addOnCompleteListener{ task->
                     if (task.isSuccessful){
-                        Toast.makeText(applicationContext, auth.currentUser?.uid  ,Toast.LENGTH_SHORT).show()
+                        var intent = Intent(this@LoginActivity, MainMenuActivity::class.java)
+                        startActivity(intent)
+                        finish()
                     }
                     else{
                         Toast.makeText(applicationContext, "Something went wrong!!"  ,Toast.LENGTH_SHORT).show()
