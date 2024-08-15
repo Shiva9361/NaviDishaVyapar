@@ -331,14 +331,144 @@
             <Spinner
                 android:id="@+id/spinner_min_budget"
                 android:layout_weight="1"
-                android:layout_height="wrap_content"
-                android:entries="@array/budget"/>
+                android:layout_height="40dp"
+                android:entries="@array/min_budget"
+                android:layout_marginHorizontal="20dp"/>
+
             <Spinner
-                android:id="@+id/spinner_max_budger"
+                android:id="@+id/spinner_max_budget"
                 android:layout_weight="1"
-                android:layout_height="wrap_content"
-                android:entries="@array/budget"/>
+                android:layout_height="40dp"
+                android:entries="@array/max_budget"
+                android:layout_marginHorizontal="20dp"/>
 
         </LinearLayout>
     </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteY="490dp"
+        android:paddingLeft="10dp">
+
+        <TextView
+            android:id="@+id/quantity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_alternates_bold"
+            android:text="Quantity"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:layout_marginBottom="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="240dp" />
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none"
+            android:paddingLeft="10dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <!--items-->
+                <FrameLayout
+                    android:layout_width="80dp"
+                    android:layout_height="50dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/baby_pink_background_less_rounded">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1 Ton"
+                        android:fontFamily="@font/opensans_semicondensed_extrabold"
+                        android:layout_gravity="center"/>
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="80dp"
+                    android:layout_height="50dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/grey_rounded_border_background">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2 Ton"
+                        android:fontFamily="@font/opensans_semicondensed_extrabold"
+                        android:layout_gravity="center"/>
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="80dp"
+                    android:layout_height="50dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/grey_rounded_border_background">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="3 Ton"
+                        android:fontFamily="@font/opensans_semicondensed_extrabold"
+                        android:layout_gravity="center"/>
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="80dp"
+                    android:layout_height="50dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/grey_rounded_border_background">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="4 Ton"
+                        android:fontFamily="@font/opensans_semicondensed_extrabold"
+                        android:layout_gravity="center"/>
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="80dp"
+                    android:layout_height="50dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/grey_rounded_border_background">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=">4 Ton"
+                        android:fontFamily="@font/opensans_semicondensed_extrabold"
+                        android:layout_gravity="center"/>
+
+                </FrameLayout>
+
+
+            </LinearLayout>
+        </HorizontalScrollView>
+
+
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/Next"
+        android:layout_width="325dp"
+        android:layout_height="48dp"
+        android:background="@drawable/submit_background"
+        android:ems="15"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="SEARCH"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="651dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
