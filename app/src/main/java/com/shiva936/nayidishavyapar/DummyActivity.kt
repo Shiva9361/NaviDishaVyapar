@@ -6,6 +6,6 @@ import androidx.activity.ComponentActivity
 class DummyActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_detailed_item_result)
+        setContentView(R.layout.activity_main_menu)
     }
 }
