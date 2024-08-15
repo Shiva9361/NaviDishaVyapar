@@ -29,22 +29,296 @@
         tools:layout_editor_absoluteY="75dp" />
 
 
-    <ImageView
-        android:id="@+id/imageView"
+    <FrameLayout
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:scaleType="centerCrop"
-        tools:layout_editor_absoluteX="36dp"
-        tools:layout_editor_absoluteY="181dp"
-        android:src="@drawable/industrial_waster"/>
+        tools:layout_editor_absoluteX="20dp"
+        tools:layout_editor_absoluteY="180dp">
 
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Industrial Waster"
-        tools:layout_editor_absoluteX="30dp"
-        tools:layout_editor_absoluteY="262dp" />
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:scaleType="centerCrop"
+            android:background="@drawable/grey_rounded_border_background"
+            android:src="@drawable/industrial_waster" />
 
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Industrial Waster"
+            android:layout_gravity="bottom|center"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:background="@color/cardview_shadow_start_color">
+    </FrameLayout>
+    <FrameLayout
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        tools:layout_editor_absoluteX="160dp"
+        tools:layout_editor_absoluteY="180dp">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/grey_rounded_border_background"
+            android:scaleType="centerCrop"
+            android:src="@drawable/industrial_waster" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center"
+            android:background="@color/cardview_shadow_start_color"
+            android:text="Industrial Waster"
+            android:textAlignment="center"
+            android:textColor="@color/white">
+    </FrameLayout>
+    <FrameLayout
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        tools:layout_editor_absoluteX="289dp"
+        tools:layout_editor_absoluteY="180dp">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:scaleType="centerCrop"
+            android:background="@drawable/grey_rounded_border_background"
+            android:src="@drawable/industrial_waster" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Industrial Waster"
+            android:layout_gravity="bottom|center"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:background="@color/cardview_shadow_start_color">
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        tools:layout_editor_absoluteX="20dp"
+        tools:layout_editor_absoluteY="330dp">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:scaleType="centerCrop"
+            android:background="@drawable/grey_rounded_border_background"
+            android:src="@drawable/industrial_waster" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Industrial Waster"
+            android:layout_gravity="bottom|center"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:background="@color/cardview_shadow_start_color">
+    </FrameLayout>
+    <FrameLayout
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        tools:layout_editor_absoluteX="160dp"
+        tools:layout_editor_absoluteY="330dp">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:scaleType="centerCrop"
+            android:background="@drawable/grey_rounded_border_background"
+            android:src="@drawable/industrial_waster" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Industrial Waster"
+            android:layout_gravity="bottom|center"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:background="@color/cardview_shadow_start_color">
+    </FrameLayout>
+    <FrameLayout
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        tools:layout_editor_absoluteX="289dp"
+        tools:layout_editor_absoluteY="330dp">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:scaleType="centerCrop"
+            android:background="@drawable/grey_rounded_border_background"
+            android:src="@drawable/industrial_waster" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Industrial Waster"
+            android:layout_gravity="bottom|center"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:background="@color/cardview_shadow_start_color">
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        tools:layout_editor_absoluteX="20dp"
+        tools:layout_editor_absoluteY="470dp">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:scaleType="centerCrop"
+            android:background="@drawable/grey_rounded_border_background"
+            android:src="@drawable/industrial_waster" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Industrial Waster"
+            android:layout_gravity="bottom|center"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:background="@color/cardview_shadow_start_color">
+    </FrameLayout>
+    <FrameLayout
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        tools:layout_editor_absoluteX="160dp"
+        tools:layout_editor_absoluteY="470dp">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:scaleType="centerCrop"
+            android:background="@drawable/grey_rounded_border_background"
+            android:src="@drawable/industrial_waster" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Industrial Waster"
+            android:layout_gravity="bottom|center"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:background="@color/cardview_shadow_start_color">
+    </FrameLayout>
+    <FrameLayout
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        tools:layout_editor_absoluteX="289dp"
+        tools:layout_editor_absoluteY="470dp">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:scaleType="centerCrop"
+            android:background="@drawable/grey_rounded_border_background"
+            android:src="@drawable/industrial_waster" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Industrial Waster"
+            android:layout_gravity="bottom|center"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:background="@color/cardview_shadow_start_color">
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        tools:layout_editor_absoluteX="20dp"
+        tools:layout_editor_absoluteY="610dp">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:scaleType="centerCrop"
+            android:background="@drawable/grey_rounded_border_background"
+            android:src="@drawable/industrial_waster" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Industrial Waster"
+            android:layout_gravity="bottom|center"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:background="@color/cardview_shadow_start_color">
+    </FrameLayout>
+    <FrameLayout
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        tools:layout_editor_absoluteX="160dp"
+        tools:layout_editor_absoluteY="610dp">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:scaleType="centerCrop"
+            android:background="@drawable/grey_rounded_border_background"
+            android:src="@drawable/industrial_waster" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Industrial Waster"
+            android:layout_gravity="bottom|center"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:background="@color/cardview_shadow_start_color">
+    </FrameLayout>
+    <FrameLayout
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        tools:layout_editor_absoluteX="289dp"
+        tools:layout_editor_absoluteY="610dp">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:scaleType="centerCrop"
+            android:background="@drawable/grey_rounded_border_background"
+            android:src="@drawable/industrial_waster" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Industrial Waster"
+            android:layout_gravity="bottom|center"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:background="@color/cardview_shadow_start_color">
+    </FrameLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
