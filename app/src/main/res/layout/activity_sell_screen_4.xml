@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/main_menu_top_bar"
+        android:paddingBottom="10dp">
+
+        <ImageView
+            android:id="@+id/back_arrow"
+            android:layout_width="32dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="16dp"
+            android:src="@drawable/back_arrow_white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/new_sell_item" />
+
+        <TextView
+            android:id="@+id/ndy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/white_background_rounded"
+            android:fontFamily="@font/montserrat_alternates_extrabold"
+            android:gravity="center"
+            android:paddingHorizontal="10dp"
+            android:paddingBottom="5dp"
+            android:text="ndy"
+            android:textColor="@color/red_orange"
+            android:textSize="22sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.876"
+            app:layout_constraintStart_toEndOf="@+id/new_sell_item"
+            app:layout_constraintTop_toTopOf="@+id/new_sell_item" />
+
+        <TextView
+            android:id="@+id/new_sell_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="30dp"
+            android:fontFamily="@font/montserrat_semibold"
+            android:text="New Sell Item"
+            android:textColor="@color/white"
+            android:textSize="23sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/ndy"
+            app:layout_constraintStart_toEndOf="@+id/back_arrow"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.666" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/top_bar">
+
+        <!-- Content inside the ScrollView -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/pricing_and_terms"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_alternates_extrabold"
+                android:paddingHorizontal="10dp"
+                android:layout_marginBottom="20dp"
+                android:text="4. Pricing &amp; Terms"
+                android:textColor="@color/red_orange"
+                android:textSize="22sp"/>
+
+            <!--Price-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="20dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/price"
+                    android:layout_width="150dp"
+                    android:layout_height="22dp"
+                    android:fontFamily="@font/montserrat_alternates_bold"
+                    android:text="Price"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/editTextText"
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/input_background"
+                        android:inputType="text"
+                        android:layout_weight="1"
+                        android:layout_marginBottom="20dp"
+                        android:text="₹ "
+                        android:hint="Type the Address"/>
+                    <Spinner
+                        android:id="@+id/measurement"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_marginHorizontal="20dp"
+                        android:entries="@array/measurement"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!--Line-->
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@drawable/rectangle_gradient_s_deep_blue_black_700"
+                android:layout_marginBottom="10dp"
+                />
+
+            <!--Negotiable-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="20dp"
+                android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/negotiable"
+                android:layout_width="wrap_content"
+                android:layout_height="22dp"
+                android:fontFamily="@font/montserrat_alternates_bold"
+                android:text="Negotiable ? "
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="20dp"
+                    android:orientation="vertical">
+
+                    <CheckBox
+                        android:id="@+id/yes_negotiable"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:checked="false"
+                        android:fontFamily="@font/montserratalternates_medium"
+                        android:text="Yes Negotiable" />
+                    <CheckBox
+                        android:id="@+id/not_negotaible"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:checked="false"
+                        android:fontFamily="@font/montserratalternates_medium"
+                        android:text="Not Negotiable" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!--Line-->
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@drawable/rectangle_gradient_s_deep_blue_black_700"
+                android:layout_marginBottom="10dp"
+                />
+
+            <!--Payment-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="20dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/payment"
+                    android:layout_width="150dp"
+                    android:layout_height="22dp"
+                    android:fontFamily="@font/montserrat_alternates_bold"
+                    android:text="Payment"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <Spinner
+                        android:id="@+id/payment_options"
+                        android:layout_height="40dp"
+                        android:layout_weight="2"
+                        android:layout_width="match_parent"
+                        android:layout_marginHorizontal="20dp"
+                        android:entries="@array/payment_options"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!--Line-->
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@drawable/rectangle_gradient_s_deep_blue_black_700"
+                android:layout_marginBottom="10dp"
+                />
+
+            <!--Min Order-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="20dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/min_order"
+                    android:layout_width="150dp"
+                    android:layout_height="22dp"
+                    android:fontFamily="@font/montserrat_alternates_bold"
+                    android:text="Minimum Order"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/txt_min_order"
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/input_background"
+                        android:inputType="text"
+                        android:layout_weight="1"
+                        android:layout_marginBottom="20dp"
+                        android:hint="Min Order.."/>
+                    <Spinner
+                        android:id="@+id/min_measurement"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_marginHorizontal="20dp"
+                        android:entries="@array/measurement"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/next"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/submit_background"
+                android:ems="15"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="NEXT"
+                android:layout_marginBottom="50dp"
+                android:textColor="@color/white"/>
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

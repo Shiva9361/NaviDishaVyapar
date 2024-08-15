@@ -18,14 +18,55 @@
     <string name="sell_and_rent_containD">you are posting this property for \n <s>Rs 500</s> </string>
     <string-array name="min_budget">
         <item>Min Budget</item>
-        <item>Item 2</item>
-        <item>Item 3</item>
+        <item>Min Item 2</item>
+        <item>Min Item 3</item>
     </string-array>
     <string-array name="max_budget">
         <item>Max Budget</item>
-        <item>Item 2</item>
-        <item>Item 3</item>
+        <item>Max Item 2</item>
+        <item>Max Item 3</item>
     </string-array>
+    <string-array name="material_condition">
+        <item>New</item>
+        <item>Used</item>
+        <item>Recycled</item>
+        <item>Scraped</item>
+    </string-array>
+    <string-array name="pick_up_or_delivery">
+        <item>Pick Up</item>
+        <item>Delivery</item>
+        <item>Recycled</item>
+        <item>Scraped</item>
+    </string-array>
+    <string-array name="date_placeholder_array">
+        <item>Select Date</item>
+    </string-array>
+    <string-array name="measurement">
+        <item>Per Kilogram</item>
+        <item>Per Metric Ton</item>
+        <item>Per Pound</item>
+        <item>Per Unit</item>
+        <item>Per Liter</item>
+        <item>Per Gallon</item>
+        <item>Per Cubic Meter</item>
+        <item>Per Square Meter</item>
+        <item>Per Cubic Yard</item>
+    </string-array>
+    <string-array name="payment_options">
+        <item>Cash</item>
+        <item>Credit Card</item>
+        <item>Bank Transfer</item>
+        <item>PayPal</item>
+        <item>Check</item>
+        <item>Mobile Payment</item>
+        <item>Cryptocurrency</item>
+        <item>Direct Debit</item>
+        <item>Wire Transfer</item>
+        <item>Installments</item>
+
+    </string-array>
+
+    <string-array name="units" />
     <string name="enter_the_name_of_the_product">Enter the name of the product</string>
     <string name="enter_a_detailed_description_of_the_product">Enter a detailed description of the product</string>
     <string name="submit">Submit</string>
