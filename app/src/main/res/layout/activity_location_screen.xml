@@ -63,14 +63,14 @@
         tools:layout_editor_absoluteX="59dp"
         tools:layout_editor_absoluteY="98dp" />
 
+
     <TextView
         android:id="@+id/textView12"
         android:layout_width="129dp"
         android:layout_height="24dp"
         android:text="POPULAR CITIES"
         tools:layout_editor_absoluteX="27dp"
-        tools:layout_editor_absoluteY="153dp" />
-
+        tools:layout_editor_absoluteY="151dp" />
 
     <TextView
         android:id="@+id/textView13"
@@ -78,7 +78,7 @@
         android:layout_height="23dp"
         android:text="Hyderabad"
         android:textColor="@color/black"
-        tools:layout_editor_absoluteX="27dp"
+        tools:layout_editor_absoluteX="30dp"
         tools:layout_editor_absoluteY="209dp" />
 
     <TextView
