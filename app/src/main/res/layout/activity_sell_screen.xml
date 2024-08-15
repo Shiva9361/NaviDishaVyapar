@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <!-- Title TextView -->
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="Product Information"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp"/>
+
+    <!-- Product Name EditText -->
+    <EditText
+        android:id="@+id/product_name"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:background="@drawable/input_background"
+        android:hint="Enter the name of the product"
+        android:inputType="text"
+        android:textColor="@android:color/black"
+        android:textColorHint="@color/text_grey"
+        app:layout_constraintTop_toBottomOf="@+id/title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Product Type Spinner -->
+    <Spinner
+        android:id="@+id/product_type"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:background="@drawable/spinner_background"
+        android:entries="@array/product_types"
+        app:layout_constraintTop_toBottomOf="@+id/product_name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"/>
+
+    <!-- Quantity EditText -->
+    <EditText
+        android:id="@+id/product_quantity"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:background="@drawable/input_background"
+        android:hint="Enter quantity"
+        android:inputType="number"
+        android:textColor="@android:color/black"
+        android:textColorHint="@color/text_grey"
+        app:layout_constraintTop_toBottomOf="@+id/product_type"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"/>
+
+    <!-- Quantity Unit Spinner -->
+    <Spinner
+        android:id="@+id/quantity_unit"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:background="@drawable/spinner_background"
+        app:layout_constraintTop_toBottomOf="@+id/product_quantity"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"/>
+
+    <!-- Minimum Order Quantity EditText -->
+    <EditText
+        android:id="@+id/min_order_quantity"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:background="@drawable/input_background"
+        android:hint="Enter minimum order quantity"
+        android:inputType="number"
+        android:textColor="@android:color/black"
+        android:textColorHint="@color/text_grey"
+        app:layout_constraintTop_toBottomOf="@+id/quantity_unit"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"/>
+
+    <!-- Minimum Order Unit Spinner -->
+    <Spinner
+        android:id="@+id/min_order_unit"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:background="@drawable/spinner_background"
+        app:layout_constraintTop_toBottomOf="@+id/min_order_quantity"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"/>
+
+    <!-- Cost Per Unit EditText -->
+    <EditText
+        android:id="@+id/cost_per_unit"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:background="@drawable/input_background"
+        android:hint="Enter cost per unit"
+        android:inputType="numberDecimal"
+        android:textColor="@android:color/black"
+        android:textColorHint="@color/text_grey"
+        app:layout_constraintTop_toBottomOf="@+id/min_order_unit"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"/>
+
+    <!-- Location EditText -->
+    <EditText
+        android:id="@+id/location"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:background="@drawable/input_background"
+        android:hint="Enter location"
+        android:inputType="text"
+        android:textColor="@android:color/black"
+        android:textColorHint="@color/text_grey"
+        app:layout_constraintTop_toBottomOf="@+id/cost_per_unit"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"/>
+
+    <!-- Upload Photo Button -->
+    <Button
+        android:id="@+id/upload_photo"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:background="@drawable/button_background"
+        android:text="Upload Product Photo"
+        android:textColor="@color/white"
+        android:fontFamily="@font/montserrat_bold"
+        app:layout_constraintTop_toBottomOf="@+id/location"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Product Description EditText -->
+    <EditText
+        android:id="@+id/product_description"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:background="@drawable/input_background"
+        android:hint="Enter a detailed description of the product"
+        android:inputType="textMultiLine"
+        android:textColor="@android:color/black"
+        android:textColorHint="@color/text_grey"
+        android:minLines="5"
+        app:layout_constraintTop_toBottomOf="@+id/upload_photo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Submit Button -->
+    <Button
+        android:id="@+id/submit_button"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:background="@drawable/submit_background"
+        android:text="Submit"
+        android:textColor="@color/white"
+        android:fontFamily="@font/montserrat_bold"
+        app:layout_constraintTop_toBottomOf="@+id/product_description"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="product_name" type="id" />
+    <item name="product_type" type="id" />
+    <item name="product_quantity" type="id" />
+    <item name="quantity_unit" type="id" />
+    <item name="min_order_quantity" type="id" />
+    <item name="min_order_unit" type="id" />
+    <item name="cost_per_unit" type="id" />
+    <item name="location" type="id" />
+    <item name="upload_photo" type="id" />
+    <item name="product_description" type="id" />
+    <item name="submit_button" type="id" />
+</resources>
