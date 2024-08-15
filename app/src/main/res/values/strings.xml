@@ -65,7 +65,30 @@
         <item>Installments</item>
 
     </string-array>
-
+    <string-array name="indian_cities">
+    <item>Mumbai</item>
+    <item>Delhi</item>
+    <item>Bengaluru</item>
+    <item>Kolkata</item>
+    <item>Chennai</item>
+    <item>Hyderabad</item>
+    <item>Pune</item>
+    <item>Ahmedabad</item>
+    <item>Jaipur</item>
+    <item>Surat</item>
+    <item>Lucknow</item>
+    <item>Kanpur</item>
+    <item>Nagpur</item>
+    <item>Indore</item>
+    <item>Thane</item>
+    <item>Bhopal</item>
+    <item>Visakhapatnam</item>
+    <item>Patna</item>
+    <item>Vadodara</item>
+    <item>Ghaziabad</item>
+    <item>Ludhiana</item>
+    <item>Agra</item>
+    </string-array>
     <string-array name="units" />
     <string name="enter_the_name_of_the_product">Enter the name of the product</string>
     <string name="enter_a_detailed_description_of_the_product">Enter a detailed description of the product</string>
