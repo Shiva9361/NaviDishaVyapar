@@ -16,4 +16,9 @@
     <string name="sell_and_rent_contentB">Access to <font color="#FF0000">15 Lac Buyer</font> &amp; tenants</string>
     <string name="sell_and_rent_contentC">Applicable only for Property Owner &amp; not Agents.An Owner can have just 1 Free Active Property on the site at a time."</string>
     <string name="sell_and_rent_containD">you are posting this property for \n <s>Rs 500</s> </string>
+    <string-array name="budget">
+        <item>Item 1</item>
+        <item>Item 2</item>
+        <item>Item 3</item>
+    </string-array>
 </resources>

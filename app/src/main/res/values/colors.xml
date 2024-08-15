@@ -19,8 +19,11 @@
     <color name="pale_cyan">#E0F7FA</color>
     <color name="pale_lavendar">#EDE7F6</color>
     <color name="apple_green">#4CAF50</color>
+    <color name="light_green">#E4F6E2</color>
+    <color name="dark_green">#45a822</color>
     <color name="amber">#FF9800</color>
     <color name="gold">#FFDA92</color>
     <color name="light_gold">#5EFFFA76</color>
     <color name="light_grey">#f0f0f0</color>
+    <color name="baby_pink">#F9E3E3</color>
 </resources>
