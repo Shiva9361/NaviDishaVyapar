@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="23dp"
+        android:layout_height="20dp"
+        app:srcCompat="@drawable/back_arrow_black"
+        tools:layout_editor_absoluteX="11dp"
+        tools:layout_editor_absoluteY="13dp" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="183dp"
+        android:layout_height="28dp"
+        android:text="Location"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="54dp"
+        tools:layout_editor_absoluteY="13dp" />
+
+
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/baseline_search_24"
+        tools:layout_editor_absoluteX="11dp"
+        tools:layout_editor_absoluteY="52dp" />
+
+    <EditText
+        android:id="@+id/editTextText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Search for your city"
+        android:textColor="@color/grey"
+        tools:layout_editor_absoluteX="47dp"
+        tools:layout_editor_absoluteY="41dp" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/group2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="imageView11,textView11" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/group4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="158dp"
+        android:layout_height="23dp"
+        android:text="Auto Detect My Location"
+        android:textColor="@color/red_orange"
+        tools:layout_editor_absoluteX="59dp"
+        tools:layout_editor_absoluteY="98dp" />
+
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="129dp"
+        android:layout_height="24dp"
+        android:text="POPULAR CITIES"
+        tools:layout_editor_absoluteX="27dp"
+        tools:layout_editor_absoluteY="151dp" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="87dp"
+        android:layout_height="23dp"
+        android:text="Hyderabad"
+        android:textColor="@color/black"
+        tools:layout_editor_absoluteX="30dp"
+        tools:layout_editor_absoluteY="209dp" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="87dp"
+        android:layout_height="23dp"
+        android:text="Chennai"
+        android:textColor="@color/black"
+        tools:layout_editor_absoluteX="246dp"
+        tools:layout_editor_absoluteY="247dp" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="87dp"
+        android:layout_height="23dp"
+        android:text="Bangalore"
+        android:textColor="@color/black"
+        tools:layout_editor_absoluteX="136dp"
+        tools:layout_editor_absoluteY="247dp" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="87dp"
+        android:layout_height="23dp"
+        android:text="Mumbai"
+        android:textColor="@color/black"
+        tools:layout_editor_absoluteX="30dp"
+        tools:layout_editor_absoluteY="247dp" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="87dp"
+        android:layout_height="23dp"
+        android:text="Delhi"
+        android:textColor="@color/black"
+        tools:layout_editor_absoluteX="246dp"
+        tools:layout_editor_absoluteY="209dp" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="87dp"
+        android:layout_height="23dp"
+        android:text="Pune"
+        android:textColor="@color/black"
+        tools:layout_editor_absoluteX="136dp"
+        tools:layout_editor_absoluteY="209dp" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="87dp"
+        android:layout_height="23dp"
+        android:text="Kolkata"
+        android:textColor="@color/black"
+        tools:layout_editor_absoluteX="30dp"
+        tools:layout_editor_absoluteY="285dp" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="87dp"
+        android:layout_height="23dp"
+        android:text="Kochi"
+        android:textColor="@color/black"
+        tools:layout_editor_absoluteX="136dp"
+        tools:layout_editor_absoluteY="285dp" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="87dp"
+        android:layout_height="23dp"
+        android:text="Chandigarh"
+        android:textColor="@color/black"
+        tools:layout_editor_absoluteX="246dp"
+        tools:layout_editor_absoluteY="285dp" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="120dp"
+        android:layout_height="27dp"
+        android:text="OTHER CITIES"
+        tools:layout_editor_absoluteX="27dp"
+        tools:layout_editor_absoluteY="348dp" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="87dp"
+        android:layout_height="23dp"
+        android:text="Adilabad"
+        android:textColor="@color/black"
+        tools:layout_editor_absoluteX="27dp"
+        tools:layout_editor_absoluteY="398dp" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="87dp"
+        android:layout_height="23dp"
+        android:text="Agra"
+        android:textColor="@color/black"
+        tools:layout_editor_absoluteX="27dp"
+        tools:layout_editor_absoluteY="523dp" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="87dp"
+        android:layout_height="23dp"
+        android:text="Ajmer"
+        android:textColor="@color/black"
+        tools:layout_editor_absoluteX="27dp"
+        tools:layout_editor_absoluteY="478dp" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="87dp"
+        android:layout_height="23dp"
+        android:text="Allahabad"
+        android:textColor="@color/black"
+        tools:layout_editor_absoluteX="27dp"
+        tools:layout_editor_absoluteY="434dp" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="87dp"
+        android:layout_height="23dp"
+        android:text="Amravati"
+        android:textColor="@color/black"
+        tools:layout_editor_absoluteX="30dp"
+        tools:layout_editor_absoluteY="652dp" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="87dp"
+        android:layout_height="23dp"
+        android:text="Aurangabad"
+        android:textColor="@color/black"
+        tools:layout_editor_absoluteX="27dp"
+        tools:layout_editor_absoluteY="606dp" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="87dp"
+        android:layout_height="23dp"
+        android:text=" Anantapur"
+        android:textColor="@color/black"
+        tools:layout_editor_absoluteX="27dp"
+        tools:layout_editor_absoluteY="565dp" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="87dp"
+        android:layout_height="23dp"
+        android:text="Chandigarh"
+        android:textColor="@color/black"
+        tools:layout_editor_absoluteX="27dp"
+        tools:layout_editor_absoluteY="694dp" />
+
+    <ImageView
+        android:id="@+id/imageView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/baseline_location_searching_24"
+        tools:layout_editor_absoluteX="35dp"
+        tools:layout_editor_absoluteY="98dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
