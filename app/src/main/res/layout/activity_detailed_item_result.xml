@@ -1,0 +1,531 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_frame"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Content inside the ScrollView -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/manufacturing" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20dp"
+                android:layout_marginBottom="20dp"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat_alternates_bold"
+                    android:text="₹ 200 per Kilogram"
+                    android:textColor="@android:color/black"
+                    android:textSize="20sp" />
+                <TextView
+                    android:id="@+id/recency"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserratalternates_medium"
+                    android:text="Uploaded 1 week before"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@color/darkgrey"
+                    android:textSize="15sp" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="horizontal">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+                        <TextView
+                            android:id="@+id/product_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat_alternates_bold"
+                            android:text="Scrap Metal"
+                            android:textColor="@android:color/black"
+                            android:textSize="20sp" />
+                        <TextView
+                            android:id="@+id/product_industry"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserratalternates_medium"
+                            android:text="Manufacturing Industries"
+                            android:textColor="@color/darkgrey"
+                            android:textSize="15sp" />
+                        <TextView
+                            android:id="@+id/location"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserratalternates_medium"
+                            android:text="Hyderabad"
+                            android:layout_marginBottom="10dp"
+                            android:textColor="@color/darkgrey"
+                            android:textSize="15sp" />
+                    </LinearLayout>
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="110dp"
+                        android:layout_weight="3">
+                        <ImageButton
+                            android:layout_width="75dp"
+                            android:layout_height="70dp"
+                            android:layout_gravity="top|center"
+                            android:background="@drawable/grey_rounded_border_background"
+                            android:src="@drawable/file_download"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="bottom|center"
+                            android:text="Download Brochure"/>
+                    </FrameLayout>
+                </LinearLayout>
+                <!--Line-->
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/rectangle_gradient_s_deep_blue_black_700"
+                    android:layout_marginBottom="10dp"
+                    />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="horizontal">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+                        <TextView
+                            android:id="@+id/owner"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserratalternates_medium"
+                            android:text="Owner"
+                            android:textColor="@color/darkgrey"
+                            android:textSize="15sp" />
+                        <TextView
+                            android:id="@+id/owner_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat_alternates_bold"
+                            android:text="ABCD Industries"
+                            android:textColor="@android:color/black"
+                            android:textSize="20sp" />
+                        <TextView
+                            android:id="@+id/owner_location"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserratalternates_medium"
+                            android:text="Hyderabad"
+                            android:layout_marginBottom="10dp"
+                            android:textColor="@color/darkgrey"
+                            android:textSize="15sp" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:gravity="center"
+                        android:fontFamily="@font/montserratalternates_medium"
+                        android:textColor="@color/darkgrey"
+                        android:text="98XXXXXXX"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/connect_now"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_weight="1"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/white_background_rounded"
+                        android:ems="15"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:text="Connect Now"
+                        android:layout_marginBottom="50dp"
+                        android:textColor="@color/red_orange"/>
+
+                    <Button
+                        android:id="@+id/next"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/submit_background"
+                        android:ems="15"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:text="Get Phone No."
+                        android:layout_marginBottom="50dp"
+                        android:textColor="@color/white"/>
+                </LinearLayout>
+
+                <!--Line-->
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/rectangle_gradient_s_deep_blue_black_700"
+                    android:layout_marginBottom="10dp"
+                    />
+                <TextView
+                    android:id="@+id/product_description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat_alternates_bold"
+                    android:text="Product Description"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@android:color/black"
+                    android:textSize="17sp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/input_background"
+                    android:layout_marginBottom="20dp"
+                    android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."/>
+                <!--Line-->
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/rectangle_gradient_s_deep_blue_black_700"
+                    android:layout_marginBottom="10dp"
+                    />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/min_quantity"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_weight="0.9"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:text="Minimum Quantity : "
+                        android:textSize="17sp"
+                        android:textColor="@color/red_orange"/>
+
+                    <Button
+                        android:id="@+id/min_quantity_ans"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/submit_background"
+                        android:ems="15"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:text="2 Tons"
+                        android:textColor="@color/white"/>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/nature_q"
+                        android:layout_width="wrap_content"
+                        android:layout_height="22dp"
+                        android:fontFamily="@font/montserrat_alternates_bold"
+                        android:text="Material Nature : "
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp" />
+                    <TextView
+                        android:id="@+id/nature_ans"
+                        android:layout_width="wrap_content"
+                        android:layout_height="22dp"
+                        android:fontFamily="@font/montserratalternates_medium"
+                        android:text="Hazardous, Corrosive"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/location_q"
+                        android:layout_width="wrap_content"
+                        android:layout_height="22dp"
+                        android:fontFamily="@font/montserrat_alternates_bold"
+                        android:text="Material Location : "
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp" />
+                    <TextView
+                        android:id="@+id/location_ans"
+                        android:layout_width="wrap_content"
+                        android:layout_height="22dp"
+                        android:fontFamily="@font/montserratalternates_medium"
+                        android:text="Hyderabad"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/transportation_q"
+                        android:layout_width="wrap_content"
+                        android:layout_height="22dp"
+                        android:fontFamily="@font/montserrat_alternates_bold"
+                        android:text="Material Transportation : "
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp" />
+                    <TextView
+                        android:id="@+id/transportation_ans"
+                        android:layout_width="wrap_content"
+                        android:layout_height="22dp"
+                        android:fontFamily="@font/montserratalternates_medium"
+                        android:text="Pick Up"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/availability_date_q"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat_alternates_bold"
+                        android:text="Material Available Date : "
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp" />
+                    <TextView
+                        android:id="@+id/availability_date_ans"
+                        android:layout_width="wrap_content"
+                        android:layout_height="22dp"
+                        android:fontFamily="@font/montserratalternates_medium"
+                        android:text="Instant"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/price_q"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat_alternates_bold"
+                        android:text="Price : "
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp" />
+                    <TextView
+                        android:id="@+id/price_ans"
+                        android:layout_width="wrap_content"
+                        android:layout_height="22dp"
+                        android:fontFamily="@font/montserratalternates_medium"
+                        android:text="₹ 200 per kilogram"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/negotiable_q"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat_alternates_bold"
+                        android:text="Negotiable : "
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp" />
+                    <TextView
+                        android:id="@+id/negotiable_ans"
+                        android:layout_width="wrap_content"
+                        android:layout_height="22dp"
+                        android:fontFamily="@font/montserratalternates_medium"
+                        android:text="Yes Negotiable"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/payment_method_q"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat_alternates_bold"
+                        android:text="Payment Method : "
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp" />
+                    <TextView
+                        android:id="@+id/payment_method_ans"
+                        android:layout_width="wrap_content"
+                        android:layout_height="22dp"
+                        android:fontFamily="@font/montserratalternates_medium"
+                        android:text="Cryptocurrency"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/min_order_q"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat_alternates_bold"
+                        android:text="Minimum Order : "
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp" />
+                    <TextView
+                        android:id="@+id/min_order_ans"
+                        android:layout_width="wrap_content"
+                        android:layout_height="22dp"
+                        android:fontFamily="@font/montserratalternates_medium"
+                        android:text=" 200 Kg"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat_alternates_bold"
+                    android:layout_marginBottom="10dp"
+                    android:text="Uploaded Images : "
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp" />
+                <GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:columnCount="4"
+                    tools:layout_editor_absoluteY="190dp">
+
+                    <ImageButton
+                        android:id="@+id/img_1"
+                        android:layout_width="75dp"
+                        android:layout_height="75dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginBottom="10dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/manufacturing" />
+
+                    <ImageButton
+                        android:id="@+id/img_2"
+                        android:layout_width="75dp"
+                        android:layout_height="75dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginBottom="10dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/manufacturing" />
+                    <ImageButton
+                        android:id="@+id/img_3"
+                        android:layout_width="75dp"
+                        android:layout_height="75dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginBottom="10dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/manufacturing" />
+                    <ImageButton
+                        android:id="@+id/img_4"
+                        android:layout_width="75dp"
+                        android:layout_height="75dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginBottom="10dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/manufacturing" />
+                </GridLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="20dp"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/enquire_now"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.9"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/baby_pink_background_rounded"
+                        android:text="Enquire Now"
+                        android:textSize="17sp"
+                        android:textColor="@color/red_orange"/>
+
+                    <Button
+                        android:id="@+id/call_owner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/submit_background"
+                        android:ems="15"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:text="Call Owner"
+                        android:textColor="@color/white"/>
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <ImageButton
+        android:id="@+id/edit_search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="16dp"
+        android:background="@drawable/circle_white_background"
+        android:padding="10dp"
+        android:src="@drawable/back_arrow_red"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
