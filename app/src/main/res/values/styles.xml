@@ -18,4 +18,13 @@
         <!-- Using fontWeight for API 28+ or consider textStyle for lower APIs -->
         <item name="android:textFontWeight" tools:targetApi="p">900</item>
     </style>
+    <style name="SpinnerStyle" parent="Widget.AppCompat.Spinner">
+        <item name="android:background">@drawable/spinner_border</item>
+        <item name="android:dropDownBackground">@android:color/white</item> <!-- Dropdown background -->
+        <item name="android:spinnerDropDownItemStyle">@style/SpinnerDropDownItem</item>
+    </style>
+
+    <style name="SpinnerDropDownItem">
+        <item name="android:background">?android:attr/selectableItemBackground</item> <!-- Dropdown item style -->
+    </style>
 </resources>
