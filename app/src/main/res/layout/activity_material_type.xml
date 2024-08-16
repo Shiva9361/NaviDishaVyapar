@@ -6,58 +6,69 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+
     <ImageView
         android:id="@+id/back_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/back_arrow_black"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="16dp" />
-
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.041"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.022"
+        android:src="@drawable/back_arrow_black" />
 
     <TextView
         android:id="@+id/buss_category"
-        android:layout_width="304dp"
+        android:layout_width="match_parent"
         android:layout_height="67dp"
+        android:layout_marginHorizontal="30dp"
         android:fontFamily="@font/montserrat_alternates_bold"
         android:text="What buisness category is yours"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="75dp"/>
-
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.108" />
 
     <FrameLayout
+        android:id="@+id/frame_manufacturing"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        tools:layout_editor_absoluteX="20dp"
-        tools:layout_editor_absoluteY="180dp">
+        app:layout_constraintStart_toStartOf="@+id/buss_category"
+        app:layout_constraintTop_toTopOf="@+id/frame_agriculture">
 
         <ImageView
             android:id="@+id/img_manufacting"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:scaleType="centerCrop"
             android:background="@drawable/grey_rounded_border_background"
+            android:scaleType="centerCrop"
             android:src="@drawable/manufacturing" />
 
         <TextView
             android:id="@+id/txt_manufacturing"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Manufacturing"
             android:layout_gravity="bottom|center"
+            android:background="@color/cardview_shadow_start_color"
+            android:text="Manufacturing"
             android:textAlignment="center"
-            android:textColor="@color/white"
-            android:background="@color/cardview_shadow_start_color"/>
+            android:textColor="@color/white" />
     </FrameLayout>
+
     <FrameLayout
+        android:id="@+id/frame_agriculture"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        tools:layout_editor_absoluteX="150dp"
-        tools:layout_editor_absoluteY="180dp">
+        android:layout_marginTop="35dp"
+        app:layout_constraintEnd_toStartOf="@+id/frame_food"
+        app:layout_constraintStart_toEndOf="@+id/frame_manufacturing"
+        app:layout_constraintTop_toBottomOf="@+id/buss_category">
 
         <ImageView
             android:id="@+id/img_agriculture"
@@ -75,202 +86,221 @@
             android:background="@color/cardview_shadow_start_color"
             android:text="Agriculture"
             android:textAlignment="center"
-            android:textColor="@color/white"/>
+            android:textColor="@color/white" />
     </FrameLayout>
+
     <FrameLayout
+        android:id="@+id/frame_food"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        tools:layout_editor_absoluteX="289dp"
-        tools:layout_editor_absoluteY="180dp">
+        app:layout_constraintEnd_toEndOf="@+id/buss_category"
+        app:layout_constraintTop_toTopOf="@+id/frame_agriculture">
 
         <ImageView
             android:id="@+id/img_food"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:scaleType="centerCrop"
             android:background="@drawable/grey_rounded_border_background"
+            android:scaleType="centerCrop"
             android:src="@drawable/food_waste" />
 
         <TextView
             android:id="@+id/txt_food"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Food and Beverage Industry"
             android:layout_gravity="bottom|center"
+            android:background="@color/cardview_shadow_start_color"
+            android:text="Food and Beverage Industry"
             android:textAlignment="center"
-            android:textColor="@color/white"
-            android:background="@color/cardview_shadow_start_color"/>
+            android:textColor="@color/white" />
     </FrameLayout>
 
     <FrameLayout
+        android:id="@+id/frame_retail"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        tools:layout_editor_absoluteX="20dp"
-        tools:layout_editor_absoluteY="320dp">
+        app:layout_constraintStart_toStartOf="@+id/frame_manufacturing"
+        app:layout_constraintTop_toTopOf="@+id/frame_health">
 
         <ImageView
             android:id="@+id/img_retail"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:scaleType="centerCrop"
             android:background="@drawable/grey_rounded_border_background"
+            android:scaleType="centerCrop"
             android:src="@drawable/commercial_waste" />
 
         <TextView
             android:id="@+id/txt_retail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Retail and Commercial Waste"
             android:layout_gravity="bottom|center"
+            android:background="@color/cardview_shadow_start_color"
+            android:text="Retail and Commercial Waste"
             android:textAlignment="center"
-            android:textColor="@color/white"
-            android:background="@color/cardview_shadow_start_color"/>
+            android:textColor="@color/white" />
     </FrameLayout>
+
     <FrameLayout
+        android:id="@+id/frame_health"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        tools:layout_editor_absoluteX="150dp"
-        tools:layout_editor_absoluteY="320dp">
+        android:layout_marginTop="35dp"
+        app:layout_constraintEnd_toStartOf="@+id/frame_hospitality"
+        app:layout_constraintStart_toEndOf="@+id/frame_retail"
+        app:layout_constraintTop_toBottomOf="@+id/frame_agriculture">
 
         <ImageView
             android:id="@+id/img_health"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:scaleType="centerCrop"
             android:background="@drawable/grey_rounded_border_background"
+            android:scaleType="centerCrop"
             android:src="@drawable/medical_waste" />
 
         <TextView
             android:id="@+id/txt_health"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Health care and Medical waste"
             android:layout_gravity="bottom|center"
+            android:background="@color/cardview_shadow_start_color"
+            android:text="Health care and Medical waste"
             android:textAlignment="center"
-            android:textColor="@color/white"
-            android:background="@color/cardview_shadow_start_color"/>
+            android:textColor="@color/white" />
     </FrameLayout>
+
     <FrameLayout
+        android:id="@+id/frame_hospitality"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        tools:layout_editor_absoluteX="289dp"
-        tools:layout_editor_absoluteY="320dp">
+        app:layout_constraintEnd_toEndOf="@+id/frame_food"
+        app:layout_constraintTop_toTopOf="@+id/frame_health">
 
         <ImageView
             android:id="@+id/img_hospitality"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:scaleType="centerCrop"
             android:background="@drawable/grey_rounded_border_background"
+            android:scaleType="centerCrop"
             android:src="@drawable/hospitality_and_service" />
 
         <TextView
             android:id="@+id/txt_hospitality"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Hospitality and service Industry waste"
             android:layout_gravity="bottom|center"
+            android:background="@color/cardview_shadow_start_color"
+            android:text="Hospitality and service Industry waste"
             android:textAlignment="center"
-            android:textColor="@color/white"
-            android:background="@color/cardview_shadow_start_color"/>
+            android:textColor="@color/white" />
     </FrameLayout>
 
     <FrameLayout
+        android:id="@+id/frame_office"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        tools:layout_editor_absoluteX="20dp"
-        tools:layout_editor_absoluteY="460dp">
+        app:layout_constraintStart_toStartOf="@+id/frame_retail"
+        app:layout_constraintTop_toTopOf="@+id/frame_auto">
 
         <ImageView
             android:id="@+id/img_office"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:scaleType="centerCrop"
             android:background="@drawable/grey_rounded_border_background"
+            android:scaleType="centerCrop"
             android:src="@drawable/office_and_admin_waste" />
 
         <TextView
             android:id="@+id/txt_office"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Office and Administrative waste"
             android:layout_gravity="bottom|center"
+            android:background="@color/cardview_shadow_start_color"
+            android:text="Office and Administrative waste"
             android:textAlignment="center"
-            android:textColor="@color/white"
-            android:background="@color/cardview_shadow_start_color"/>
+            android:textColor="@color/white" />
     </FrameLayout>
+
     <FrameLayout
+        android:id="@+id/frame_auto"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        tools:layout_editor_absoluteX="150dp"
-        tools:layout_editor_absoluteY="460dp">
+        android:layout_marginTop="35dp"
+        app:layout_constraintEnd_toStartOf="@+id/frame_mining"
+        app:layout_constraintStart_toEndOf="@+id/frame_office"
+        app:layout_constraintTop_toBottomOf="@+id/frame_health">
 
         <ImageView
             android:id="@+id/img_auto"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:scaleType="centerCrop"
             android:background="@drawable/grey_rounded_border_background"
+            android:scaleType="centerCrop"
             android:src="@drawable/automotive_waste" />
 
         <TextView
             android:id="@+id/txt_auto"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center"
+            android:background="@color/cardview_shadow_start_color"
             android:text="Automotive Industry waste"
-            android:layout_gravity="bottom|center"
             android:textAlignment="center"
-            android:textColor="@color/white"
-            android:background="@color/cardview_shadow_start_color"/>
-    </FrameLayout>
-    <FrameLayout
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        tools:layout_editor_absoluteX="20dp"
-        tools:layout_editor_absoluteY="600dp">
-
-        <ImageView
-            android:id="@+id/img_other"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:scaleType="centerCrop"
-            android:background="@drawable/grey_rounded_border_background"
-            android:src="@drawable/industrial_waster" />
-
-        <TextView
-            android:id="@+id/txt_other"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Other"
-            android:layout_gravity="bottom|center"
-            android:textAlignment="center"
-            android:textColor="@color/white"
-            android:background="@color/cardview_shadow_start_color"/>
+            android:textColor="@color/white" />
     </FrameLayout>
 
     <FrameLayout
+        android:id="@+id/frame_mining"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        tools:layout_editor_absoluteX="289dp"
-        tools:layout_editor_absoluteY="460dp">
+        app:layout_constraintEnd_toEndOf="@+id/frame_hospitality"
+        app:layout_constraintTop_toTopOf="@+id/frame_auto">
 
         <ImageView
             android:id="@+id/img_mining"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:scaleType="centerCrop"
             android:background="@drawable/grey_rounded_border_background"
+            android:scaleType="centerCrop"
             android:src="@drawable/mining_waste" />
 
         <TextView
             android:id="@+id/txt_mining"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Mining and Quarrying waste"
             android:layout_gravity="bottom|center"
+            android:background="@color/cardview_shadow_start_color"
+            android:text="Mining and Quarrying waste"
             android:textAlignment="center"
-            android:textColor="@color/white"
-            android:background="@color/cardview_shadow_start_color"/>
+            android:textColor="@color/white" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/frame_other"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="35dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frame_auto">
+
+        <ImageView
+            android:id="@+id/img_other"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/grey_rounded_border_background"
+            android:scaleType="centerCrop"
+            android:src="@drawable/industrial_waster" />
+
+        <TextView
+            android:id="@+id/txt_other"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center"
+            android:background="@color/cardview_shadow_start_color"
+            android:text="Other"
+            android:textAlignment="center"
+            android:textColor="@color/white" />
     </FrameLayout>
 
 
