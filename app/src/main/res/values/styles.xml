@@ -20,7 +20,7 @@
     </style>
     <style name="SpinnerStyle" parent="Widget.AppCompat.Spinner">
         <item name="android:background">@drawable/spinner_border</item>
-        <item name="android:dropDownBackground">@android:color/white</item> <!-- Dropdown background -->
+<!--        <item name="android:dropDownBackground">@android:color/white</item> &lt;!&ndash; Dropdown background &ndash;&gt;-->
         <item name="android:spinnerDropDownItemStyle">@style/SpinnerDropDownItem</item>
     </style>
 

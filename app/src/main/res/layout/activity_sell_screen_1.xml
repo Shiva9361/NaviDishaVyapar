@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/main_menu_top_bar"
+        android:paddingBottom="10dp">
+
+        <ImageView
+            android:id="@+id/hamburger_menu"
+            android:layout_width="32dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="16dp"
+            android:src="@drawable/baseline_dehaze_24"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textView16" />
+
+        <TextView
+            android:id="@+id/ndy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/white_background_rounded"
+            android:fontFamily="@font/montserrat_alternates_extrabold"
+            android:gravity="center"
+            android:paddingHorizontal="10dp"
+            android:paddingBottom="5dp"
+            android:text="ndy"
+            android:textColor="@color/red_orange"
+            android:textSize="22sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.876"
+            app:layout_constraintStart_toEndOf="@+id/textView16"
+            app:layout_constraintTop_toTopOf="@+id/textView16" />
+
+        <TextView
+            android:id="@+id/textView16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="30dp"
+            android:fontFamily="@font/montserrat_semibold"
+            android:text="New Sell Item"
+            android:textColor="@color/white"
+            android:textSize="23sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/ndy"
+            app:layout_constraintStart_toEndOf="@+id/hamburger_menu"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.666" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/top_bar">
+
+        <!-- Content inside the ScrollView -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/basic_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_alternates_extrabold"
+                android:paddingHorizontal="10dp"
+                android:layout_marginBottom="20dp"
+                android:text="1. Basic Information"
+                android:textColor="@color/red_orange"
+                android:textSize="22sp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/material_name"
+                    android:layout_width="150dp"
+                    android:layout_height="22dp"
+                    android:fontFamily="@font/montserrat_alternates_bold"
+                    android:text="Product name"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/editTextText"
+                    android:layout_width="350dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/input_background"
+                    android:inputType="text"
+                    android:layout_marginBottom="20dp"
+                    android:hint="A descriptive name for the waste material."/>
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@drawable/rectangle_gradient_s_deep_blue_black_700"
+                android:layout_marginBottom="10dp"
+                />
+
+            <LinearLayout
+                android:id="@+id/linearLayout3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+
+                <TextView
+                    android:id="@+id/material_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:fontFamily="@font/montserrat_alternates_bold"
+                    android:text="Material Type"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"/>
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="none">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <!--items-->
+                        <FrameLayout
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_marginEnd="10dp"
+                            android:background="@drawable/baby_pink_background_rounded">
+
+                            <FrameLayout
+                                android:layout_width="55dp"
+                                android:layout_height="55dp"
+                                android:layout_gravity="center"
+                                android:background="@drawable/baby_pink_background_rounded">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="bottom|center"
+                                    android:text="Metals" />
+
+                                <ImageView
+                                    android:id="@+id/material_type_1"
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:layout_gravity="top|center"
+                                    android:src="@drawable/baseline_electric_meter_24" />
+                            </FrameLayout>
+                        </FrameLayout>
+
+
+                        <FrameLayout
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_marginEnd="10dp"
+                            android:background="@drawable/baby_pink_background_rounded">
+
+                            <FrameLayout
+                                android:layout_width="55dp"
+                                android:layout_height="55dp"
+                                android:layout_gravity="center"
+                                android:background="@drawable/baby_pink_background_rounded">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="bottom|center"
+                                    android:text="Metals" />
+
+                                <ImageView
+                                    android:id="@+id/material_type_2"
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:layout_gravity="top|center"
+                                    android:src="@drawable/baseline_electric_meter_24" />
+                            </FrameLayout>
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_marginEnd="10dp"
+                            android:background="@drawable/baby_pink_background_rounded">
+
+                            <FrameLayout
+                                android:layout_width="55dp"
+                                android:layout_height="55dp"
+                                android:layout_gravity="center"
+                                android:background="@drawable/baby_pink_background_rounded">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="bottom|center"
+                                    android:text="Metals" />
+
+                                <ImageView
+                                    android:id="@+id/material_type_3"
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:layout_gravity="top|center"
+                                    android:src="@drawable/baseline_electric_meter_24" />
+                            </FrameLayout>
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_marginEnd="10dp"
+                            android:background="@drawable/baby_pink_background_rounded">
+
+                            <FrameLayout
+                                android:layout_width="55dp"
+                                android:layout_height="55dp"
+                                android:layout_gravity="center"
+                                android:background="@drawable/baby_pink_background_rounded">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="bottom|center"
+                                    android:text="Metals" />
+
+                                <ImageView
+                                    android:id="@+id/material_type_4"
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:layout_gravity="top|center"
+                                    android:src="@drawable/baseline_electric_meter_24" />
+                            </FrameLayout>
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_marginEnd="10dp"
+                            android:background="@drawable/baby_pink_background_rounded">
+
+                            <FrameLayout
+                                android:layout_width="55dp"
+                                android:layout_height="55dp"
+                                android:layout_gravity="center"
+                                android:background="@drawable/baby_pink_background_rounded">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="bottom|center"
+                                    android:text="Metals" />
+
+                                <ImageView
+                                    android:id="@+id/material_type_5"
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:layout_gravity="top|center"
+                                    android:src="@drawable/baseline_electric_meter_24" />
+                            </FrameLayout>
+                        </FrameLayout>
+
+
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@drawable/rectangle_gradient_s_deep_blue_black_700"
+                android:layout_marginBottom="10dp"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="30dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/product_description"
+                    android:layout_width="200dp"
+                    android:layout_height="22dp"
+                    android:fontFamily="@font/montserrat_alternates_bold"
+                    android:text="Product Description"
+                    android:layout_marginBottom="5dp"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/note"
+                    android:layout_width="350dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat_lightitalic"
+                    android:text="*** A detailed description of the waste material, including its origin, potential uses, and any special handling requirements"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="20dp"
+                    android:textColor="@android:color/black"
+                    android:textSize="10sp" />
+                <EditText
+                    android:id="@+id/editTextTextMultiLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="start|top"
+                    android:background="@drawable/input_background"
+                    android:hint="Describe your material....\n\n\n\n"
+                    android:inputType="textMultiLine" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/next"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/submit_background"
+                android:ems="15"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="NEXT"
+                android:layout_marginBottom="50dp"
+                android:textColor="@color/white"/>
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
