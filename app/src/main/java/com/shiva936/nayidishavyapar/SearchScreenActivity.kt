@@ -7,6 +7,7 @@ import android.util.TypedValue.applyDimension
 import android.widget.Button
 import android.widget.FrameLayout
 import android.widget.LinearLayout
+import android.widget.Toast
 import androidx.activity.ComponentActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DataSnapshot
@@ -14,6 +15,7 @@ import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 import com.shiva936.nayidishavyapar.databinding.ActivitySearchScreenBinding
+import java.util.ArrayList
 
 
 class SearchScreenActivity : ComponentActivity() {
@@ -78,34 +80,34 @@ class SearchScreenActivity : ComponentActivity() {
         loadCities()
 
         searchScreenBinding.frameAgriculture.setOnClickListener{
-            handelMaterialClick("Agriculture",searchScreenBinding.frameAgriculture)
+            handleMaterialClick("Agriculture",searchScreenBinding.frameAgriculture)
         }
         searchScreenBinding.frameAuto.setOnClickListener{
-            handelMaterialClick("Auto",searchScreenBinding.frameAuto)
+            handleMaterialClick("Auto",searchScreenBinding.frameAuto)
         }
         searchScreenBinding.frameFood.setOnClickListener{
-            handelMaterialClick("Food",searchScreenBinding.frameFood)
+            handleMaterialClick("Food",searchScreenBinding.frameFood)
         }
         searchScreenBinding.frameHealth.setOnClickListener{
-            handelMaterialClick("Health",searchScreenBinding.frameHealth)
+            handleMaterialClick("Health",searchScreenBinding.frameHealth)
         }
         searchScreenBinding.frameOther.setOnClickListener{
-            handelMaterialClick("Other",searchScreenBinding.frameOther)
+            handleMaterialClick("Other",searchScreenBinding.frameOther)
         }
         searchScreenBinding.frameMining.setOnClickListener{
-            handelMaterialClick("Mining",searchScreenBinding.frameMining)
+            handleMaterialClick("Mining",searchScreenBinding.frameMining)
         }
         searchScreenBinding.frameHospitality.setOnClickListener{
-            handelMaterialClick("Hospitality",searchScreenBinding.frameHospitality)
+            handleMaterialClick("Hospitality",searchScreenBinding.frameHospitality)
         }
         searchScreenBinding.frameManufacturing.setOnClickListener{
-            handelMaterialClick("Manufacturing",searchScreenBinding.frameManufacturing)
+            handleMaterialClick("Manufacturing",searchScreenBinding.frameManufacturing)
         }
         searchScreenBinding.frameOffice.setOnClickListener{
-            handelMaterialClick("Office",searchScreenBinding.frameOffice)
+            handleMaterialClick("Office",searchScreenBinding.frameOffice)
         }
         searchScreenBinding.frameRetail.setOnClickListener{
-            handelMaterialClick("Office",searchScreenBinding.frameRetail)
+            handleMaterialClick("Office",searchScreenBinding.frameRetail)
         }
 
         searchScreenBinding.oneTon.setOnClickListener{
@@ -123,18 +125,35 @@ class SearchScreenActivity : ComponentActivity() {
         searchScreenBinding.moreTon.setOnClickListener{
             handleQuantityClick(">4",searchScreenBinding.moreTon)
         }
+        searchScreenBinding.Next.setOnClickListener{
+            if (selectedQuantity.isEmpty() || selectedMaterials.isEmpty() || selectedCities.isEmpty()){
+                println(selectedQuantity)
+                Toast.makeText(applicationContext, "Fields can't be empty", Toast.LENGTH_SHORT).show()
+            }
+            else{
+                val intent = Intent(applicationContext,SearchResultActivity::class.java)
+                intent.putStringArrayListExtra("Quantities", ArrayList( selectedQuantity))
+                intent.putStringArrayListExtra("Materials", ArrayList( selectedMaterials))
+                intent.putStringArrayListExtra("Cities", ArrayList( selectedCities))
+                intent.putExtra("Range",searchScreenBinding.spinnerBudget.toString())
+                intent.putExtra("Method",selectedMethod.text)
+                startActivity(intent)
+            }
+        }
     }
 
 
     private fun handleQuantityClick(s: String, frameLayout: FrameLayout) {
         if (selectedQuantity.contains(s)) {
             frameLayout.setBackgroundResource(R.drawable.grey_rounded_border_background)
+            selectedQuantity.remove(s)
         } else {
             frameLayout.setBackgroundResource(R.drawable.baby_pink_background_rounded)
+            selectedQuantity.add(s)
         }
     }
 
-    private fun handelMaterialClick(s: String, frameLayout: FrameLayout) {
+    private fun handleMaterialClick(s: String, frameLayout: FrameLayout) {
         if (selectedMaterials.contains(s)) {
             selectedMaterials.remove(s)
             frameLayout.alpha = 0.5F
