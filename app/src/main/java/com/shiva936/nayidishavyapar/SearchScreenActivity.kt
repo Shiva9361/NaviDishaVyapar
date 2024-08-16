@@ -1,6 +1,5 @@
 package com.shiva936.nayidishavyapar
 
-import android.app.ActivityOptions
 import android.content.Intent
 import android.os.Bundle
 import android.util.TypedValue.COMPLEX_UNIT_SP
@@ -21,7 +20,7 @@ class SearchScreenActivity : ComponentActivity() {
     private val auth : FirebaseAuth = FirebaseAuth.getInstance()
     private val userReference = database.reference.child("user_data")
     private lateinit var searchScreenBinding: ActivitySearchScreenBinding
-    private val selectedButtons = mutableSetOf<String>()
+    private val selectedCities = mutableSetOf<String>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -43,6 +42,7 @@ class SearchScreenActivity : ComponentActivity() {
         searchScreenBinding.backButton.setOnClickListener{
             onBackPressedDispatcher.onBackPressed()
         }
+
         loadCities()
 
     }
@@ -67,7 +67,7 @@ class SearchScreenActivity : ComponentActivity() {
     private fun createButton(text: String) {
         val button = Button(this@SearchScreenActivity)
         button.text = text
-        selectedButtons.add(text)
+        selectedCities.add(text)
         val params = LinearLayout.LayoutParams(
             LinearLayout.LayoutParams.WRAP_CONTENT,  // Width
             spToPx(40F)
@@ -79,13 +79,13 @@ class SearchScreenActivity : ComponentActivity() {
         button.setTextColor(getColor(R.color.dark_green))
         button.setBackgroundResource(R.drawable.green_background_rounded)
         button.setOnClickListener{
-            if (selectedButtons.contains(text)){
-                selectedButtons.remove(text)
+            if (selectedCities.contains(text)){
+                selectedCities.remove(text)
                 button.setBackgroundResource(R.drawable.baseline_electric_meter_24)
 
             }
             else{
-                selectedButtons.add(text)
+                selectedCities.add(text)
                 button.setBackgroundResource(R.drawable.green_background_rounded)
             }
         }
