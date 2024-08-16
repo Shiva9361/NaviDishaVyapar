@@ -485,18 +485,18 @@
             <Spinner
                 android:id="@+id/spinner_min_budget"
                 android:layout_height="40dp"
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_marginHorizontal="20dp"
-                android:entries="@array/min_budget"/>
+                android:entries="@array/budget"/>
 
-            <Spinner
-                android:id="@+id/spinner_max_budget"
-                android:layout_height="40dp"
-                android:layout_width="match_parent"
-                android:layout_marginHorizontal="20dp"
-                android:layout_weight="1"
-                android:entries="@array/max_budget" />
+<!--            <Spinner-->
+<!--                android:id="@+id/spinner_max_budget"-->
+<!--                android:layout_height="40dp"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_marginHorizontal="20dp"-->
+<!--                android:layout_weight="1"-->
+<!--                android:entries="@array/max_budget" />-->
 
         </LinearLayout>
     </LinearLayout>
@@ -535,10 +535,11 @@
 
                 <!--items-->
                 <FrameLayout
+                    android:id="@+id/one_ton"
                     android:layout_width="80dp"
                     android:layout_height="50dp"
                     android:layout_marginEnd="10dp"
-                    android:background="@drawable/baby_pink_background_less_rounded">
+                    android:background="@drawable/grey_rounded_border_background">
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -550,6 +551,7 @@
                 </FrameLayout>
 
                 <FrameLayout
+                    android:id="@+id/two_ton"
                     android:layout_width="80dp"
                     android:layout_height="50dp"
                     android:layout_marginEnd="10dp"
@@ -565,6 +567,7 @@
                 </FrameLayout>
 
                 <FrameLayout
+                    android:id="@+id/three_ton"
                     android:layout_width="80dp"
                     android:layout_height="50dp"
                     android:layout_marginEnd="10dp"
@@ -580,6 +583,7 @@
                 </FrameLayout>
 
                 <FrameLayout
+                    android:id="@+id/four_ton"
                     android:layout_width="80dp"
                     android:layout_height="50dp"
                     android:layout_marginEnd="10dp"
@@ -595,6 +599,7 @@
                 </FrameLayout>
 
                 <FrameLayout
+                    android:id="@+id/more_ton"
                     android:layout_width="80dp"
                     android:layout_height="50dp"
                     android:layout_marginEnd="10dp"

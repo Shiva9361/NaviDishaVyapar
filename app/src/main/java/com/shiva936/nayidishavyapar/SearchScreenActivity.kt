@@ -23,6 +23,7 @@ class SearchScreenActivity : ComponentActivity() {
     private lateinit var searchScreenBinding: ActivitySearchScreenBinding
     private val selectedCities = mutableSetOf<String>()
     private val selectedMaterials = mutableListOf<String>()
+    private val selectedQuantity = mutableListOf<String>()
     private lateinit var selectedMethod : Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -107,7 +108,30 @@ class SearchScreenActivity : ComponentActivity() {
             handelMaterialClick("Office",searchScreenBinding.frameRetail)
         }
 
+        searchScreenBinding.oneTon.setOnClickListener{
+            handleQuantityClick("1",searchScreenBinding.oneTon)
+        }
+        searchScreenBinding.twoTon.setOnClickListener{
+            handleQuantityClick("2",searchScreenBinding.twoTon)
+        }
+        searchScreenBinding.threeTon.setOnClickListener{
+            handleQuantityClick("3",searchScreenBinding.threeTon)
+        }
+        searchScreenBinding.fourTon.setOnClickListener{
+            handleQuantityClick("4",searchScreenBinding.fourTon)
+        }
+        searchScreenBinding.moreTon.setOnClickListener{
+            handleQuantityClick(">4",searchScreenBinding.moreTon)
+        }
+    }
 
+
+    private fun handleQuantityClick(s: String, frameLayout: FrameLayout) {
+        if (selectedQuantity.contains(s)) {
+            frameLayout.setBackgroundResource(R.drawable.grey_rounded_border_background)
+        } else {
+            frameLayout.setBackgroundResource(R.drawable.baby_pink_background_rounded)
+        }
     }
 
     private fun handelMaterialClick(s: String, frameLayout: FrameLayout) {
