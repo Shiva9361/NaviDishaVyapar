@@ -22,19 +22,31 @@ class SplashScreenActivity : ComponentActivity() {
             {
                 var intent = Intent(this@SplashScreenActivity, MainMenuActivity::class.java)
                 if (auth.currentUser != null) {
-                    userReference.child(auth.currentUser!!.uid.toString()).child("location").get().addOnCompleteListener { task ->
-                        if (!task.isSuccessful || !task.result.exists()) {
-                            intent = Intent(this@SplashScreenActivity, LocationScreenActivity::class.java)
-                        }
-                        userReference.child(auth.currentUser!!.uid.toString()).child("material").get().addOnCompleteListener { task ->
+                    userReference.child(auth.currentUser!!.uid.toString()).child("locations").get()
+                        .addOnCompleteListener { task ->
                             if (!task.isSuccessful || !task.result.exists()) {
-                                intent = Intent(this@SplashScreenActivity, MaterialTypeActivity::class.java)
+                                intent = Intent(
+                                    this@SplashScreenActivity,
+                                    LocationScreenActivity::class.java
+                                )
                             }
-                            startActivity(intent)
-                            finish()
+                            userReference.child(auth.currentUser!!.uid.toString()).child("material")
+                                .get().addOnCompleteListener { task ->
+                                if (!task.isSuccessful || !task.result.exists()) {
+                                    intent = Intent(
+                                        this@SplashScreenActivity,
+                                        MaterialTypeActivity::class.java
+                                    )
+                                }
+                                startActivity(intent)
+                                finish()
+                            }
                         }
+                }
+                else {
+                    auth.signInAnonymously().addOnCompleteListener {
+                        intent = Intent(this@SplashScreenActivity, MaterialTypeActivity::class.java)
                     }
-
                 }
             },2000
         )

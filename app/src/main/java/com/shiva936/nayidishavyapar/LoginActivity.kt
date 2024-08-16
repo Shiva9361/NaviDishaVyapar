@@ -22,7 +22,6 @@ class LoginActivity : ComponentActivity() {
         //ActivityNameBinding can be used to get the content from XML
         loginBinding = ActivityLoginScreenBinding.inflate(layoutInflater)
         val view = loginBinding.root
-        enableEdgeToEdge()
         setContentView(view)
 
         // Set up the click listener

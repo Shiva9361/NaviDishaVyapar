@@ -40,12 +40,23 @@ class LocationScreenActivity : ComponentActivity() {
                 id: Long
             ) {
                 val selectedCity = parent.getItemAtPosition(position).toString()
-                if (selectedCity != "Select your City") {
-                    userReference.child("${auth.currentUser?.uid}").child("location")
-                        .setValue(selectedCity)
-                    intent = Intent(this@LocationScreenActivity, MainMenuActivity::class.java)
-                    startActivity(intent)
-                    finish()
+                if (selectedCity != "Select City") {
+                    userReference.child("${auth.currentUser?.uid}").child("locations").child(selectedCity).addListenerForSingleValueEvent(object : ValueEventListener {
+                        override fun onDataChange(snapshot: DataSnapshot) {
+                            // Check if the snapshot has any child
+                            if (!snapshot.exists()) {
+                                userReference.child("${auth.currentUser?.uid}").child("locations")
+                                    .child(selectedCity).setValue("Dummy")
+                            }
+                            intent = Intent(this@LocationScreenActivity, MainMenuActivity::class.java)
+                            startActivity(intent)
+                            finish()
+                        }
+
+                        override fun onCancelled(error: DatabaseError) {
+                            // Handle possible errors
+                        }
+                    })
                 }
             }
 
