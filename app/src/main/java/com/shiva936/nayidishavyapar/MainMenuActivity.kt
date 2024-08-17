@@ -57,6 +57,7 @@ class MainMenuActivity : ComponentActivity() {
     private fun loadMaterials(materialType:String, horizontalScrollView: LinearLayout) {
         databaseReference.child("Categories").child(materialType).addValueEventListener(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
+                horizontalScrollView.removeAllViews()
                 for (materialSnapshot in snapshot.children) {
                     val material = materialSnapshot.getValue(MaterialDataClass::class.java)
                     material?.let { addMaterialView(it,horizontalScrollView) }

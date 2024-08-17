@@ -18,15 +18,13 @@ class LoginActivity : ComponentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-        //ActivityNameBinding can be used to get the content from XML
         loginBinding = ActivityLoginScreenBinding.inflate(layoutInflater)
         val view = loginBinding.root
         setContentView(view)
 
-        // Set up the click listener
+
         loginBinding.RegisterWithUs.setOnClickListener {
-            // Create an Intent to start the SignupActivity
+
             val intent = Intent(this, SignUpActivity::class.java)
             startActivity(intent)
         }

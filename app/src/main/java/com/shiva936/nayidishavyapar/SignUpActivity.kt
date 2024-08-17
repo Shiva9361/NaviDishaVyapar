@@ -6,6 +6,7 @@ import androidx.activity.ComponentActivity
 import androidx.activity.enableEdgeToEdge
 import android.graphics.Color
 import android.widget.Button
+import com.google.firebase.auth.EmailAuthProvider
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseAuthUserCollisionException
 import com.google.firebase.database.FirebaseDatabase
@@ -48,17 +49,30 @@ class SignUpActivity : ComponentActivity() {
                 Toast.makeText(applicationContext, "Please fill all details", Toast.LENGTH_SHORT).show()
             }
             else{
-                auth.createUserWithEmailAndPassword(email,password).addOnCompleteListener{ task ->
-                    if (task.isSuccessful) {
-                        userReference.child("${auth.currentUser?.uid}").child("role").setValue(selectedRole)
-                        userReference.child("${auth.currentUser?.uid}").child("name").setValue(name)
+                if (auth.currentUser!=null && auth.currentUser!!.isAnonymous){
+                    val credential = EmailAuthProvider.getCredential(email, password)
+                    auth.currentUser!!.linkWithCredential(credential).addOnCompleteListener { task ->
+                        if (task.isSuccessful) {
+                            Toast.makeText(this, "Account linked successfully!", Toast.LENGTH_SHORT).show()
+                            onBackPressedDispatcher.onBackPressed()
+                        } else {
+                            Toast.makeText(this, "Failed to link account: ${task.exception?.message}", Toast.LENGTH_SHORT).show()
+                        }
                     }
-                    else{
-                        if (task.exception is FirebaseAuthUserCollisionException){
-                            Toast.makeText(applicationContext, "Email is already registered", Toast.LENGTH_SHORT).show()
+                }
+                else {
+                    auth.createUserWithEmailAndPassword(email,password).addOnCompleteListener{ task ->
+                        if (task.isSuccessful) {
+                            userReference.child("${auth.currentUser?.uid}").child("role").setValue(selectedRole)
+                            userReference.child("${auth.currentUser?.uid}").child("name").setValue(name)
                         }
                         else{
-                            Toast.makeText(applicationContext, "${task.exception?.message}", Toast.LENGTH_SHORT).show()
+                            if (task.exception is FirebaseAuthUserCollisionException){
+                                Toast.makeText(applicationContext, "Email is already registered", Toast.LENGTH_SHORT).show()
+                            }
+                            else{
+                                Toast.makeText(applicationContext, "${task.exception?.message}", Toast.LENGTH_SHORT).show()
+                            }
                         }
                     }
                 }

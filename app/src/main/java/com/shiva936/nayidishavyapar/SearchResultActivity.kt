@@ -11,8 +11,10 @@ import android.widget.Toast
 import androidx.activity.ComponentActivity
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.compose.animation.core.snap
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
@@ -22,6 +24,7 @@ import com.shiva936.nayidishavyapar.databinding.ActivitySearchResultBinding
 class SearchResultActivity : ComponentActivity() {
     private val database : FirebaseDatabase = FirebaseDatabase.getInstance()
     private val databaseReference = database.reference
+    private val auth = FirebaseAuth.getInstance()
 
     private lateinit var searchResultBinding: ActivitySearchResultBinding
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -44,12 +47,16 @@ class SearchResultActivity : ComponentActivity() {
 
         val minPrice = intent.getIntExtra("Min", 0)
         val maxPrice = intent.getIntExtra("Max", 10_00_00_000)
+        searchResultBinding.searchResults.visibility = View.VISIBLE
         if (materials != null) {
             for (material in materials) {
                 databaseReference.child("Categories").child(material).orderByChild("cost").startAt(minPrice.toDouble())
                     .endAt(maxPrice.toDouble())
                     .addValueEventListener(object : ValueEventListener {
                         override fun onDataChange(snapshot: DataSnapshot) {
+                            if(snapshot.exists()){
+                                searchResultBinding.searchResults.removeAllViews()
+                            }
                             for (materialSnapshot in snapshot.children) {
                                 val materialData =
                                     materialSnapshot.getValue(MaterialDataClass::class.java)
@@ -77,27 +84,39 @@ class SearchResultActivity : ComponentActivity() {
         view.findViewById<TextView>(R.id.material_cost).text = "₹ "+material.cost.toString()
         view.findViewById<TextView>(R.id.material_quantity).text = material.quantity+ " Ton(s)"
         view.findViewById<Button>(R.id.get_contact_details).setOnClickListener{
-            try {
-                // Check if WhatsApp is installed
-                val intent = Intent(Intent.ACTION_VIEW)
-                val url = "https://api.whatsapp.com/send?phone=+91${material.number}"
-                intent.data = Uri.parse(url)
-                if (intent.resolveActivity(packageManager) != null) {
-                    startActivity(intent)
-                } else {
-                    Toast.makeText(applicationContext, "Whatsapp not installed", Toast.LENGTH_SHORT).show()
+            if (auth.currentUser!!.isAnonymous){
+                intent = Intent(this@SearchResultActivity,SignUpActivity::class.java)
+                startActivity(intent)
+            }
+            else {
+                try {
+                    // Check if WhatsApp is installed
+                    val intent = Intent(Intent.ACTION_VIEW)
+                    val url = "https://api.whatsapp.com/send?phone=+91${material.number}"
+                    intent.data = Uri.parse(url)
+                    if (intent.resolveActivity(packageManager) != null) {
+                        startActivity(intent)
+                    } else {
+                        Toast.makeText(
+                            applicationContext,
+                            "Whatsapp not installed",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                } catch (e: Exception) {
+                    e.printStackTrace()
+                    Toast.makeText(applicationContext, "Some error occurred", Toast.LENGTH_SHORT)
+                        .show()
                 }
-            } catch (e: Exception) {
-                e.printStackTrace()
-                Toast.makeText(applicationContext, "Some error occurred", Toast.LENGTH_SHORT).show()
             }
         }
         //view.findViewById<TextView>(R.id.distance).text = material.distance
         view.visibility = View.VISIBLE
-//        view.setOnClickListener{
-//            intent = Intent(this@SearchResultActivity,)
-//        }
-        // Add view to the parent LinearLayout
+        view.setOnClickListener{
+            intent = Intent(this@SearchResultActivity,ProductDetailedViewActivity::class.java)
+            startActivity(intent)
+        }
+
         searchResultBinding.searchResults.addView(view)
     }
 }

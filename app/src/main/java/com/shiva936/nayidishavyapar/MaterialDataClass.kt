@@ -6,4 +6,5 @@ data class MaterialDataClass(
     val location: String = "",
     val quantity: String = "",
     val number: String = "",
+    val description: String = "",
 )

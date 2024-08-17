@@ -18,7 +18,7 @@
         android:theme="@style/Theme.NayiDishaVyapar"
         tools:targetApi="31">
         <activity
-            android:name=".ProductDetailedViewAcitvity"
+            android:name=".ProductDetailedViewActivity"
             android:exported="false" />
         <activity
             android:name=".SearchResultActivity"
