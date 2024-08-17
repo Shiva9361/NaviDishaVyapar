@@ -48,9 +48,7 @@ class LocationScreenActivity : ComponentActivity() {
                                 userReference.child("${auth.currentUser?.uid}").child("locations")
                                     .child(selectedCity).setValue("Dummy")
                             }
-                            intent = Intent(this@LocationScreenActivity, MainMenuActivity::class.java)
-                            startActivity(intent)
-                            finish()
+                            onBackPressedDispatcher.onBackPressed()
                         }
 
                         override fun onCancelled(error: DatabaseError) {
