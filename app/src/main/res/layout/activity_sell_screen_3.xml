@@ -109,10 +109,12 @@
                     android:orientation="horizontal">
 
                     <ImageView
+                        android:id="@+id/locationImageView101"
                         android:layout_width="40dp"
                         android:layout_height="40dp"
                         android:layout_marginRight="10dp"
-                        android:src="@drawable/baseline_location_red_searching_24"/>
+                        android:src="@drawable/baseline_location_red_searching_24"
+                        />
                     <EditText
                         android:id="@+id/editTextText"
                         android:layout_width="300dp"
