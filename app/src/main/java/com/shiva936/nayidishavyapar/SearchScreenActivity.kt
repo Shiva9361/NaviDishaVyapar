@@ -16,6 +16,7 @@ import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 import com.shiva936.nayidishavyapar.databinding.ActivitySearchScreenBinding
 import java.util.ArrayList
+import kotlin.reflect.typeOf
 
 
 class SearchScreenActivity : ComponentActivity() {
@@ -80,7 +81,7 @@ class SearchScreenActivity : ComponentActivity() {
         loadCities()
 
         searchScreenBinding.frameAgriculture.setOnClickListener{
-            handleMaterialClick("Agriculture",searchScreenBinding.frameAgriculture)
+            handleMaterialClick("Agricultural",searchScreenBinding.frameAgriculture)
         }
         searchScreenBinding.frameAuto.setOnClickListener{
             handleMaterialClick("Auto",searchScreenBinding.frameAuto)
@@ -127,15 +128,19 @@ class SearchScreenActivity : ComponentActivity() {
         }
         searchScreenBinding.Next.setOnClickListener{
             if (selectedQuantity.isEmpty() || selectedMaterials.isEmpty() || selectedCities.isEmpty()){
-                println(selectedQuantity)
                 Toast.makeText(applicationContext, "Fields can't be empty", Toast.LENGTH_SHORT).show()
             }
             else{
                 val intent = Intent(applicationContext,SearchResultActivity::class.java)
+                intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
                 intent.putStringArrayListExtra("Quantities", ArrayList( selectedQuantity))
                 intent.putStringArrayListExtra("Materials", ArrayList( selectedMaterials))
                 intent.putStringArrayListExtra("Cities", ArrayList( selectedCities))
-                intent.putExtra("Range",searchScreenBinding.spinnerBudget.toString())
+                val rangeString = searchScreenBinding.spinnerBudget.selectedItem.toString()
+                val min = rangeString.split("-")[0].toInt()
+                val max = rangeString.split("-")[1].toInt()
+                intent.putExtra("Min",min)
+                intent.putExtra("Max",max)
                 intent.putExtra("Method",selectedMethod.text)
                 startActivity(intent)
             }

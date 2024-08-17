@@ -1,23 +1,103 @@
 package com.shiva936.nayidishavyapar
 
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
+import android.view.LayoutInflater
+import android.view.View
+import android.widget.Button
+import android.widget.TextView
+import android.widget.Toast
 import androidx.activity.ComponentActivity
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.ValueEventListener
 import com.shiva936.nayidishavyapar.databinding.ActivitySearchResultBinding
 
 class SearchResultActivity : ComponentActivity() {
+    private val database : FirebaseDatabase = FirebaseDatabase.getInstance()
+    private val databaseReference = database.reference
+
     private lateinit var searchResultBinding: ActivitySearchResultBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         searchResultBinding = ActivitySearchResultBinding.inflate(layoutInflater)
         val view = searchResultBinding.root
         setContentView(view)
+
+        loadMaterials()
+
         searchResultBinding.editSearch.setOnClickListener {
             onBackPressedDispatcher.onBackPressed()
         }
+    }
+
+    private fun loadMaterials() {
+        val quantities: Set<String> = intent.getStringArrayListExtra("Quantities")!!.toSet()
+        val materials = intent.getStringArrayListExtra("Materials")
+        val cities: Set<String> = intent.getStringArrayListExtra("Cities")!!.toSet()
+
+        val minPrice = intent.getIntExtra("Min", 0)
+        val maxPrice = intent.getIntExtra("Max", 10_00_00_000)
+        if (materials != null) {
+            for (material in materials) {
+                databaseReference.child("Categories").child(material).orderByChild("cost").startAt(minPrice.toDouble())
+                    .endAt(maxPrice.toDouble())
+                    .addValueEventListener(object : ValueEventListener {
+                        override fun onDataChange(snapshot: DataSnapshot) {
+                            for (materialSnapshot in snapshot.children) {
+                                val materialData =
+                                    materialSnapshot.getValue(MaterialDataClass::class.java)
+                                if (cities.contains(materialData!!.location) && quantities.contains(materialData.quantity)) {
+                                    addMaterialView(materialData)
+                                    println(materialData)
+                                }
+
+                            }
+                        }
+
+                        override fun onCancelled(error: DatabaseError) {
+                            // Ignoring
+                        }
+                    })
+            }
+        }
+    }
+    private fun addMaterialView(material: MaterialDataClass) {
+        val inflater = LayoutInflater.from(this)
+        val view = inflater.inflate(R.layout.search_result_item, searchResultBinding.searchResults, false)
+
+
+        view.findViewById<TextView>(R.id.material_name).text = material.name
+        view.findViewById<TextView>(R.id.material_cost).text = "₹ "+material.cost.toString()
+        view.findViewById<TextView>(R.id.material_quantity).text = material.quantity+ " Ton(s)"
+        view.findViewById<Button>(R.id.get_contact_details).setOnClickListener{
+            try {
+                // Check if WhatsApp is installed
+                val intent = Intent(Intent.ACTION_VIEW)
+                val url = "https://api.whatsapp.com/send?phone=+91${material.number}"
+                intent.data = Uri.parse(url)
+                if (intent.resolveActivity(packageManager) != null) {
+                    startActivity(intent)
+                } else {
+                    Toast.makeText(applicationContext, "Whatsapp not installed", Toast.LENGTH_SHORT).show()
+                }
+            } catch (e: Exception) {
+                e.printStackTrace()
+                Toast.makeText(applicationContext, "Some error occurred", Toast.LENGTH_SHORT).show()
+            }
+        }
+        //view.findViewById<TextView>(R.id.distance).text = material.distance
+        view.visibility = View.VISIBLE
+//        view.setOnClickListener{
+//            intent = Intent(this@SearchResultActivity,)
+//        }
+        // Add view to the parent LinearLayout
+        searchResultBinding.searchResults.addView(view)
     }
 }

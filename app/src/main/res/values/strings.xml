@@ -17,11 +17,13 @@
     <string name="sell_and_rent_contentC">Applicable only for Property Owner &amp; not Agents.An Owner can have just 1 Free Active Property on the site at a time."</string>
     <string name="sell_and_rent_containD">you are posting this property for \n <s>Rs 500</s> </string>
     <string-array name="budget">
-        <item>0–1000</item>
-        <item>1000–10000</item>
-        <item>10000–50000</item>
-        <item>">50000"</item>
+        <item>0-1000</item>
+        <item>1000-10000</item>
+        <item>10000-50000</item>
+        <item>50000-100000</item>
+        <item>100000-1000000</item>
     </string-array>
+    <!--    <string name="price_separator">–</string>-->
     <string-array name="material_condition">
         <item>New</item>
         <item>Used</item>

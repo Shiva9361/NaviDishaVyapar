@@ -60,8 +60,6 @@ class MainMenuActivity : ComponentActivity() {
                 for (materialSnapshot in snapshot.children) {
                     val material = materialSnapshot.getValue(MaterialDataClass::class.java)
                     material?.let { addMaterialView(it,horizontalScrollView) }
-
-                    println(material)
                 }
 
             }

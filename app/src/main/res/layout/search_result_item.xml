@@ -1,0 +1,145 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/search_results"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <!--Items-->
+    <LinearLayout
+        android:id="@+id/search_result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="25dp"
+        android:background="@drawable/grey_bottom_border"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="20dp">
+
+            <ImageView
+                android:layout_width="160dp"
+                android:layout_height="100dp"
+                android:layout_gravity="top"
+                android:layout_marginEnd="8dp"
+                android:src="@drawable/rectangle_gradient_s_deep_orange_a700_e_pink_700" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="bottom">
+
+                <TextView
+                    android:id="@+id/material_cost"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat_alternates_extrabold"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="4dp"
+                    android:text=""
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/material_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat_alternates_bold"
+                    android:paddingLeft="10dp"
+                    android:text=""
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/material_quantity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat_alternates_bold"
+                    android:paddingLeft="10dp"
+                    android:text=""
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <TextView
+                    android:id="@+id/distance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/opensans_light"
+                    android:paddingLeft="10dp"
+                    android:paddingBottom="4dp"
+                    android:text="In 3 Miles Radius"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/material_name" />
+
+                <ImageButton
+                    android:id="@+id/maps"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginEnd="1dp"
+                    android:background="@drawable/button_background_transparent"
+                    android:src="@drawable/map"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+                <ImageButton
+                    android:id="@+id/more_option"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginEnd="1dp"
+                    android:background="@drawable/button_background_transparent"
+                    android:src="@drawable/more_options"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingHorizontal="10dp">
+
+            <ImageButton
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/transparent_background"
+                android:padding="10dp"
+                android:src="@drawable/thumbs_up" />
+
+            <Button
+                android:id="@+id/contact_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/red_rounded_border_background"
+                android:textColor="@color/red_orange"
+                android:layout_marginHorizontal="5dp"
+                android:text="Contact Details" />
+            <Button
+                android:id="@+id/get_contact_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/red_background_less_rounded"
+                android:textColor="@color/white"
+                android:layout_marginHorizontal="5dp"
+                android:text="Connect Now" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>
