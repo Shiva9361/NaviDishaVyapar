@@ -21,6 +21,14 @@ class SellScreen2Activity : ComponentActivity() {
 
         sellScreen2Binding.oneTon.setBackgroundResource(R.drawable.baby_pink_background_rounded)
 
+        sellScreen2Binding.ndy.setOnClickListener{
+            intent = Intent(this@SellScreen2Activity,MainMenuActivity::class.java)
+            startActivity(intent)
+        }
+        sellScreen2Binding.backButton.setOnClickListener{
+            intent = Intent(this@SellScreen2Activity,MainMenuActivity::class.java)
+            startActivity(intent)
+        }
         for (quantity in quantities){
             quantity.setOnClickListener{
                 for (otherQuantity in quantities ){

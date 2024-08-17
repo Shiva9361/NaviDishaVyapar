@@ -15,6 +15,14 @@ class SellScreen1Activity : ComponentActivity() {
         val view = sellScreen1Binding.root
         setContentView(view)
 
+        sellScreen1Binding.ndy.setOnClickListener{
+            intent = Intent(this@SellScreen1Activity,MainMenuActivity::class.java)
+            startActivity(intent)
+        }
+        sellScreen1Binding.backButton.setOnClickListener{
+            intent = Intent(this@SellScreen1Activity,MainMenuActivity::class.java)
+            startActivity(intent)
+        }
         sellScreen1Binding.frameOther.alpha = 0.5F
         sellScreen1Binding.frameAgriculture.alpha = 1F
         sellScreen1Binding.frameFood.alpha = 0.5F
