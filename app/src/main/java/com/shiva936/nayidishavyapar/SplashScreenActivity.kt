@@ -46,6 +46,8 @@ class SplashScreenActivity : ComponentActivity() {
                 else {
                     auth.signInAnonymously().addOnCompleteListener {
                         intent = Intent(this@SplashScreenActivity, MaterialTypeActivity::class.java)
+                        startActivity(intent)
+                        finish()
                     }
                 }
             },2000
