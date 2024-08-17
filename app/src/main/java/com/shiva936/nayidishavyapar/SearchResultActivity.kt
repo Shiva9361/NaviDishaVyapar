@@ -10,7 +10,6 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.ComponentActivity
 import androidx.activity.enableEdgeToEdge
-import androidx.appcompat.app.AppCompatActivity
 import androidx.compose.animation.core.snap
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat

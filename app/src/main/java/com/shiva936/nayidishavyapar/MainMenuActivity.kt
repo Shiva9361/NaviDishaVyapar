@@ -36,6 +36,12 @@ class MainMenuActivity : ComponentActivity() {
             intent = Intent(this@MainMenuActivity, SearchScreenActivity::class.java)
             startActivity(intent)
         }
+
+        mainMenuBinding.sell.setOnClickListener {
+            intent = Intent(this@MainMenuActivity, SellScreen1Activity::class.java)
+            startActivity(intent)
+        }
+
         mainMenuBinding.user.setOnClickListener {
             intent = Intent(this@MainMenuActivity, SettingScreenActivity::class.java)
             startActivity(intent)

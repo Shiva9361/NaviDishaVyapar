@@ -18,6 +18,24 @@
         android:theme="@style/Theme.NayiDishaVyapar"
         tools:targetApi="31">
         <activity
+            android:name=".SellScreen1Activity"
+            android:exported="false" />
+        <activity
+            android:name=".SellScreen2Activity"
+            android:exported="false" />
+        <activity
+            android:name=".SellScreen3Activity"
+            android:exported="false" />
+        <activity
+            android:name=".SellScreen4Activity"
+            android:exported="false" />
+        <activity
+            android:name=".SellScreen5Activity"
+            android:exported="false" />
+        <activity
+            android:name=".SellScreen6Activity"
+            android:exported="false" />
+        <activity
             android:name=".ProductDetailedViewActivity"
             android:exported="false" />
         <activity
