@@ -25,8 +25,8 @@ class SellScreen2Activity : ComponentActivity() {
             intent = Intent(this@SellScreen2Activity,MainMenuActivity::class.java)
             startActivity(intent)
         }
-        sellScreen2Binding.backButton.setOnClickListener{
-            intent = Intent(this@SellScreen2Activity,MainMenuActivity::class.java)
+        sellScreen2Binding.backArrow.setOnClickListener{
+            intent = Intent(this@SellScreen2Activity,SellScreen1Activity::class.java)
             startActivity(intent)
         }
         for (quantity in quantities){

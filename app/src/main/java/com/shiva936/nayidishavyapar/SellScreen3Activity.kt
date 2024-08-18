@@ -1,8 +1,16 @@
-import android.Manifest
+package com.shiva936.nayidishavyapar
+
 import android.content.Intent
+import android.os.Bundle
+import android.widget.CheckBox
+import androidx.activity.ComponentActivity
+import androidx.core.view.children
+import com.shiva936.nayidishavyapar.databinding.ActivitySellScreen2Binding
+import java.util.ArrayList
+
+import android.Manifest
 import android.content.pm.PackageManager
 import android.location.LocationManager
-import android.os.Bundle
 import android.provider.Settings
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
