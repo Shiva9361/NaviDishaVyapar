@@ -59,6 +59,16 @@ class MainMenuActivity : ComponentActivity() {
         }
         loadMaterials("Agricultural",mainMenuBinding.agriculturalWasteNearYou)
         loadMaterials("Industrial",mainMenuBinding.industrialWasteNearYou)
+        loadMaterials("Food",mainMenuBinding.foodWasteNearYou)
+        loadMaterials("Packaging",mainMenuBinding.packagingWasteNearYou)
+        loadMaterials("Medical",mainMenuBinding.medicalWasteNearYou)
+        loadMaterials("Hospitality",mainMenuBinding.hospitalityWasteNearYou)
+        loadMaterials("Office",mainMenuBinding.officeWasteeNearYou)
+        loadMaterials("Automotive",mainMenuBinding.automotiveWasteNearYou)
+        loadMaterials("Mining",mainMenuBinding.miningWasteNearYou)
+        loadMaterials("Other",mainMenuBinding.otherWasteNearYou)
+
+
     }
     private fun loadMaterials(materialType:String, horizontalScrollView: LinearLayout) {
         databaseReference.child("Categories").child(materialType).addValueEventListener(object : ValueEventListener {
