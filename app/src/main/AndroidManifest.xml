@@ -8,6 +8,7 @@
     </queries>
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -79,6 +80,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".WebViewActivity" />
+        <activity android:name=".ManageNotificationsActivity" />
+        <activity android:name=".ClearHistoryActivity" />
+        <activity android:name=".TermsConditionsActivity" />
+        <activity android:name=".PrivacyPolicyActivity" />
+        <activity android:name=".AboutUsActivity" />
+        <activity android:name=".ContactUsActivity" />
     </application>
 
 </manifest>

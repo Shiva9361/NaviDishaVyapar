@@ -17,6 +17,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import com.shiva936.nayidishavyapar.databinding.ActivitySellScreen3Binding
 
+
+
 class SellScreen3Activity : AppCompatActivity() {
 
     private lateinit var sellScreen3Binding: ActivitySellScreen3Binding
