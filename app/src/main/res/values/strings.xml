@@ -95,4 +95,30 @@
         <item>Clothing</item>
         <item>Furniture</item>
     </string-array>
+
+    <string name="terms_condition">
+        <h2>Welcome to Nayi Dish Vayapar</h2>
+            <p>A pioneering business-to-business (B2B) mobile application meticulously developed by an innovative student from IIT Tirupati. Nayi Dish Vayapar is engineered to revolutionize the food service industry by facilitating an efficient and dynamic connection between food vendors and restaurants. Our app is designed to streamline procurement processes, optimize inventory management, and enhance communication channels within the food supply chain.</p>
+
+            <h2>Terms and Conditions</h2>
+
+            <ul>
+                <li><b>Agreement:</b> These Terms and Conditions ("Terms") govern your access to and use of Nayi Dish Vayapar. By downloading, installing, or using the App, you enter into a legally binding agreement with us and agree to comply with these Terms. This agreement outlines your rights and responsibilities, as well as the rules that govern the operation of the <App class=""></App></li>
+
+                <li><b>Acceptance:</b> If you disagree with any of these Terms, you should immediately cease all use of the App. Your continued use of Nayi Dish Vayapar signifies that you accept and agree to be bound by these Terms, including any future <modifications class=""></modifications></li>
+
+                <li><b>Review:</b> We encourage you to review these Terms periodically, as we may update them from time to time. Any changes will be posted in the App or communicated through other means. It is your responsibility to stay informed of such updates, and your use of the App after changes have been made constitutes acceptance of the revised Terms.</li>
+
+                <li><b>Thank You:</b> Thank you for choosing Nayi Dish Vayapar. We look forward to supporting your business needs.</li>
+            </ul>
+    </string>
+    <string name="policy">Privacy &amp; Policy</string>
+    <string name="term"> Terms &amp; Conditions</string>
+
+    <string name="policy_content1">
+        <h3>At Nayi Dish Vayapar, safeguarding your privacy is our top priority. As a leading business-to-business (B2B) platform connecting sellers of waste material with buyers, we are dedicated to ensuring the confidentiality and security of your personal and business information. This Privacy Policy outlines how we collect, use, and protect your data when you use our app.</h3>
+    </string>
+    <string name="policy_content2">
+        <h3>We collect information necessary for the effective operation of our platform, including but not limited to business details, contact information, and transaction history. This data helps us facilitate interactions between sellers and buyers, manage transactions, and provide customer support. We may also collect technical information related to your use of the app, such as device information and usage patterns.</h3>
+    </string>
 </resources>
