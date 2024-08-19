@@ -35,7 +35,7 @@
             android:exported="false" />
         <activity
             android:name=".SellScreen5Activity"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".SellScreen6Activity"
             android:exported="false" />
