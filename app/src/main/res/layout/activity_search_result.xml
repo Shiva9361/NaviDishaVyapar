@@ -21,7 +21,7 @@
             android:layout_width="32dp"
             android:layout_height="30dp"
             android:layout_marginStart="16dp"
-            android:src="@drawable/baseline_dehaze_24"
+            android:src="@drawable/back_arrow_white"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/textView16" />
 

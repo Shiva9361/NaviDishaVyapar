@@ -115,8 +115,9 @@
                         android:layout_marginRight="10dp"
                         android:src="@drawable/baseline_location_red_searching_24"
                         />
-                    <EditText
-                        android:id="@+id/editTextText"
+                    <Spinner
+                        android:id="@+id/location_data"
+                        android:entries="@array/indian_cities"
                         android:layout_width="300dp"
                         android:layout_height="wrap_content"
                         android:background="@drawable/input_background"
@@ -160,6 +161,7 @@
                         android:orientation="horizontal">
 
                         <FrameLayout
+                            android:id="@+id/pick_up"
                             android:layout_width="match_parent"
                             android:layout_height="50dp"
                             android:layout_weight="1"
@@ -177,6 +179,7 @@
                         </FrameLayout>
 
                         <FrameLayout
+                            android:id="@+id/drop"
                             android:layout_width="match_parent"
                             android:layout_height="50dp"
                             android:layout_weight="1"
@@ -271,8 +274,10 @@
                                 android:layout_marginBottom="10dp"
                                 android:textColor="@android:color/black"
                                 android:textSize="12sp" />
-                            <Spinner
+                            <TextView
                                 android:id="@+id/from_date"
+                                android:hint="FROM"
+                                android:gravity="center"
                                 android:layout_height="40dp"
                                 android:layout_width="match_parent"
                                 android:layout_marginHorizontal="20dp"
@@ -293,19 +298,16 @@
                                 android:layout_marginBottom="10dp"
                                 android:textColor="@android:color/black"
                                 android:textSize="12sp" />
-                            <Spinner
+                            <TextView
                                 android:id="@+id/to_date"
+                                android:gravity="center"
+                                android:hint="TO"
                                 android:layout_height="40dp"
                                 android:layout_width="match_parent"
                                 android:layout_marginHorizontal="20dp"
                                 android:entries="@array/material_condition"/>
                         </LinearLayout>
                     </LinearLayout>
-
-                    <CalendarView
-                        android:id="@+id/calendarView2"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
                 </LinearLayout>
 
             </LinearLayout>
