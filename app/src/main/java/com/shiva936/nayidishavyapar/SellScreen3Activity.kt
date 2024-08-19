@@ -88,7 +88,7 @@ class SellScreen3Activity : ComponentActivity() {
         sellScreen3Binding.next.setOnClickListener {
             if ((sellScreen3Binding.toDate.text.isNotEmpty() && sellScreen3Binding.fromDate.text.isNotEmpty() && sellScreen3Binding.fromDate.text.toString() < sellScreen3Binding.toDate.text.toString() ) || sellScreen3Binding.availabilityImmediately.isChecked){
                 if(!sellScreen3Binding.locationData.selectedItem.equals("Select City")){
-                    val childIntent = Intent(this@SellScreen3Activity,SellScreen6Activity::class.java)
+                    val childIntent = Intent(this@SellScreen3Activity,SellScreen4Activity::class.java)
                     if (intent.extras!=null){
                         childIntent.putExtras(intent.extras!!)
                     }
