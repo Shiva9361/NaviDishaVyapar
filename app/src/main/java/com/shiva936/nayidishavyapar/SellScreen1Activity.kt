@@ -59,11 +59,9 @@ class SellScreen1Activity : ComponentActivity() {
             val name = sellScreen1Binding.editName.text
             val description = sellScreen1Binding.editDescription.text
             if (name.isNotEmpty() && description.isNotEmpty()){
-                intent = Intent(this@SellScreen1Activity,SellScreen2Activity::class.java)
-                intent.putExtra("Category",materialType)
-                intent.putExtra("Name",name)
-                intent.putExtra("Description",description)
-                startActivity(intent)
+                var childIntent = Intent(this@SellScreen1Activity,SellScreen2Activity::class.java)
+                childIntent.putExtra("Category",materialType).putExtra("Name",name.toString()).putExtra("Description",description.toString())
+                startActivity(childIntent)
             }
             else{
                 Toast.makeText(applicationContext, "Fill all details", Toast.LENGTH_SHORT).show()

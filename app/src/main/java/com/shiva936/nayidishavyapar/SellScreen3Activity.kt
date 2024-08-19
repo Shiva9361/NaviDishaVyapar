@@ -93,12 +93,13 @@ class SellScreen3Activity : ComponentActivity() {
                         childIntent.putExtras(intent.extras!!)
                     }
                     childIntent.putExtra("Delivery Option",deliveryOption)
+                    childIntent.putExtra("Location",sellScreen3Binding.locationData.selectedItem.toString())
                     if (sellScreen3Binding.availabilityImmediately.isChecked){
                         childIntent.putExtra("Available",true)
                     }
                     else {
-                        childIntent.putExtra("From Data", sellScreen3Binding.toDate.text)
-                        childIntent.putExtra("To Date", sellScreen3Binding.toDate.text)
+                        childIntent.putExtra("From Data", sellScreen3Binding.toDate.text.toString())
+                        childIntent.putExtra("To Date", sellScreen3Binding.toDate.text.toString())
                     }
                     startActivity(childIntent)
                 }

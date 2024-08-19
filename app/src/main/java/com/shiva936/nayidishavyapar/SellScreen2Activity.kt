@@ -17,16 +17,17 @@ class SellScreen2Activity : ComponentActivity() {
         sellScreen2Binding = ActivitySellScreen2Binding.inflate(layoutInflater)
         val view = sellScreen2Binding.root
         setContentView(view)
+        val parentIntent = intent
         val quantities = listOf(sellScreen2Binding.oneTon,sellScreen2Binding.twoTon,sellScreen2Binding.threeTon,sellScreen2Binding.fourTon,sellScreen2Binding.moreTon)
 
         sellScreen2Binding.oneTon.setBackgroundResource(R.drawable.baby_pink_background_rounded)
 
         sellScreen2Binding.ndy.setOnClickListener{
-            intent = Intent(this@SellScreen2Activity,MainMenuActivity::class.java)
+            val childIntent = Intent(this@SellScreen2Activity,MainMenuActivity::class.java)
             startActivity(intent)
         }
         sellScreen2Binding.backArrow.setOnClickListener{
-            intent = Intent(this@SellScreen2Activity,SellScreen1Activity::class.java)
+            val childIntent = Intent(this@SellScreen2Activity,SellScreen1Activity::class.java)
             startActivity(intent)
         }
         for (quantity in quantities){

@@ -34,6 +34,7 @@ class SellScreen4Activity : ComponentActivity() {
                 }
                 childIntent.putExtra("Negotiability",negotiability)
                 childIntent.putExtra("Price",sellScreen4Binding.txtPrice.text.toString())
+                childIntent.putExtra("Payment",sellScreen4Binding.paymentOptions.selectedItem.toString())
                 childIntent.putExtra("Price Measurement",sellScreen4Binding.measurement.selectedItem.toString())
                 childIntent.putExtra("Quantity Measurement",sellScreen4Binding.measurement.selectedItem.toString())
                 childIntent.putExtra("Minimum Quantity",sellScreen4Binding.txtMinOrder.text.toString())

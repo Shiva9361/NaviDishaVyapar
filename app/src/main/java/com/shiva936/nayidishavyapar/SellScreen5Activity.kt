@@ -45,8 +45,9 @@ class SellScreen5Activity : ComponentActivity() {
     }
 
     private fun uploadImageToFirebase(imageUri: Uri) {
-        val imageName = UUID.randomUUID()
-        val imageRef = storageRef.child("images/${imageName}.jpg")
+        val imageUUID = UUID.randomUUID()
+        val imageName = "images/${imageUUID}.jpg"
+        val imageRef = storageRef.child(imageName)
 
 
         imageRef.putFile(imageUri)
