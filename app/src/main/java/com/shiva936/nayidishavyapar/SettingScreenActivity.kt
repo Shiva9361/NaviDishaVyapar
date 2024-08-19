@@ -29,11 +29,11 @@ class SettingScreenActivity : ComponentActivity() {
             startActivity(intent)
         }
 
-//        settingScreenBinding.t_c.setOnClickListener {
-//            // Navigate to Terms and Conditions
-//            val intent = Intent(this, TermsConditionsActivity::class.java)
-//            startActivity(intent)
-//        }
+        settingScreenBinding.tC.setOnClickListener {
+            // Navigate to Terms and Conditions
+            val intent = Intent(this, TermsConditionsActivity::class.java)
+            startActivity(intent)
+        }
 
         settingScreenBinding.privacyPolicy.setOnClickListener {
             // Navigate to Privacy Policy
