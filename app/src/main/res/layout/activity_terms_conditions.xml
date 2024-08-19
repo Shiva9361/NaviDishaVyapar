@@ -8,25 +8,21 @@
     <!-- Layout for Top Bar -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/top_bar"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="2dp"
         android:background="@drawable/main_menu_top_bar"
         android:paddingBottom="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        tools:ignore="MissingConstraints">
 
         <ImageView
             android:id="@+id/back_arrow"
             android:layout_width="32dp"
             android:layout_height="30dp"
-            android:layout_marginTop="17dp"
             android:src="@drawable/back_arrow_white"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.042"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintStart_toStartOf="parent" />
 
         <TextView
             android:id="@+id/ndy"
@@ -41,13 +37,14 @@
             android:text="ndy"
             android:textColor="@color/red_orange"
             android:textSize="22sp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.876"
-            app:layout_constraintStart_toEndOf="@+id/new_sell_item"
-            app:layout_constraintTop_toTopOf="@+id/new_sell_item" />
+            app:layout_constraintStart_toEndOf="@+id/term_condition"
+            app:layout_constraintTop_toTopOf="@+id/term_condition" />
 
         <TextView
-            android:id="@+id/new_sell_item"
+            android:id="@+id/term_condition"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="50dp"
@@ -63,32 +60,67 @@
             app:layout_constraintVertical_bias="1.0" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <!-- ScrollView for Privacy Policy Content -->
-    <ScrollView
-        android:id="@+id/scrollView2"
+    <!-- TextView for Privacy Policy Sections -->
+
+    <TextView
+        android:id="@+id/term_condition1"
         android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="8dp"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="@string/policy_content1"
+        android:textColor="@color/black"
+        android:textSize="15sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/top_bar">
+        app:layout_constraintTop_toBottomOf="@+id/top_bar"
+        app:layout_constraintVertical_bias="0.001" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+    <TextView
+        android:id="@+id/term_condition2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="@string/policy_content2"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/term_condition1"
+        app:layout_constraintVertical_bias="0.0" />
 
-            <TextView
-                android:id="@+id/TermsConditionsTextView"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="20dp"
-                android:text="TermsConditions"
-                android:textColor="@android:color/black"
-                android:textSize="16sp" />
+    <TextView
+        android:id="@+id/term_condition3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="@string/policy_content1"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/term_condition4"
+        app:layout_constraintVertical_bias="0.125" />
 
-        </LinearLayout>
-    </ScrollView>
+    <TextView
+        android:id="@+id/term_condition4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:padding="10dp"
+        android:text="@string/policy_content2"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/term_condition2"
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
