@@ -131,12 +131,6 @@
             </LinearLayout>
 
             <!--Line-->
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="0.5dp"
-                android:background="@drawable/rectangle_gradient_s_deep_blue_black_700"
-                android:layout_marginBottom="10dp"
-                />
 
             <!--Negotiable-->
             <LinearLayout
@@ -179,12 +173,6 @@
             </LinearLayout>
 
             <!--Line-->
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="0.5dp"
-                android:background="@drawable/rectangle_gradient_s_deep_blue_black_700"
-                android:layout_marginBottom="10dp"
-                />
 
             <!--Payment-->
             <LinearLayout
@@ -221,12 +209,6 @@
             </LinearLayout>
 
             <!--Line-->
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="0.5dp"
-                android:background="@drawable/rectangle_gradient_s_deep_blue_black_700"
-                android:layout_marginBottom="10dp"
-                />
 
             <!--Min Order-->
             <LinearLayout
