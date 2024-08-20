@@ -103,10 +103,8 @@ class MainMenuActivity : ComponentActivity() {
             startActivity(Intent.createChooser(i, "Share link:"))
         }
         loadMaterials("Agricultural",mainMenuBinding.agriculturalWasteNearYou)
-        loadMaterials("Industrial",mainMenuBinding.industrialWasteNearYou)
+        loadMaterials("Manufacturing",mainMenuBinding.industrialWasteNearYou)
         loadMaterials("Food",mainMenuBinding.foodWasteNearYou)
-        loadMaterials("Packaging",mainMenuBinding.packagingWasteNearYou)
-        loadMaterials("Medical",mainMenuBinding.medicalWasteNearYou)
         loadMaterials("Hospitality",mainMenuBinding.hospitalityWasteNearYou)
         loadMaterials("Office",mainMenuBinding.officeWasteeNearYou)
         loadMaterials("Automotive",mainMenuBinding.automotiveWasteNearYou)
