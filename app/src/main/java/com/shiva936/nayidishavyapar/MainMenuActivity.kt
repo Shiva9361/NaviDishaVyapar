@@ -29,7 +29,6 @@ class MainMenuActivity : ComponentActivity() {
     private val database : FirebaseDatabase = FirebaseDatabase.getInstance()
     private val databaseReference = database.reference
     private val storage = FirebaseStorage.getInstance()
-    private val auth : FirebaseAuth = FirebaseAuth.getInstance()
     private var storageRef = storage.reference
 
     private lateinit var mainMenuBinding: ActivityMainMenuBinding
@@ -49,6 +48,10 @@ class MainMenuActivity : ComponentActivity() {
 
         mainMenuBinding.sell.setOnClickListener {
             intent = Intent(this@MainMenuActivity, SellScreen1Activity::class.java)
+            startActivity(intent)
+        }
+        mainMenuBinding.yourProducts.setOnClickListener {
+            intent = Intent(this@MainMenuActivity,ProductsActivity::class.java)
             startActivity(intent)
         }
 
