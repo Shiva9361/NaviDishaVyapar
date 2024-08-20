@@ -154,7 +154,10 @@ class MainMenuActivity : ComponentActivity() {
             // Handle errors
             Toast.makeText(applicationContext, "Some error occurred", Toast.LENGTH_SHORT).show()
         }
-
+        materialView.setOnClickListener {
+            val childIntent = Intent(this@MainMenuActivity,ProductDetailedViewActivity::class.java)
+            startActivity(childIntent)
+        }
         materialView.findViewById<TextView>(R.id.txt_cost_1).text = material.cost.toString()
         materialView.findViewById<TextView>(R.id.txt_location_a).text = material.location
         materialView.visibility = FrameLayout.VISIBLE
