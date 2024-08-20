@@ -121,7 +121,7 @@ class MainMenuActivity : ComponentActivity() {
                 horizontalScrollView.removeAllViews()
                 for (materialSnapshot in snapshot.children) {
                     val material = materialSnapshot.getValue(MaterialDataClass::class.java)
-                    material?.let { addMaterialView(it,horizontalScrollView) }
+                    material?.let { addMaterialView(it,horizontalScrollView,"Categories/${materialType}/${materialSnapshot.key!!}",materialType) }
                 }
 
             }
@@ -132,7 +132,7 @@ class MainMenuActivity : ComponentActivity() {
             })
     }
     private fun addMaterialView(material: MaterialDataClass,
-                                horizontalScrollView: LinearLayout
+                                horizontalScrollView: LinearLayout, path:String,category:String
     ) {
         val inflater = LayoutInflater.from(this)
         val materialView = inflater.inflate(R.layout.material_item, horizontalScrollView, false) as FrameLayout
@@ -156,6 +156,8 @@ class MainMenuActivity : ComponentActivity() {
         }
         materialView.setOnClickListener {
             val childIntent = Intent(this@MainMenuActivity,ProductDetailedViewActivity::class.java)
+            childIntent.putExtra("path",path)
+            childIntent.putExtra("category",category)
             startActivity(childIntent)
         }
         materialView.findViewById<TextView>(R.id.txt_cost_1).text = material.cost.toString()

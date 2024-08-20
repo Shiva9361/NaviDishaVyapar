@@ -122,6 +122,8 @@ class SellScreen6Activity : ComponentActivity() {
             }
             itemRef.child("minimumQuantity").setValue(minimumQuantity)
             itemRef.child("quantityMeasurement").setValue(quantityMeasurement)
+            itemRef.child("negotiable").setValue(negotiability)
+            itemRef.child("payment").setValue(payment)
 
 
             val childIntent = Intent(this@SellScreen6Activity,ProductsActivity::class.java)

@@ -46,7 +46,6 @@ class ProductsActivity : ComponentActivity() {
         productsBinding.backButton.setOnClickListener{
             onBackPressedDispatcher.onBackPressed()
         }
-
     }
     private fun loadMaterials() {
         val materials = mutableListOf<String>()
@@ -71,7 +70,7 @@ class ProductsActivity : ComponentActivity() {
 //                        }
                         for (materialSnapshot in snapshot.children) {
                             val materialData = materialSnapshot.getValue(MaterialDataClass::class.java)
-                            addMaterialView(materialData!!)
+                            addMaterialView(materialData!!,"Categories/${material}/${materialSnapshot.key!!}", material)
                         }
                     }
 
@@ -81,7 +80,7 @@ class ProductsActivity : ComponentActivity() {
                 })
         }
     }
-    private fun addMaterialView(material: MaterialDataClass) {
+    private fun addMaterialView(material: MaterialDataClass,path: String,category:String) {
         val inflater = LayoutInflater.from(this)
         val view = inflater.inflate(R.layout.your_product, productsBinding.searchResults, false)
 
@@ -108,8 +107,10 @@ class ProductsActivity : ComponentActivity() {
         //view.findViewById<TextView>(R.id.distance).text = material.distance
         view.visibility = View.VISIBLE
         view.setOnClickListener{
-            intent = Intent(this@ProductsActivity,ProductDetailedViewOwnerActivity::class.java)
-            startActivity(intent)
+            val childIntent = Intent(this@ProductsActivity,ProductDetailedViewActivity::class.java)
+            childIntent.putExtra("path",path)
+            childIntent.putExtra("category",category)
+            startActivity(childIntent)
         }
 
         productsBinding.searchResults.addView(view)

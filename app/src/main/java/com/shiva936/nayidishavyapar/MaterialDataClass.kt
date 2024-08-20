@@ -16,5 +16,7 @@ data class MaterialDataClass(
     val availability: String="",
     val minimumQuantity: String="",
     val quantityMeasurement: String="",
+    val negotiable: String="",
+    val payment: String="",
     val images: Map<String, Boolean>? = null,
 )
