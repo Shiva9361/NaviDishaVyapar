@@ -18,17 +18,17 @@
             android:id="@+id/back_arrow"
             android:layout_width="32dp"
             android:layout_height="30dp"
+            android:layout_marginStart="16dp"
             android:src="@drawable/back_arrow_white"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.042"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/term_condition" />
 
         <TextView
             android:id="@+id/ndy"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="10dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="16dp"
             android:background="@drawable/white_background_rounded"
             android:fontFamily="@font/montserrat_alternates_extrabold"
             android:gravity="center"
@@ -37,27 +37,22 @@
             android:text="ndy"
             android:textColor="@color/red_orange"
             android:textSize="22sp"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.876"
-            app:layout_constraintStart_toEndOf="@+id/term_condition"
-            app:layout_constraintTop_toTopOf="@+id/term_condition" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/term_condition"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="50dp"
-            android:layout_marginEnd="30dp"
             android:fontFamily="@font/montserrat_semibold"
             android:text="@string/term"
             android:textColor="@color/white"
             android:textSize="23sp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/ndy"
-            app:layout_constraintStart_toEndOf="@+id/back_arrow"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="1.0" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.382"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/ndy" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <!-- TextView for Privacy Policy Sections -->

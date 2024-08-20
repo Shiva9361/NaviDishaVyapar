@@ -82,11 +82,11 @@
             android:textColor="@android:color/black"
             android:textSize="16sp" />
         <TextView
-            android:id="@+id/txt_price"
+            android:id="@+id/update_location"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
-            android:hint="Manage Notifications"/>
+            android:hint="Update Location"/>
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="0.5dp"
@@ -174,6 +174,26 @@
             />
 
 
-
+        <TextView
+            android:id="@+id/account"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_alternates_bold"
+            android:text="Account"
+            android:layout_marginBottom="10dp"
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
+        <TextView
+            android:id="@+id/sign_out"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:hint="Sign Out"/>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@drawable/rectangle_gradient_s_deep_blue_black_700"
+            android:layout_marginBottom="10dp"
+            />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

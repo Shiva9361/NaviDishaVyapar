@@ -40,6 +40,14 @@ class ProductsActivity : ComponentActivity() {
         setContentView(view)
         loadMaterials()
 
+        productsBinding.backButton.setOnClickListener{
+            onBackPressedDispatcher.onBackPressed()
+        }
+
+        productsBinding.edit.setOnClickListener{
+            val childIntent = Intent(this@ProductsActivity,SellScreen1Activity::class.java)
+            startActivity(childIntent)
+        }
     }
     private fun loadMaterials() {
         val materials = mutableListOf<String>()
