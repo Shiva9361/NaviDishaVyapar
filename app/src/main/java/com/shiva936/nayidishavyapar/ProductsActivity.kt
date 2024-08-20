@@ -112,7 +112,7 @@ class ProductsActivity : ComponentActivity() {
         //view.findViewById<TextView>(R.id.distance).text = material.distance
         view.visibility = View.VISIBLE
         view.setOnClickListener{
-            intent = Intent(this@ProductsActivity,ProductDetailedViewActivity::class.java)
+            intent = Intent(this@ProductsActivity,ProductDetailedViewOwnerActivity::class.java)
             startActivity(intent)
         }
 
