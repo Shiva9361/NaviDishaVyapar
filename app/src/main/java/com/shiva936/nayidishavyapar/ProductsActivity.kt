@@ -39,6 +39,9 @@ class ProductsActivity : ComponentActivity() {
         val view = productsBinding.root
         setContentView(view)
         loadMaterials()
+        productsBinding.backButton.setOnClickListener{
+            onBackPressedDispatcher.onBackPressed()
+        }
 
     }
     private fun loadMaterials() {
@@ -59,9 +62,9 @@ class ProductsActivity : ComponentActivity() {
             databaseReference.child("Categories").child(material).orderByChild("user").equalTo(auth.currentUser!!.uid)
                 .addValueEventListener(object : ValueEventListener {
                     override fun onDataChange(snapshot: DataSnapshot) {
-                        if(snapshot.exists()){
-                            productsBinding.searchResults.removeAllViews()
-                        }
+//                        if(snapshot.exists()){
+//                            productsBinding.searchResults.removeAllViews()
+//                        }
                         for (materialSnapshot in snapshot.children) {
                             val materialData = materialSnapshot.getValue(MaterialDataClass::class.java)
                             addMaterialView(materialData!!)
@@ -76,7 +79,7 @@ class ProductsActivity : ComponentActivity() {
     }
     private fun addMaterialView(material: MaterialDataClass) {
         val inflater = LayoutInflater.from(this)
-        val view = inflater.inflate(R.layout.search_result_item, productsBinding.searchResults, false)
+        val view = inflater.inflate(R.layout.your_product, productsBinding.searchResults, false)
 
 
         view.findViewById<TextView>(R.id.material_name).text = material.name
