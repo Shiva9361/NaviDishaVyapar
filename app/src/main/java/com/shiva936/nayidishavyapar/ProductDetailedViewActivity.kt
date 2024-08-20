@@ -124,7 +124,34 @@ class ProductDetailedViewActivity : ComponentActivity() {
                         try {
                             // Check if WhatsApp is installed
                             val intent = Intent(Intent.ACTION_VIEW)
-                            val url = "https://api.whatsapp.com/send?phone=+91${material.number}"
+                            val url = "https://api.whatsapp.com/send?phone=+919398815361${material.number}"
+                            intent.data = Uri.parse(url)
+                            if (intent.resolveActivity(packageManager) != null) {
+                                startActivity(intent)
+                            } else {
+                                Toast.makeText(
+                                    applicationContext,
+                                    "Whatsapp not installed",
+                                    Toast.LENGTH_SHORT
+                                ).show()
+                            }
+                        } catch (e: Exception) {
+                            e.printStackTrace()
+                            Toast.makeText(applicationContext, "Some error occurred", Toast.LENGTH_SHORT)
+                                .show()
+                        }
+                    }
+                }
+                productDetailedViewBinding.enquireNow.setOnClickListener{
+                    if (auth.currentUser!!.isAnonymous){
+                        intent = Intent(this@ProductDetailedViewActivity,SignUpActivity::class.java)
+                        startActivity(intent)
+                    }
+                    else {
+                        try {
+                            // Check if WhatsApp is installed
+                            val intent = Intent(Intent.ACTION_VIEW)
+                            val url = "https://api.whatsapp.com/send?phone=+919398815361${material.number}"
                             intent.data = Uri.parse(url)
                             if (intent.resolveActivity(packageManager) != null) {
                                 startActivity(intent)

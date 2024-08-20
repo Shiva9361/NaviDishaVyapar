@@ -45,7 +45,8 @@ class SellScreen6Activity : ComponentActivity() {
         val minimumQuantity = intent.getStringExtra("Minimum Quantity")
         val quantityMeasurement = intent.getStringExtra("Quantity Measurement")
         val images = intent.getStringArrayListExtra("Images")
-
+        val phoneNumber = intent.getStringExtra("Phone Number")
+        sellScreen6Binding.phoneNumberAns.text = phoneNumber
         sellScreen6Binding.backArrow.setOnClickListener{
             onBackPressedDispatcher.onBackPressed()
         }
@@ -124,7 +125,8 @@ class SellScreen6Activity : ComponentActivity() {
             itemRef.child("quantityMeasurement").setValue(quantityMeasurement)
             itemRef.child("negotiable").setValue(negotiability)
             itemRef.child("payment").setValue(payment)
-
+            itemRef.child("phoneNumber").setValue(phoneNumber)
+            println(phoneNumber)
 
             val childIntent = Intent(this@SellScreen6Activity,ProductsActivity::class.java)
             startActivity(childIntent)

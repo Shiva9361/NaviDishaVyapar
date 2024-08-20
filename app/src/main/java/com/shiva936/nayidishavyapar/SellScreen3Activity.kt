@@ -94,6 +94,8 @@ class SellScreen3Activity : ComponentActivity() {
                     }
                     childIntent.putExtra("Delivery Option",deliveryOption)
                     childIntent.putExtra("Location",sellScreen3Binding.locationData.selectedItem.toString())
+                    val phoneNumber = sellScreen3Binding.phoneNumber.text.toString()
+                    childIntent.putExtra("Phone Number",phoneNumber)
                     if (sellScreen3Binding.availabilityImmediately.isChecked){
                         childIntent.putExtra("Available",true)
                     }

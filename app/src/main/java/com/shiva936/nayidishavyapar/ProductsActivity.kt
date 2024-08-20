@@ -8,6 +8,7 @@ import android.util.TypedValue.applyDimension
 import android.view.LayoutInflater
 import android.view.View
 import android.widget.Button
+import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
@@ -40,11 +41,12 @@ class ProductsActivity : ComponentActivity() {
         setContentView(view)
         loadMaterials()
         productsBinding.backButton.setOnClickListener{
-            onBackPressedDispatcher.onBackPressed()
+            val childIntent = Intent(this@ProductsActivity,MainMenuActivity::class.java)
+            startActivity(childIntent)
         }
-
-        productsBinding.backButton.setOnClickListener{
-            onBackPressedDispatcher.onBackPressed()
+        productsBinding.ndy.setOnClickListener{
+            val childIntent = Intent(this@ProductsActivity,MainMenuActivity::class.java)
+            startActivity(childIntent)
         }
     }
     private fun loadMaterials() {
@@ -88,6 +90,17 @@ class ProductsActivity : ComponentActivity() {
         view.findViewById<TextView>(R.id.material_name).text = material.name
         view.findViewById<TextView>(R.id.material_cost).text = "₹ "+material.cost.toString()
         view.findViewById<TextView>(R.id.material_quantity).text = material.quantity+ " Ton(s)"
+        view.findViewById<ImageButton>(R.id.delete).setOnClickListener{
+            productsBinding.searchResults.removeView(view)
+            databaseReference.child(path).removeValue().addOnCompleteListener{ task->{
+                    if(task.isSuccessful){
+                        Toast.makeText(applicationContext, "Successfully Deleted", Toast.LENGTH_SHORT).show()
+                    }else{
+                        Toast.makeText(applicationContext, "Some error occurred", Toast.LENGTH_SHORT).show()
+                    }
+                }
+            }
+        }
 
         val imageFrame = view.findViewById<ImageView>(R.id.item_image)
         val image = material.images!!.entries.first().key
@@ -112,6 +125,7 @@ class ProductsActivity : ComponentActivity() {
             childIntent.putExtra("category",category)
             startActivity(childIntent)
         }
+
 
         productsBinding.searchResults.addView(view)
     }

@@ -17,38 +17,78 @@
         android:layout_height="90dp"
         android:layout_gravity="bottom">
 
-        <TextView
-            android:id="@+id/txt_material_info_1"
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="top|left"
-            android:paddingLeft="10dp"
-            android:paddingTop="4dp"
-            android:text="Material Info"
-            android:textColor="@android:color/black"
-            android:textSize="10sp" />
+            android:layout_gravity="top|center"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="4dp"
+                android:text="Material : "
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:textSize="13sp" />
+            <TextView
+                android:id="@+id/txt_material_info_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="4dp"
+                android:text="Material Info"
+                android:textColor="@android:color/black"
+                android:textSize="13sp" />
+        </LinearLayout>
 
-        <TextView
-            android:id="@+id/txt_cost_1"
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center|left"
-            android:paddingLeft="10dp"
-            android:text="Cost"
-            android:textColor="@android:color/black"
-            android:textSize="16sp" />
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:orientation="horizontal">
 
-        <TextView
-            android:id="@+id/txt_location_a"
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:text="Cost : ₹"
+                android:textColor="@android:color/black"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txt_cost_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@android:color/black"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom|left"
-            android:paddingLeft="10dp"
-            android:paddingBottom="4dp"
-            android:text="Location"
-            android:textColor="@android:color/holo_red_dark"
-            android:textSize="12sp"
-            android:textStyle="bold" />
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingBottom="4dp"
+                android:text="Location : "
+                android:textColor="@android:color/holo_red_dark"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/txt_location_a"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="4dp"
+                android:text="Location"
+                android:textColor="@android:color/holo_red_dark"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+        </LinearLayout>
     </FrameLayout>
 
 </FrameLayout>

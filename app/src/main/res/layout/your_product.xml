@@ -65,24 +65,15 @@
                 app:layout_constraintStart_toStartOf="parent" />
 
             <ImageButton
-                android:id="@+id/maps"
+                android:id="@+id/delete"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
-                android:layout_marginEnd="1dp"
-                android:background="@drawable/button_background_transparent"
-                android:src="@drawable/map"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent" />
-
-            <ImageButton
-                android:id="@+id/more_option"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
+                android:layout_marginTop="60dp"
                 android:layout_marginEnd="1dp"
                 android:background="@drawable/transparent_background"
-                android:src="@drawable/edit_red_symbol"
+                android:src="@drawable/delete"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintBottom_toBottomOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </LinearLayout>
 

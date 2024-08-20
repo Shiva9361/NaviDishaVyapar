@@ -160,7 +160,7 @@ class MainMenuActivity : ComponentActivity() {
             childIntent.putExtra("category",category)
             startActivity(childIntent)
         }
-        materialView.findViewById<TextView>(R.id.txt_cost_1).text = material.cost.toString()
+        materialView.findViewById<TextView>(R.id.txt_cost_1).text = material.cost.toString()+" "+material.costUnit.toString()
         materialView.findViewById<TextView>(R.id.txt_location_a).text = material.location
         materialView.visibility = FrameLayout.VISIBLE
         // Add materialView to LinearLayout
