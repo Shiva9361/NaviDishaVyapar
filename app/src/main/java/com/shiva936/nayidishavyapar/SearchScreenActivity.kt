@@ -222,4 +222,5 @@ class SearchScreenActivity : ComponentActivity() {
             resources.displayMetrics
         ).toInt()
     }
+
 }

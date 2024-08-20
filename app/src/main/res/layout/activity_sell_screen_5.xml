@@ -101,7 +101,53 @@
                     android:layout_marginBottom="20dp"
                     android:background="@drawable/upload_background_rounded"
                     android:src="@drawable/upload_symbol" />
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:id="@+id/image_root_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="20dp"
+                        android:columnCount="4"
+                        tools:layout_editor_absoluteY="190dp">
 
+                        <!--                <ImageButton-->
+                        <!--                    android:id="@+id/img_1"-->
+                        <!--                    android:layout_width="75dp"-->
+                        <!--                    android:layout_height="75dp"-->
+                        <!--                    android:layout_marginLeft="5dp"-->
+                        <!--                    android:layout_marginBottom="10dp"-->
+                        <!--                    android:scaleType="centerCrop"-->
+                        <!--                    android:src="@drawable/manufacturing" />-->
+
+                        <!--                <ImageButton-->
+                        <!--                    android:id="@+id/img_2"-->
+                        <!--                    android:layout_width="75dp"-->
+                        <!--                    android:layout_height="75dp"-->
+                        <!--                    android:layout_marginLeft="5dp"-->
+                        <!--                    android:layout_marginBottom="10dp"-->
+                        <!--                    android:scaleType="centerCrop"-->
+                        <!--                    android:src="@drawable/manufacturing" />-->
+                        <!--                <ImageButton-->
+                        <!--                    android:id="@+id/img_3"-->
+                        <!--                    android:layout_width="75dp"-->
+                        <!--                    android:layout_height="75dp"-->
+                        <!--                    android:layout_marginLeft="5dp"-->
+                        <!--                    android:layout_marginBottom="10dp"-->
+                        <!--                    android:scaleType="centerCrop"-->
+                        <!--                    android:src="@drawable/manufacturing" />-->
+                        <!--                <ImageButton-->
+                        <!--                    android:id="@+id/img_4"-->
+                        <!--                    android:layout_width="75dp"-->
+                        <!--                    android:layout_height="75dp"-->
+                        <!--                    android:layout_marginLeft="5dp"-->
+                        <!--                    android:layout_marginBottom="10dp"-->
+                        <!--                    android:scaleType="centerCrop"-->
+                        <!--                    android:src="@drawable/manufacturing" />-->
+                    </LinearLayout>
+                </HorizontalScrollView>
 
             </LinearLayout>
 

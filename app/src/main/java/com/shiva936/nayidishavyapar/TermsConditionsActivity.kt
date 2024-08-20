@@ -40,6 +40,6 @@ class TermsConditionsActivity : ComponentActivity() {
         """.trimIndent()
 
         // Set the privacy policy text to the TextView
-        binding.TermsConditionsTextView.text = termsConditionsText
+        binding.termCondition.text = termsConditionsText
     }
 }

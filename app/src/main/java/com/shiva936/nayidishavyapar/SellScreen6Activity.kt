@@ -1,5 +1,6 @@
 package com.shiva936.nayidishavyapar
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.ImageView
@@ -7,13 +8,19 @@ import android.widget.LinearLayout
 import android.widget.Toast
 import androidx.activity.ComponentActivity
 import com.bumptech.glide.Glide
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.storage.FirebaseStorage
 import com.shiva936.nayidishavyapar.databinding.ActivitySellScreen6Binding
 
 class SellScreen6Activity : ComponentActivity() {
     private lateinit var sellScreen6Binding: ActivitySellScreen6Binding
     private var storage = FirebaseStorage.getInstance()
+    private var database = FirebaseDatabase.getInstance()
+    private var databaseRef = database.reference
     private var storageRef = storage.reference
+    private var auth = FirebaseAuth.getInstance()
+    private var newKey:String? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -48,7 +55,7 @@ class SellScreen6Activity : ComponentActivity() {
         sellScreen6Binding.materialNameAns.text = name
         sellScreen6Binding.materialTypeAns.text = category
         sellScreen6Binding.productDescriptionAns.text = description
-        sellScreen6Binding.quantityAns.text = quantity
+        sellScreen6Binding.quantityAns.text = "${quantity} Ton"
         sellScreen6Binding.materialConditionAns.text = condition
         sellScreen6Binding.natureAns.text = specification?.joinToString(", ")?:""
         sellScreen6Binding.locationAns.text = location
@@ -63,6 +70,7 @@ class SellScreen6Activity : ComponentActivity() {
         sellScreen6Binding.negotiableAns.text = negotiability
         sellScreen6Binding.paymentMethodAns.text = payment
         sellScreen6Binding.minOrderAns.text = minimumQuantity+" "+quantityMeasurement
+        sellScreen6Binding.imageRootView.removeAllViews()
 
         if (images != null) {
             for (image in images){
@@ -77,7 +85,6 @@ class SellScreen6Activity : ComponentActivity() {
                     Glide.with(this)
                         .load(uri).placeholder(R.drawable.agriculture_waste).override(300,300)
                         .into(imageView)
-                    println(uri)
                     imageView.visibility = View.VISIBLE
                     sellScreen6Binding.imageRootView.addView(imageView)
                     println("done")
@@ -86,6 +93,26 @@ class SellScreen6Activity : ComponentActivity() {
                     Toast.makeText(applicationContext, "Some error occurred", Toast.LENGTH_SHORT).show()
                 }
             }
+        }
+        sellScreen6Binding.next.setOnClickListener {
+            if (newKey==null){
+                newKey = databaseRef.child("Categories").child(category!!).push().key
+            }
+            val itemRef = databaseRef.child("Categories").child(category!!).child(newKey.toString())
+            itemRef.child("name").setValue(name)
+            itemRef.child("user").setValue(auth.currentUser!!.uid)
+            if (images != null) {
+                for (image in images){
+                    itemRef.child(image.split(".")[0]).setValue(true)
+                }
+            }
+            itemRef.child("location").setValue(location)
+            itemRef.child("quantity").setValue(quantity)
+            itemRef.child("cost").setValue(price)
+            itemRef.child("cost unit").setValue(priceMeasurement)
+            val childIntent = Intent(this@SellScreen6Activity,ProductsActivity::class.java)
+            startActivity(childIntent)
+            finish()
         }
     }
 }

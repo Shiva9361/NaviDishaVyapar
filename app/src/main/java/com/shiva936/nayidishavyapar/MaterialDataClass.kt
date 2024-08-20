@@ -7,4 +7,5 @@ data class MaterialDataClass(
     val quantity: String = "",
     val number: String = "",
     val description: String = "",
+    val images: Map<String, Boolean>? = null,
 )

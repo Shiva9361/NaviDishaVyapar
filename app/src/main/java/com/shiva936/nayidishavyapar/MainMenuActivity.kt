@@ -3,24 +3,34 @@ package com.shiva936.nayidishavyapar
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.TypedValue.COMPLEX_UNIT_DIP
+import android.util.TypedValue.COMPLEX_UNIT_SP
+import android.util.TypedValue.applyDimension
 import android.view.LayoutInflater
+import android.view.View
 import android.widget.FrameLayout
 import android.widget.HorizontalScrollView
+import android.widget.ImageView
 import com.shiva936.nayidishavyapar.SettingScreenActivity
 import android.widget.LinearLayout
 import android.widget.TextView
+import android.widget.Toast
 import androidx.activity.ComponentActivity
+import com.bumptech.glide.Glide
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
+import com.google.firebase.storage.FirebaseStorage
 import com.shiva936.nayidishavyapar.databinding.ActivityMainMenuBinding
 
 class MainMenuActivity : ComponentActivity() {
     private val database : FirebaseDatabase = FirebaseDatabase.getInstance()
     private val databaseReference = database.reference
+    private val storage = FirebaseStorage.getInstance()
     private val auth : FirebaseAuth = FirebaseAuth.getInstance()
+    private var storageRef = storage.reference
 
     private lateinit var mainMenuBinding: ActivityMainMenuBinding
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -94,12 +104,35 @@ class MainMenuActivity : ComponentActivity() {
 
         // Update materialView with material data
         materialView.findViewById<TextView>(R.id.txt_material_info_1).text = material.name
+        val imageFrame = materialView.findViewById<ImageView>(R.id.item_image)
+        val image = material.images!!.entries.first().key
+        val width = dpToPx(200f)
+        val height = dpToPx(100f)
+        storageRef.child("images/${image}.jpg").downloadUrl.addOnSuccessListener { uri ->
+            Glide.with(this)
+                .load(uri).placeholder(R.drawable.agriculture_waste).override(width,height)
+                .into(imageFrame)
+            println(uri)
+            imageFrame.visibility = View.VISIBLE
+            println("done")
+        }.addOnFailureListener {
+            // Handle errors
+            Toast.makeText(applicationContext, "Some error occurred", Toast.LENGTH_SHORT).show()
+        }
 
         materialView.findViewById<TextView>(R.id.txt_cost_1).text = material.cost.toString()
         materialView.findViewById<TextView>(R.id.txt_location_a).text = material.location
         materialView.visibility = FrameLayout.VISIBLE
         // Add materialView to LinearLayout
         horizontalScrollView.addView(materialView)
+    }
+
+    private fun dpToPx(sp: Float): Int {
+        return applyDimension(
+            COMPLEX_UNIT_DIP,
+            sp,
+            resources.displayMetrics
+        ).toInt()
     }
 
 }
