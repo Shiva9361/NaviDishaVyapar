@@ -59,6 +59,10 @@ class MainMenuActivity : ComponentActivity() {
             intent = Intent(this@MainMenuActivity, SettingScreenActivity::class.java)
             startActivity(intent)
         }
+        mainMenuBinding.login.setOnClickListener {
+            intent = Intent(this@MainMenuActivity, LoginActivity::class.java)
+            startActivity(intent)
+        }
         mainMenuBinding.share.setOnClickListener {
             val applicationNameId: Int = applicationInfo.labelRes
             val appPackageName: String = packageName

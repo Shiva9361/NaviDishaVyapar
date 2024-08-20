@@ -29,6 +29,9 @@ class LoginActivity : ComponentActivity() {
             startActivity(intent)
         }
 
+        loginBinding.backButton.setOnClickListener{
+            onBackPressedDispatcher.onBackPressed()
+        }
         loginBinding.Next.setOnClickListener{
             val email = loginBinding.EmailField.text.toString()
             val password = loginBinding.PasswordField.text.toString()
