@@ -44,6 +44,10 @@ class SearchResultActivity : ComponentActivity() {
         searchResultBinding.editSearch.setOnClickListener {
             onBackPressedDispatcher.onBackPressed()
         }
+
+        searchResultBinding.backButton.setOnClickListener{
+            onBackPressedDispatcher.onBackPressed()
+        }
     }
 
     private fun loadMaterials() {

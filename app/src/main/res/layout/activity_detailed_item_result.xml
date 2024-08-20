@@ -96,10 +96,12 @@
                         </LinearLayout>
                     </LinearLayout>
                     <FrameLayout
+                        android:id="@+id/download_framework"
                         android:layout_width="match_parent"
                         android:layout_height="110dp"
                         android:layout_weight="3">
                         <ImageButton
+                            android:id="@+id/download"
                             android:layout_width="75dp"
                             android:layout_height="70dp"
                             android:layout_gravity="top|center"
@@ -188,7 +190,7 @@
                         android:textColor="@color/red_orange"/>
 
                     <Button
-                        android:id="@+id/next"
+                        android:id="@+id/get_phone_number"
                         android:layout_width="match_parent"
                         android:layout_height="48dp"
                         android:layout_weight="1"
@@ -528,7 +530,7 @@
     </ScrollView>
 
     <ImageButton
-        android:id="@+id/edit_search"
+        android:id="@+id/back_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
