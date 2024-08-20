@@ -58,5 +58,17 @@ class SettingScreenActivity : ComponentActivity() {
 //            val intent = Intent(this, ShareTheAppActivity::class.java)
 //            startActivity(intent)
 //        }
+
+        settingScreenBinding.shareTheApp.setOnClickListener {
+            val applicationNameId: Int = applicationInfo.labelRes
+            val appPackageName: String = packageName
+            val i = Intent(Intent.ACTION_SEND)
+            i.setType("text/plain")
+            i.putExtra(Intent.EXTRA_SUBJECT, getString(applicationNameId))
+            val text = "Share ndy, "
+            val link = "https://play.google.com/store/apps/details?id=$appPackageName"
+            i.putExtra(Intent.EXTRA_TEXT, "$text $link")
+            startActivity(Intent.createChooser(i, "Share link:"))
+        }
     }
 }

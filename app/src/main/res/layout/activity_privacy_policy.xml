@@ -74,21 +74,142 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/top_bar">
 
+
         <LinearLayout
-            android:id="@+id/linearLayout5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:padding="16dp">
 
             <TextView
-                android:id="@+id/privacyPolicyTextView"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:padding="20dp"
+                android:text="Privacy Policy"
+                android:textColor="@android:color/black"
+                android:textSize="20sp"
+                android:fontFamily="@font/montserrat_semibold"
+                android:layout_marginBottom="16dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="At Nayi Dish Vayapar, safeguarding your privacy is our top priority. As a leading business-to-business (B2B) platform connecting sellers of waste material with buyers, we are dedicated to ensuring the confidentiality and security of your personal and business information. This Privacy Policy outlines how we collect, use, and protect your data when you use our app."
                 android:textColor="@android:color/black"
                 android:textSize="16sp"
-                android:text="Privacy Policy" />
+                android:layout_marginBottom="16dp"/>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@drawable/rectangle_gradient_s_deep_blue_black_700"
+                android:layout_marginBottom="10dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1. Information Collection:"
+                android:textColor="@android:color/black"
+                android:textSize="15sp"
+                android:fontFamily="@font/montserrat_semibold"
+                android:layout_marginBottom="8dp"/>
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="We collect information necessary for the effective operation of our platform, including but not limited to business details, contact information, and transaction history. This data helps us facilitate interactions between sellers and buyers, manage transactions, and provide customer support. We may also collect technical information related to your use of the app, such as device information and usage patterns."
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                android:layout_marginBottom="16dp"/>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@drawable/rectangle_gradient_s_deep_blue_black_700"
+                android:layout_marginBottom="10dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2.Data Usage:"
+                android:textColor="@android:color/black"
+                android:textSize="15sp"
+                android:fontFamily="@font/montserrat_semibold"
+                android:layout_marginBottom="8dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Your data is used primarily to enable and improve our services. This includes processing transactions, managing your account, and enhancing your experience on the platform. We may use your information to communicate important updates, respond to inquiries, and offer tailored recommendations. In addition, aggregated data may be analyzed to improve app functionality and user experience."
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                android:layout_marginBottom="16dp"/>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@drawable/rectangle_gradient_s_deep_blue_black_700"
+                android:layout_marginBottom="10dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3. Data Protection:"
+                android:textColor="@android:color/black"
+                android:textSize="15sp"
+                android:fontFamily="@font/montserrat_semibold"
+                android:layout_marginBottom="8dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="We implement stringent security measures to protect your data from unauthorized access, disclosure, or alteration. Our security protocols include encryption, access controls, and regular security audits. Despite these measures, no method of electronic transmission or storage is completely secure, and we cannot guarantee absolute protection."
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                android:layout_marginBottom="16dp"/>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@drawable/rectangle_gradient_s_deep_blue_black_700"
+                android:layout_marginBottom="10dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4. Data Sharing:"
+                android:textColor="@android:color/black"
+                android:textSize="15sp"
+                android:fontFamily="@font/montserrat_semibold"
+                android:layout_marginBottom="8dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="We respect your privacy and do not share your personal or business data with third parties without your consent, except where necessary to facilitate transactions between sellers and buyers, comply with legal obligations, or enforce our terms and conditions. We may share aggregated or anonymized data for analytical purposes without identifying individuals."
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                android:layout_marginBottom="16dp"/>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@drawable/rectangle_gradient_s_deep_blue_black_700"
+                android:layout_marginBottom="10dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5. Contact Us:"
+                android:textColor="@android:color/black"
+                android:textSize="15sp"
+                android:fontFamily="@font/montserrat_semibold"
+                android:layout_marginBottom="8dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="For questions or concerns regarding our Privacy Policy or data practices, please reach out to us at +91 99627 62516. We are committed to addressing any issues and ensuring a positive experience with our platform."
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                android:layout_marginBottom="16dp"/>
         </LinearLayout>
     </ScrollView>
 
