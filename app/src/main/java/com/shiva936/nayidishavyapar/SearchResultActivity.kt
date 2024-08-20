@@ -3,9 +3,12 @@ package com.shiva936.nayidishavyapar
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
+import android.util.TypedValue.COMPLEX_UNIT_DIP
+import android.util.TypedValue.applyDimension
 import android.view.LayoutInflater
 import android.view.View
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.ComponentActivity
@@ -13,17 +16,21 @@ import androidx.activity.enableEdgeToEdge
 import androidx.compose.animation.core.snap
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.bumptech.glide.Glide
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
+import com.google.firebase.storage.FirebaseStorage
 import com.shiva936.nayidishavyapar.databinding.ActivitySearchResultBinding
 
 class SearchResultActivity : ComponentActivity() {
     private val database : FirebaseDatabase = FirebaseDatabase.getInstance()
     private val databaseReference = database.reference
     private val auth = FirebaseAuth.getInstance()
+    private val storage = FirebaseStorage.getInstance()
+    private var storageRef = storage.reference
 
     private lateinit var searchResultBinding: ActivitySearchResultBinding
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -109,6 +116,21 @@ class SearchResultActivity : ComponentActivity() {
                 }
             }
         }
+        val imageFrame = view.findViewById<ImageView>(R.id.item_image)
+        val image = material.images!!.entries.first().key
+        val width = dpToPx(200f)
+        val height = dpToPx(100f)
+        storageRef.child("images/${image}.jpg").downloadUrl.addOnSuccessListener { uri ->
+            Glide.with(this)
+                .load(uri).placeholder(R.drawable.agriculture_waste).override(width,height)
+                .into(imageFrame)
+            println(uri)
+            imageFrame.visibility = View.VISIBLE
+            println("done")
+        }.addOnFailureListener {
+            // Handle errors
+            Toast.makeText(applicationContext, "Some error occurred", Toast.LENGTH_SHORT).show()
+        }
         //view.findViewById<TextView>(R.id.distance).text = material.distance
         view.visibility = View.VISIBLE
         view.setOnClickListener{
@@ -117,5 +139,12 @@ class SearchResultActivity : ComponentActivity() {
         }
 
         searchResultBinding.searchResults.addView(view)
+    }
+    private fun dpToPx(sp: Float): Int {
+        return applyDimension(
+            COMPLEX_UNIT_DIP,
+            sp,
+            resources.displayMetrics
+        ).toInt()
     }
 }
