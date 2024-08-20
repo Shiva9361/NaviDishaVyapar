@@ -112,6 +112,8 @@ class MainMenuActivity : ComponentActivity() {
         loadMaterials("Automotive",mainMenuBinding.automotiveWasteNearYou)
         loadMaterials("Mining",mainMenuBinding.miningWasteNearYou)
         loadMaterials("Other",mainMenuBinding.otherWasteNearYou)
+        loadMaterials("Health",mainMenuBinding.healthWasteNearYou)
+        loadMaterials("Retail",mainMenuBinding.retailWasteNearYou)
 
 
     }

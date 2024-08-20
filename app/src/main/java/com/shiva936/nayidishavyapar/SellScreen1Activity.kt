@@ -47,7 +47,7 @@ class SellScreen1Activity : ComponentActivity() {
                     sellScreen1Binding.frameHealth -> "Health"
                     sellScreen1Binding.frameMining -> "Mining"
                     sellScreen1Binding.frameOffice -> "Office"
-                    sellScreen1Binding.frameAuto -> "Auto"
+                    sellScreen1Binding.frameAuto -> "Automotive"
                     sellScreen1Binding.frameManufacturing -> "Manufacturing"
                     sellScreen1Binding.frameRetail -> "Retail"
                     else -> "Hospitality"
