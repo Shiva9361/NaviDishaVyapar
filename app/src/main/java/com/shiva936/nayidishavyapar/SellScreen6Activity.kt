@@ -108,8 +108,22 @@ class SellScreen6Activity : ComponentActivity() {
             }
             itemRef.child("location").setValue(location)
             itemRef.child("quantity").setValue(quantity)
-            itemRef.child("cost").setValue(price)
+            itemRef.child("cost").setValue(price!!.split(" ")[0].toInt())
             itemRef.child("cost unit").setValue(priceMeasurement)
+            itemRef.child("description").setValue(description)
+            itemRef.child("condition").setValue(condition)
+            itemRef.child("specification").setValue(specification?.joinToString(", ")?:"")
+            itemRef.child("deliveryOption").setValue(deliveryOption)
+            if (availability){
+                itemRef.child("availability").setValue("Instantly Available")
+            }
+            else{
+                itemRef.child("availability").setValue(fromDate+"-"+toDate)
+            }
+            itemRef.child("minimumQuantity").setValue(minimumQuantity)
+            itemRef.child("quantityMeasurement").setValue(quantityMeasurement)
+
+
             val childIntent = Intent(this@SellScreen6Activity,ProductsActivity::class.java)
             startActivity(childIntent)
             finish()

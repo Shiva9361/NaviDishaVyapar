@@ -126,6 +126,9 @@ class SearchScreenActivity : ComponentActivity() {
         searchScreenBinding.moreTon.setOnClickListener{
             handleQuantityClick(">4",searchScreenBinding.moreTon)
         }
+        searchScreenBinding.backButton.setOnClickListener{
+            onBackPressedDispatcher.onBackPressed()
+        }
         searchScreenBinding.Next.setOnClickListener{
             if (selectedQuantity.isEmpty() || selectedMaterials.isEmpty() || selectedCities.isEmpty()){
                 Toast.makeText(applicationContext, "Fields can't be empty", Toast.LENGTH_SHORT).show()
