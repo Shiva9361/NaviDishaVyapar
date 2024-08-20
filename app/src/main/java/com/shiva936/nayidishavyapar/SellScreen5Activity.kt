@@ -46,6 +46,14 @@ class SellScreen5Activity : ComponentActivity() {
                 Toast.makeText(applicationContext, "Upload at least one Image", Toast.LENGTH_SHORT).show()
             }
         }
+
+        sellScreen5Binding.ndy.setOnClickListener{
+            val childIntent = Intent(this@SellScreen5Activity,MainMenuActivity::class.java)
+            startActivity(childIntent)
+        }
+        sellScreen5Binding.backArrow.setOnClickListener{
+            onBackPressedDispatcher.onBackPressed()
+        }
     }
 
     private fun uploadImageToFirebase(imageUri: Uri) {

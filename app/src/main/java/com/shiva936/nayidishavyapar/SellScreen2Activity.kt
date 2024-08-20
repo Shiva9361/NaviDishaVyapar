@@ -24,11 +24,10 @@ class SellScreen2Activity : ComponentActivity() {
 
         sellScreen2Binding.ndy.setOnClickListener{
             val childIntent = Intent(this@SellScreen2Activity,MainMenuActivity::class.java)
-            startActivity(intent)
+            startActivity(childIntent)
         }
         sellScreen2Binding.backArrow.setOnClickListener{
-            val childIntent = Intent(this@SellScreen2Activity,SellScreen1Activity::class.java)
-            startActivity(intent)
+            onBackPressedDispatcher.onBackPressed()
         }
         for (quantity in quantities){
             quantity.setOnClickListener{

@@ -111,6 +111,13 @@ class SellScreen3Activity : ComponentActivity() {
                 Toast.makeText(applicationContext, "Enter Valid Dates!!", Toast.LENGTH_SHORT).show()
             }
         }
+        sellScreen3Binding.ndy.setOnClickListener{
+            val childIntent = Intent(this@SellScreen3Activity,MainMenuActivity::class.java)
+            startActivity(childIntent)
+        }
+        sellScreen3Binding.backArrow.setOnClickListener{
+            onBackPressedDispatcher.onBackPressed()
+        }
     }
     private fun datePicker(onDateSelected: (day: Int, month: Int, year: Int) -> Unit) {
         val calendar = Calendar.getInstance()

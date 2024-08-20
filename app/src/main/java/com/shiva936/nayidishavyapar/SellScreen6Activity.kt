@@ -114,5 +114,14 @@ class SellScreen6Activity : ComponentActivity() {
             startActivity(childIntent)
             finish()
         }
+
+
+        sellScreen6Binding.ndy.setOnClickListener{
+            val childIntent = Intent(this@SellScreen6Activity,MainMenuActivity::class.java)
+            startActivity(childIntent)
+        }
+        sellScreen6Binding.backArrow.setOnClickListener{
+            onBackPressedDispatcher.onBackPressed()
+        }
     }
 }

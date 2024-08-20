@@ -140,6 +140,41 @@
                 android:layout_height="0.5dp"
                 android:background="@drawable/rectangle_gradient_s_deep_blue_black_700"
                 android:layout_marginBottom="10dp"
+                />            <!--Location-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="20dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/contact"
+                    android:layout_width="wrap_content"
+                    android:layout_height="22dp"
+                    android:fontFamily="@font/montserrat_alternates_bold"
+                    android:text="Phone Number"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/phone_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/input_background"
+                    android:inputType="text"
+                    android:layout_weight="1"
+                    android:layout_marginBottom="20dp"
+                    android:hint="+91 93.."/>
+
+            </LinearLayout>
+
+            <!--Line-->
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@drawable/rectangle_gradient_s_deep_blue_black_700"
+                android:layout_marginBottom="10dp"
                 />
 
             <!--Pickup/Delivery-->

@@ -20,8 +20,7 @@ class SellScreen1Activity : ComponentActivity() {
             startActivity(childIntent)
         }
         sellScreen1Binding.backButton.setOnClickListener{
-            val childIntent = Intent(this@SellScreen1Activity,MainMenuActivity::class.java)
-            startActivity(childIntent)
+            onBackPressedDispatcher.onBackPressed()
         }
         sellScreen1Binding.frameOther.alpha = 0.5F
         sellScreen1Binding.frameAgriculture.alpha = 1F

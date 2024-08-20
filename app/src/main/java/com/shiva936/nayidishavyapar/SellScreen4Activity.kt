@@ -44,5 +44,13 @@ class SellScreen4Activity : ComponentActivity() {
                 Toast.makeText(application, "Fill all details", Toast.LENGTH_SHORT).show()
             }
         }
+
+        sellScreen4Binding.ndy.setOnClickListener{
+            val childIntent = Intent(this@SellScreen4Activity,MainMenuActivity::class.java)
+            startActivity(childIntent)
+        }
+        sellScreen4Binding.backArrow.setOnClickListener{
+            onBackPressedDispatcher.onBackPressed()
+        }
     }
 }
