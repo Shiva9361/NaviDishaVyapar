@@ -3,10 +3,12 @@ package com.shiva936.nayidishavyapar
 import android.content.Intent
 import android.os.Bundle
 import androidx.activity.ComponentActivity
+import com.google.firebase.auth.FirebaseAuth
 import com.shiva936.nayidishavyapar.databinding.ActivitySettingsScreenBinding
 
 class SettingScreenActivity : ComponentActivity() {
     private lateinit var settingScreenBinding: ActivitySettingsScreenBinding
+    private var auth = FirebaseAuth.getInstance()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -58,6 +60,12 @@ class SettingScreenActivity : ComponentActivity() {
 //            val intent = Intent(this, ShareTheAppActivity::class.java)
 //            startActivity(intent)
 //        }
+        settingScreenBinding.signOut.setOnClickListener {
+            auth.signOut()
+            val childIntent = Intent(this@SettingScreenActivity,SplashScreenActivity::class.java)
+            startActivity(childIntent)
+            finish()
+        }
 
         settingScreenBinding.shareTheApp.setOnClickListener {
             val applicationNameId: Int = applicationInfo.labelRes

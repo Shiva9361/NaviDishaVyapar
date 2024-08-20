@@ -109,7 +109,7 @@ class SellScreen6Activity : ComponentActivity() {
             itemRef.child("location").setValue(location)
             itemRef.child("quantity").setValue(quantity)
             itemRef.child("cost").setValue(price!!.split("₹")[1].trim().toInt())
-            itemRef.child("cost unit").setValue(priceMeasurement)
+            itemRef.child("costUnit").setValue(priceMeasurement)
             itemRef.child("description").setValue(description)
             itemRef.child("condition").setValue(condition)
             itemRef.child("specification").setValue(specification?.joinToString(", ")?:"")
