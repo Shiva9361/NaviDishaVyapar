@@ -16,6 +16,7 @@ import android.widget.LinearLayout
 import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.ComponentActivity
+import androidx.compose.animation.core.snap
 import com.bumptech.glide.Glide
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DataSnapshot
@@ -30,6 +31,7 @@ class MainMenuActivity : ComponentActivity() {
     private val databaseReference = database.reference
     private val storage = FirebaseStorage.getInstance()
     private var storageRef = storage.reference
+    private val auth = FirebaseAuth.getInstance()
 
     private lateinit var mainMenuBinding: ActivityMainMenuBinding
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -47,8 +49,15 @@ class MainMenuActivity : ComponentActivity() {
         }
 
         mainMenuBinding.sell.setOnClickListener {
-            intent = Intent(this@MainMenuActivity, SellScreen1Activity::class.java)
-            startActivity(intent)
+            if (auth.currentUser==null || auth.currentUser!!.isAnonymous){
+                intent = Intent(this@MainMenuActivity, LoginActivity::class.java)
+                startActivity(intent)
+                finish()
+            }
+            else {
+                intent = Intent(this@MainMenuActivity, SellScreen1Activity::class.java)
+                startActivity(intent)
+            }
         }
         mainMenuBinding.yourProducts.setOnClickListener {
             intent = Intent(this@MainMenuActivity,ProductsActivity::class.java)
@@ -58,6 +67,25 @@ class MainMenuActivity : ComponentActivity() {
         mainMenuBinding.user.setOnClickListener {
             intent = Intent(this@MainMenuActivity, SettingScreenActivity::class.java)
             startActivity(intent)
+        }
+        if (auth.currentUser==null || auth.currentUser!!.isAnonymous){
+            mainMenuBinding.login.setOnClickListener {
+                intent = Intent(this@MainMenuActivity, LoginActivity::class.java)
+                startActivity(intent)
+                finish()
+            }
+        }
+        else{
+            databaseReference.child("user_data").child(auth.currentUser!!.uid).child("name").addValueEventListener(object : ValueEventListener {
+                override fun onDataChange(snapshot: DataSnapshot) {
+                        mainMenuBinding.login.text = snapshot.getValue(String::class.java)
+                }
+
+                override fun onCancelled(error: DatabaseError) {
+                    // Handle error
+
+                }
+            })
         }
         mainMenuBinding.login.setOnClickListener {
             intent = Intent(this@MainMenuActivity, LoginActivity::class.java)
