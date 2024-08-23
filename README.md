@@ -4,7 +4,7 @@
 </figure>
 <h2><strong>Description</strong></h2>
 
-<p>TheNaviDisha Vyapar is an innovative solution aimed at connecting companies to facilitate the exchange of waste products. Companies can list their waste products, and other companies can browse and purchase these products for reuse, thus promoting sustainability and reducing environmental impact. This app provides a platform where waste can be transformed into a valuable resource, supporting a circular economy.</p>
+<p>NaviDisha Vyapar is an innovative solution aimed at connecting companies to facilitate the exchange of waste products. Companies can list their waste products, and other companies can browse and purchase these products for reuse, thus promoting sustainability and reducing environmental impact. This app provides a platform where waste can be transformed into a valuable resource, supporting a circular economy.</p>
 
 <h2><strong>Features</strong></h2>
 
