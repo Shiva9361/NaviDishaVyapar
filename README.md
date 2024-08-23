@@ -59,11 +59,6 @@
 
 <h2><strong>Screenshots</strong></h2>
 
-- **Login Screen with secure authentication**.
-- **Company profile showcasing waste listings**.
-- **Search and filter waste products**.
-- **Streamlined purchasing process**.
-
 
 <!-- Splash Screen -->
 <img src="Media/splash_screen.jpeg" align="right" alt="Caption" height="550" />
@@ -81,87 +76,67 @@
 
 - **Description:** This screen allows users to select the category of their business from various industries. Based on the selected category, the application tailors waste management solutions and guidelines relevant to that industry.<br><br>
 - **Purpose:** Helps users navigate and specify their business type for more accurate recommendations.<br><br>
+<br clear="right"/>
+<br><br>
+
+<!-- Login Screen -->
+<img src="Media\Screenshot_20240823_182656_NayiDishaVyapar.jpg" align="right" alt="Caption" height="500" />
+<h3>Login & Sign-Up Screen ➡</h3>
+
+- **Description:** This screen enables users to log in or sign up to access the app's features like posting new waste material or can engage in buying raw materials.
+<br clear="left"/>
+<br>
+
+<!-- Main menu -->
+<img src="Media\Screenshot_20240823_182527_NayiDishaVyapar.jpg" align="left" alt="Caption" width="250" />
+<img src="https://via.placeholder.com/1x20/ffffff/ffffff" alt="" align="left" width="0" height="500" />
+<h3>⬅ Main Menu Screen</h3>
+
+- **Description:** This is the main menu screen of our waste material marketplace app. The screen offers users an intuitive interface to browse and purchase waste materials of different types.Additional Features:
+    - Filter/Search Bar: Users can filter materials or search by specific material names.
+    - Navigation Bar: Includes options to access home, sell materials, share materials, and manage user accounts.
+    - User Authentication: Login functionality to manage user sessions and preferences.
+<br><br>
+- **Purpose:** Helps users navigate and specify their business type for more accurate recommendations.<br><br>
 <br clear="left"/>
 
+<!-- Detailed View -->
+<img src="Media\Screenshot_20240823_183119_NayiDishaVyapar.jpg" align="right" alt="Caption" width="240" />
+<h3>Product Detail View ➡</h3>
 
+- **Description:** This is the **Product Detail View** for individual waste material listings within the app. It provides users with a comprehensive breakdown of the selected material. The details displayed include:
+- **Price**: The price of the material, displayed at the top (e.g., ₹1000).
+- **Upload Date**: Information on when the product was uploaded to the platform (e.g., "Uploaded 1 week before").
+- **Material Name & Category**: Display of the material name and its category (e.g., Rice Husk, Agricultural).
+- **Location**: Indicates the geographic location where the material is available (e.g., Patna).
+- **Download Brochure**: Option to download a detailed brochure of the material for offline reference.
+- **Product Description**: A brief description of the material’s source, quality, and potential applications (e.g., "Our Rice Husk is carefully sourced from premium rice mills...").
+- **Minimum Quantity**: The minimum order quantity required for purchase (e.g., 2000 KG).
+- **Material Details**:
+  - **Nature**: (e.g., Bio Degradable)
+  - **Location**: (e.g., Patna)
+  - **Transportation**: method
+  - **Availability**: (e.g., Instant)
+  - **Price per KG**: (e.g., ₹200)
+  - **Negotiable**: pricing option
+- **Payment Method**: Available payment options.
+- **Minimum Order**: Reinforces the minimum purchase quantity (e.g., 2000 KG).
+- **Images**: Preview images of the material.
+- **Contact Options**: Buttons for **Enquire Now** and **Call Owner** for easy communication with the material seller.
 
-<div style="display: flex; justify-content: space-between;">
-  <figure>
-    <img src="Media/Screenshot_20240823_182455_NayiDishaVyapar.jpg" alt="Image 1" width="100" height ="200" />
-    <figcaption> Caption </figcaption>
-  </figure>
-  <figure>
-    <img src="Media\Screenshot_20240823_182510_NayiDishaVyapar.jpg" alt="Image 2" width="100" height ="200" />
-    <figcaption> </figcaption>
-  </figure>
-  <figure>
-    <img src="Media\Screenshot_20240823_182527_NayiDishaVyapar.jpg" alt="Image 3" width="100" height ="200" />
-    <figcaption> </figcaption>
-  <figure>
+<br clear="left"/>
+<br>
+<h3>These are Sell Screens : </h3>
+<div style="display: flex; justify-content: center; flex-wrap: wrap;">
+    <img src="Media\Screenshot_20240823_184113_NayiDishaVyapar.jpg" align="left" alt="Caption" width="200" />
+    <img src="Media\Screenshot_20240823_184309_NayiDishaVyapar.jpg" align="left" alt="Caption" width="200" />
+    <img src="Media\Screenshot_20240823_184317_NayiDishaVyapar.jpg" align="left" alt="Caption" width="200" />
+    <img src="Media\Screenshot_20240823_184348_NayiDishaVyapar.jpg" align="left" alt="Caption" width="200" />
+    <img src="Media\Screenshot_20240823_184416_NayiDishaVyapar.jpg" align="left" alt="Caption" width="200" />
+    <img src="Media\Screenshot_20240823_184517_NayiDishaVyapar.jpg" align="left" alt="Caption" width="200" />
 </div>
 
-
-<div style="display: flex; justify-content: space-between;">
-    <figure>
-    <img src="Media\Screenshot_20240823_182540_NayiDishaVyapar.jpg" alt="Image 1" width="100" height ="200" />
-    <figcaption> </figcaption>
-    </figure>
-    <figure>
-    <img src="Media\Screenshot_20240823_182656_NayiDishaVyapar.jpg" alt="Image 2" width="100" height ="200" />
-    <figcaption> </figcaption>
-    </figure>
-    <figure>
-    <img src="Media\Screenshot_20240823_182711_NayiDishaVyapar.jpg" alt="Image 3" width="100" height ="200" />
-    <figcaption> </figcaption>
-    </figure>
-</div>
-
-<div style="display: flex; justify-content: space-between;">
-<figure>
-    <img src="Media\Screenshot_20240823_183119_NayiDishaVyapar.jpg" alt="Image 1" width="100" height ="200" />
-    <figcaption> </figcaption>
-    </figure>
-    <figure>
-    <img src="Media\Screenshot_20240823_183316_NayiDishaVyapar.jpg" alt="Image 2" width="100" height ="200" />
-    <figcaption> </figcaption>
-    </figure>
-    <figure>
-    <img src="Media\Screenshot_20240823_184113_NayiDishaVyapar.jpg" alt="Image 3" width="100" height ="200" />
-    <figcaption> </figcaption>
-    </figure>
-</div>
-
-<div style="display: flex; justify-content: space-between;">
-    <figure>
-    <img src="Media\Screenshot_20240823_184309_NayiDishaVyapar.jpg" alt="Image 1" width="100" height ="200" />
-    <figcaption> </figcaption>
-    </figure>
-    <figure>
-    <img src="Media\Screenshot_20240823_184317_NayiDishaVyapar.jpg" alt="Image 2" width="100" height ="200" />
-    <figcaption> </figcaption>
-    </figure>
-    <figure>
-    <img src="Media\Screenshot_20240823_184348_NayiDishaVyapar.jpg" alt="Image 3" width="100" height ="200" />
-    <figcaption> </figcaption>
-    </figure>
-</div>
-
-<div style="display: flex; justify-content: space-between;">
-<figure>
-    <img src="Media\Screenshot_20240823_184416_NayiDishaVyapar.jpg" alt="Image 1" width="100" height ="200" />
-    <figcaption> </figcaption>
-    </figure>
-    <figure>
-    <img src="Media\Screenshot_20240823_184517_NayiDishaVyapar.jpg" alt="Image 2" width="100" height ="200" />
-    <figcaption> </figcaption>
-    </figure>
-    <figure>
-    <img src="Media\Screenshot_20240823_184522_NayiDishaVyapar.jpg" alt="Image 3" width="100" height ="200" />
-    <figcaption> </figcaption>
-    </figure>
-</div>
-
-
+<br clear="left"/>
 <h2><strong>Installation and Setup</strong></h2>
 
 1. Clone the repository: 
