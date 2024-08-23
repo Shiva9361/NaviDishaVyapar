@@ -61,7 +61,7 @@
 
 
 <!-- Splash Screen -->
-<img src="Media/splash_screen.jpeg" align="right" alt="Caption" height="550" />
+<img src="Media/splash_screen.jpeg" align="right" alt="Caption" width="25%" />
 <h3>Splash Screen ➡</h3>
 
 - **Description:** The splash screen displays the app’s logo and name, NayiDishaVyapar, as the first screen when the application launches. It serves as the branding introduction and sets the visual tone for the app.
@@ -70,7 +70,7 @@
 <br>
 
 <!-- Business Category Selection Screen -->
-<img src="Media/Screenshot_20240823_182455_NayiDishaVyapar.jpg" align="left" alt="Caption" width="250" />
+<img src="Media/Screenshot_20240823_182455_NayiDishaVyapar.jpg" align="left" alt="Caption" width="25%" />
 <img src="https://via.placeholder.com/1x20/ffffff/ffffff" alt="" align="left" width="0" height="500" />
 <h3>⬅ Business Category Selection Screen</h3>
 
@@ -80,7 +80,7 @@
 <br><br>
 
 <!-- Login Screen -->
-<img src="Media\Screenshot_20240823_182656_NayiDishaVyapar.jpg" align="right" alt="Caption" height="500" />
+<img src="Media\Screenshot_20240823_182656_NayiDishaVyapar.jpg" align="right" alt="Caption" width="25%" />
 <h3>Login & Sign-Up Screen ➡</h3>
 
 - **Description:** This screen enables users to log in or sign up to access the app's features like posting new waste material or can engage in buying raw materials.
@@ -88,7 +88,7 @@
 <br>
 
 <!-- Main menu -->
-<img src="Media\Screenshot_20240823_182527_NayiDishaVyapar.jpg" align="left" alt="Caption" width="250" />
+<img src="Media\Screenshot_20240823_182527_NayiDishaVyapar.jpg" align="left" alt="Caption" width="25%" />
 <img src="https://via.placeholder.com/1x20/ffffff/ffffff" alt="" align="left" width="0" height="500" />
 <h3>⬅ Main Menu Screen</h3>
 
@@ -101,7 +101,7 @@
 <br clear="left"/>
 
 <!-- Detailed View -->
-<img src="Media\Screenshot_20240823_183119_NayiDishaVyapar.jpg" align="right" alt="Caption" width="240" />
+<img src="Media\Screenshot_20240823_183119_NayiDishaVyapar.jpg" align="right" alt="Caption" width="24%" />
 <h3>Product Detail View ➡</h3>
 
 - **Description:** This is the **Product Detail View** for individual waste material listings within the app. It provides users with a comprehensive breakdown of the selected material. The details displayed include:
@@ -127,14 +127,12 @@
 <br clear="left"/>
 <br>
 <h3>These are Sell Screens : </h3>
-<div style="display: flex; justify-content: center; flex-wrap: wrap;">
-    <img src="Media\Screenshot_20240823_184113_NayiDishaVyapar.jpg" align="left" alt="Caption" width="200" />
-    <img src="Media\Screenshot_20240823_184309_NayiDishaVyapar.jpg" align="left" alt="Caption" width="200" />
-    <img src="Media\Screenshot_20240823_184317_NayiDishaVyapar.jpg" align="left" alt="Caption" width="200" />
-    <img src="Media\Screenshot_20240823_184348_NayiDishaVyapar.jpg" align="left" alt="Caption" width="200" />
-    <img src="Media\Screenshot_20240823_184416_NayiDishaVyapar.jpg" align="left" alt="Caption" width="200" />
-    <img src="Media\Screenshot_20240823_184517_NayiDishaVyapar.jpg" align="left" alt="Caption" width="200" />
-</div>
+<img src="Media\Screenshot_20240823_184113_NayiDishaVyapar.jpg" align="left" alt="Caption" width="20%" />
+<img src="Media\Screenshot_20240823_184309_NayiDishaVyapar.jpg" align="left" alt="Caption" width="20%" />
+<img src="Media\Screenshot_20240823_184317_NayiDishaVyapar.jpg" align="left" alt="Caption" width="20%" />
+<img src="Media\Screenshot_20240823_184348_NayiDishaVyapar.jpg" align="left" alt="Caption" width="20%" />
+<img src="Media\Screenshot_20240823_184416_NayiDishaVyapar.jpg" align="left" alt="Caption" width="20%" />
+<img src="Media\Screenshot_20240823_184517_NayiDishaVyapar.jpg" align="left" alt="Caption" width="20%" />
 
 <br clear="left"/>
 <h2><strong>Installation and Setup</strong></h2>
