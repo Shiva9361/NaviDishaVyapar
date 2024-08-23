@@ -37,7 +37,7 @@
   - Developed search/filter features.
   - Added constraints to layouts.
 
-- **Luvkush**:
+- **Lavkush Kumar**:
   - Created the screens login, waste materials layouts.
   - Ensured the app adhered to Material Design principles.
   - Added data to firebase 
