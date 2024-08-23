@@ -35,11 +35,12 @@
 - **Vineeth Raghavendra**:
   - Collaborated on UI/UX design, focusing on responsive layouts and accessibility.
   - Developed search/filter features.
-  - Added constrains to layouts.
+  - Added constraints to layouts.
 
 - **Luvkush**:
   - Created the screens login, waste materials layouts.
   - Ensured the app adhered to Material Design principles.
+  - Added data to firebase 
 
 - **Lachiram Nayak**:
    - Searched all images and put in layouts.
@@ -48,10 +49,13 @@
 
 <h3>Backend Team:</h3>
 
-- **Shivadharshan**:
-  - Developed and designed the structure of data management in Firebase.
-  - User Authentication and user session management.
-  - Getting and setting data from and to the Firebase.
+- **Shivadharshan S**:
+  - Implemented user authentication and user session management.
+  - Added listners and bindings to make the frontend react to user input (glue code).
+  - Modeled the business logic and controllers in the backend.
+  - Setup firebase for anonymous authentication, user login and data storage in realtime database. 
+  - Implemented image storage using Firebase storage
+  - Implemented communication between activities using Intents.
 
 - **Preet Bobde**:
   - Developed the backend logic using Firebase, focusing on data management and user authentication.
